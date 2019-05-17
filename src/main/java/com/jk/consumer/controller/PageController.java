@@ -7,9 +7,23 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("page")
 public class PageController {
-    @RequestMapping("test")
-    @ResponseBody
-    public String  test(){
-        return "test";
+
+    @RequestMapping("tozaixian")
+    public String  tozaixian(){
+        return "zaixian";
+    }
+
+
+    @RequestMapping("toxzgs")
+    public String  toxzgs(){
+        return "xzgs";
+    }
+    @RequestMapping("toszwlzx")
+    public String  toszwlzx(){
+        return "szwlzx";
+    }
+    @RequestMapping("towuliugs")
+    public String  towuliugs(){
+        return "wuliugs";
     }
 }
