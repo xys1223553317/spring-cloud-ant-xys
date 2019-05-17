@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://www.lvmae.com/road/deliver.html?action=com -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>选择物流公司</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="/xzgojs/20150729template.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/xzgojs/style.css">
+<link rel="stylesheet" href="/xzgojs/H-ui.min.css" type="text/css">
+<link rel="stylesheet" href="/xzgojs/layui.css" media="all">
+<script type="text/javascript" src="/xzgojs/jquery-3.2.1.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/xzgojs/config.js" charset="UTF-8"></script>
+<style type="text/css">
+.layui-table{margin:0px 0px;}
+.icon{border-radius: 2px;color: #fff;margin-right: 3px;padding: 2px 4px;}
+.zheng{background-color: #F87E7E;}
+.cheng{background-color: #f3ab01;}
+</style>
+</head>
+
+<body>
+<table class="layui-table" id="table_box">
+<thead>
+<tr>
+<th colspan="2">承运商</th>
+<th>起步价</th>
+<th>重货</th>
+<th>轻货</th>
+<th>时效</th>
+</tr>
+</thead>
+<tbody id="content">
+<tr><td colspan="15">暂无关招标信息</td></tr>
+</tbody>
+</table>
+<div class="pagination">
+        </div>
+<script type="text/javascript">
+$('input[name="lid"]').click(function(){
+var val = $(this).val();
+obj = JSON.parse(val);
+parent.$('input[name=carrierId]').val(obj[6]);
+parent.$('input[name=itemid]').val(obj[0]);
+parent.$('input[name=carrierName]').val(obj[5]);
+parent.$('input[name=carrierMobile]').val(obj[8]);
+parent.$('input[name=lineName]').val('到物流专线');
+parent.$('input[name=businessPhone]').val(obj[9]);
+parent.$('#orderinfo').attr('action','http://www.lvmae.com/road/-/fahuo-'+obj[0]+'.html');
+parent.$('#orderinfo').submit();
+    var index = parent.layer.getFrameIndex(window.name);
+    parent.layer.close(index);
+})
+</script>
+
+</body></html>

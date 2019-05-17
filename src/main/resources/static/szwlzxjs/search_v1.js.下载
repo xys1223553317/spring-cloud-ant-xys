@@ -1,0 +1,127 @@
+function select_area(_this,id,area_id){
+	$.ajax({
+		type : "get",
+		url : basePath+"search.php?action=getarea&areaid="+$(_this).val()+'&id='+id+'&area_id='+area_id,
+		dataType : 'text',
+		async:false,
+		success : function(data) {
+			if(data!=''){
+				$('#'+id).html(data).show();
+			}
+		}
+	});
+}
+
+//点击交换，发收贷地址交换
+function reverseAddress(){
+	//value交换
+	var temp=null;
+	temp=$("#leave_city").attr("value");
+	$("#leave_city").attr("value",$("#arrive_city").attr("value"));
+	$("#arrive_city").attr("value",temp);
+	
+	temp=$("#jsonLeaveCityParams").attr("value");
+	$("#jsonLeaveCityParams").attr("value",$("#jsonArriveCityParams").attr("value"));
+	$("#jsonArriveCityParams").attr("value",temp);
+}
+
+function select_auto(_this,id,area_id){
+	$('#areaid_'+area_id).val($(_this).val());
+	//subFrom('area','');
+	_this.form.submit();
+}
+
+function filterNum(obj){
+	obj.value = obj.value.replace(/[^\d.]/g,"");
+	obj.value = obj.value.replace(/^\./g,"");
+	obj.value = obj.value.replace(/\.{2,}/g,".");
+	obj.value = obj.value.replace(".","$#$").replace(/\./g,"").replace("$#$",".");
+	obj.style.color = "black";
+}
+
+function subFrom(type,val){
+	//判断货物数量
+	if($('#weight_num').val()>10000000){
+		alert('货物公斤不能大于10000000');return;
+	}
+	if($('#volume_num').val()>10000000){
+		alert('货物体积不能大于10000000');return;
+	}
+			//运输方式
+			if(type=='way')$('#way').val(val);
+			//分页
+			if(type=='page')document.logLineForm.action=val;
+			//排序
+			if(type=='order')$('#order').val(val);
+			//点搜索
+			if(type=='find'){
+				var j_jsonLeaveCityParams=$.parseJSON($("[name='jsonLeaveCityParams']").val().replace(/-1/g,"0"));
+				var j_jsonArriveCityParams=$.parseJSON($("[name='jsonArriveCityParams']").val().replace(/-1/g,"0"));
+				if( j_jsonLeaveCityParams == null ){
+			        setTimeout(function () {
+			        	$("#leave_city").trigger("click");
+			        }, 10);
+			        return;
+				}
+				if( j_jsonArriveCityParams == null ){
+			        setTimeout(function () {
+			        	$("#arrive_city").trigger("click");
+			        }, 10);
+			        return;
+				}
+				var leave=j_jsonLeaveCityParams.cityID+'-'+j_jsonArriveCityParams.cityID;
+				if(j_jsonLeaveCityParams.districtID>0 || j_jsonArriveCityParams.districtID>0){
+					var url="road/"+leave+'/index-'+j_jsonLeaveCityParams.districtID+'-'+j_jsonArriveCityParams.districtID+'.html';
+				}else{
+					var url="road/"+leave+'/index.html';
+				}
+				document.logLineForm.action=basePath+url;
+			}
+			//品牌
+			if(type=='company'){
+//				if($(val).is(':checked')==true) {alert(55);return;
+//					$('#company_'+$(val).val()).attr('checked',true);
+//				}else{alert(666);return;
+//					$('#company_'+$(val).val()).attr('checked',false);
+//				}
+			}
+			document.logLineForm.submit();
+			return false;
+}
+
+function clearWhere(){
+	$('input[name="cartime[]"]').each(function(){
+		$(this).attr('checked','');
+	});
+	$('#areaid_1,#areaid_2').val(0);
+}
+
+$(function() {
+	$("#leave_city").chooseCity({
+		initGeo : $.parseJSON(line_jsonLeaveCityParams),
+		tips : "请选择发货地",
+		tipsClass : "gray",
+		valueClass : "black",
+		callback : function(data) {
+			if (data != null) {
+				clearWhere();
+				$("#jsonLeaveCityParams").val(JSON.stringify(data));
+				//设置cookies
+				setCookie("leave_city_id",data.cityID);
+				setCookie("leave_city_name", encodeURI(data.cityName));
+			}
+		}
+	});
+	$("#arrive_city").chooseCity({
+		initGeo : $.parseJSON(line_jsonArriveCityParams),
+		tips : "请选择收货地",
+		tipsClass : "gray",
+		valueClass : "black",
+		callback : function(data) {
+			if (data != null) {
+				clearWhere();
+				$("#jsonArriveCityParams").val(JSON.stringify(data));
+			}
+		}
+	});
+});

@@ -1,0 +1,55 @@
+.dedicated-line { background-color: #fff; border-color: #72B111 #EAEAEA #EAEAEA; border-style: solid; border-width: 2px 1px 1px; padding: 20px; }
+
+.zx-left { float: left; text-align: left; width: 890px; }
+
+.hot-line { background-color: #F7F7F7; border: #EAEAEA solid 1px; height: 48px; margin-bottom: 15px; width: 888px; }
+
+.hot-line h2 { color: #F60; font-size: 14px; font-weight: bold; float: left; height: 48px; line-height: 48px; padding: 0 0 0 20px; }
+
+/*---------- hot search line style ----------*/
+.new{ float: left; height: 48px; width:760px; }
+
+.scroll_horizontal{ height:48px; margin:0 auto;  overflow:hidden; width:760px;  }
+
+.scroll_horizontal div.box{ height:48px; overflow:hidden; position:relative; width:760px; }
+
+.scroll_horizontal .newslist{ overflow:hidden; width:9999px; }
+
+.scroll_horizontal .newslist li{ float:left; height:48px; line-height:48px; overflow: hidden; padding:0 5px; text-overflow: ellipsis; white-space: nowrap; width:180px; }
+
+.scroll_horizontal .newslist li span a ,.hl-line ul.line-list li a { color: #999; } .scroll_horizontal .newslist li span a:hover , .hl-line ul li a:hover { color: #72B111; }
+
+/*------ Hot logistics line ------*/
+.hl-line { border: #EAEAEA solid 1px; clear: both; margin-bottom: 15px; padding: 10px 15px; width: 858px; }
+
+.hl-line h2 { border-bottom: #dedede dotted 1px; color: #F60; font-size: 14px; font-weight: bold; padding-bottom: 10px; position: relative; text-indent: 0.5em; width: 100%; }
+
+.hl-line ul { display: block; height: 120px; margin-top: 10px; margin-left: 6px; width: 856px; }
+
+.hl-line ul li { float: left; height: 30px; line-height: 30px; margin-right: 6px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 207px; }
+
+.hl-line h2 a { font-weight: 400; position: absolute; top: 0; right: 5px;  }
+
+/*HOT CITY */
+.p20 ul.line-list { display: block; margin-top: 10px; margin-left: 6px; width: 856px; }
+
+.p20 ul.line-list li { float: left; height: 30px; line-height: 30px; margin-right: 6px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 207px; }
+
+.p20 ul.line-list li a { color: #999; }.p20 ul.line-list li a:hover , .my-tab-1-box .my-tab-1 li.tab-active { color: #72B111; }
+
+
+/*右侧内容样式*/
+.zx-right { float: right; width: 245px; }
+
+h2.title-5 { margin: 10px 0; text-align: left; }
+
+.list-left { text-align: left; }
+
+.list-left img{ height: 36px; width: 108px; margin-top: 2px; margin-right: 5px; }
+
+.list-4 { border-bottom: #dedede dotted 1px; margin-bottom: 5px; }
+
+.list-4 .list-right p { text-align: left; width: 132px; }
+
+.news-list li { text-align: left; }
+
