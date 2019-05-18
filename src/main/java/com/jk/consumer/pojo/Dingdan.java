@@ -10,7 +10,16 @@ public class Dingdan {
     private String goodsName;//货物名称
     private Integer goodsWeight;//货物重量
     private Integer goodsVolume;//货物立方米
+    private Integer goodsNumber;//订单号
     private String note;//其他说明
+
+    public Integer getGoodsNumber() {
+        return goodsNumber;
+    }
+
+    public void setGoodsNumber(Integer goodsNumber) {
+        this.goodsNumber = goodsNumber;
+    }
 
     public Integer getId() {
         return id;
