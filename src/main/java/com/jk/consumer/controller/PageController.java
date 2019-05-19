@@ -12,4 +12,20 @@ public class PageController {
     public String  test(){
         return "test";
     }
+    @RequestMapping("show")
+    public String  show(){
+        return "show";
+    }
+    @RequestMapping("luxian")
+    public String  luxian(){
+        return "luxian";
+    }
+    @RequestMapping("shouye")
+    public String  shouye(){
+        return "shouye";
+    }
+    @RequestMapping("queryDingdan")
+    public String  queryDingdan(){
+        return "queryDingdan";
+    }
 }
