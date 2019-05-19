@@ -12,6 +12,18 @@ public class PageController {
     public String  test(){
         return "test";
     }
+    @RequestMapping("tolmybackground")
+    public String tolmybackground(){
+        return "lmybackground";
+    }
+    @RequestMapping("tonavigationbar")
+    public String tonavigationbar(){
+        return "navigation";
+    }
+    @RequestMapping("toaddnavigationbar")
+    public String toaddnavigationbar(){
+        return "addnavigationbar";
+    }
     @RequestMapping("show")
     public String  show(){
         return "show";
