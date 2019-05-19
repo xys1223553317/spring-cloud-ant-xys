@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:form="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>余额提现展示</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap3/css/bootstrap.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap-table/bootstrap-table.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap-fileinput/css/fileinput.css">
+    <script src="/bootstrap/easyui1.5/jquery.min.js"></script>
+    <script src="/bootstrap/bootstrap3/js/bootstrap.js"></script>
+    <script src="/bootstrap/bootstrap-table/bootstrap-table.js"></script>
+    <script src="/bootstrap/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+    <script src="/bootstrap/bootbox/bootbox.all.min.js"></script>
+    <script src="/bootstrap/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script src="/bootstrap/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="/bootstrap/bootstrap-fileinput/js/fileinput.js"></script>
+    <script src="/bootstrap/bootstrap-fileinput/js/locales/zh.js"></script>
+
+    <style type="text/css">
+        div.aaa{
+            width:95%;
+            height:150%;
+            padding:5px 30px;
+            margin-top:30px;
+            margin-left:30px;
+            border:2px solid #CCCCCC;
+        }
+        span.title{
+            display:block;
+            width:100px;
+            height:10px;
+            position:relative;
+            top:-15px;
+            text-align: center;
+            background: white;
+        }
+
+    </style>
+
+    <style type="text/css">
+        div.bbb{
+            width:95%;
+            height:200%;
+            padding:5px 30px;
+            margin-top:30px;
+            margin-left:30px;
+            border:2px solid #CCCCCC;
+        }
+        span.title1{
+            display:block;
+            width:100px;
+            height:30px;
+            position:relative;
+            top:-15px;
+            text-align: center;
+            background: white;
+        }
+
+    </style>
+</head>
+<body>
+<form:form modelAttribute="organizationManageDto">
+    <div class="panel">
+        <div class="panel-body">
+            <div class="aaa">
+                <span class="title">筛选条件</span>
+                <div  class="row">
+                    <div class="col-md-2">
+                        <label class="control-label" for="startTime">申请时间：</label>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="date" class="form-control date" id="startTime">到 <input type="date" id="endTime" class="form-control date">
+                    </div>
+                </div>
+                <div  class="row">
+                    <div>
+                        <div class="col-md-2">
+                            <label class="control-label">审核状态:</label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" value="option1">全部
+
+                            </label>
+                            <label>
+                            <input type="radio" value="option2">已审核
+
+                            </label>
+                            <label>
+                                <input type="radio" value="option3">待审核
+
+                            </label>
+
+                            <button type="button" class="btn btn-primary" onclick="searchMoney()">筛选</button>
+                            <button type="button" class="btn btn-primary">重置</button>
+                            <button type="button" class="btn btn-primary">导出</button>
+                            <font size="3px">共有20条结果</font>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form:form>
+
+<form:form modelAttribute="organizationManageDto">
+    <div class="panel">
+        <div class="panel-body">
+            <div class="bbb">
+                <span class="title1">排序规则</span>
+                  <a href="javascript:shijian('+id+');">按下单时间排序</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:jine('+id+');">按结算状态排序</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="javascript:jaioyi('+id+');">按运费金额排序</a>
+
+            </div>
+
+        </div>
+    </div>
+</form:form>
+<table id="MoneyTable"></table>
+</body>
+<script>
+
+    
+
+
+    /*页面加载*/
+    $(function () {
+        initMoneyTable();//商品查询展示
+    });
+    /*查询展示*/
+    function initMoneyTable() {
+
+        $("#MoneyTable").bootstrapTable({
+            url: '/findMoneyList',
+            toolbar: '#toolbar',
+            pagination: true, //是否展示分页
+            pageList: [3, 5, 10, 20, 50],//分页组件
+            pageNumber: 1,
+            pageSize: 3,//默认每页条数
+            //页面修饰
+            showRefresh: true,//是否显示刷新按钮
+            showToggle: true,//是否显示 切换试图（table/card）按钮
+            detailView: true,//设置为 true 可以显示详细页面模式。
+            showColumns: true,//是否显示 内容列下拉框
+            clickToSelect: true, //是否启用点击选中行
+            showPaginationSwitch: true,//是否显示 数据条数选择框
+            //解决条查乱码
+            method: "post",
+            contentType:'application/x-www-form-urlencoded;charset=UTF-8',   //数据编码纯文本  offset=0&limit=5
+            //传递参数,条件查询,分页传参
+            queryParams: function () {
+                var endTime=$("#endTime").val();
+                var startTime=$("#startTime").val();
+
+                return {
+                    //有分页的固定传值
+                    page: this.pageNumber,
+                    rows: this.pageSize,
+                    startTime:startTime,
+                    endTime:endTime
+                }
+            },
+            sidePagination: 'server',
+            columns: [
+                {field: 'money', title: '提现金额', formatter: function (value, row, index) {
+                        return "<a href='javascript:addPing(" + row.id + ")'>"+value+"</a>";
+                    }},
+                {field: 'createTime', title: '下单时间'},
+                {field: 'bank', title: '提现银行卡'},
+                {field:'status',title:'审核状态',formatter:function(value,row,index){
+                        if(value == 1){
+                            return "<input type='button' value='待审核'>";
+                        }
+                        if(value == 2){
+                            return "<input type='button' value='已审核'>";
+                        }
+                    }},
+                {field:'abc',title:'操作',formatter:function(value,row,index){
+                        return '<a href="javascript:del('+row.id+');">订单详情</a>';
+                    }}
+            ]
+        })
+    }
+
+
+    //搜索
+    function searchMoney(){
+        $("#MoneyTable").bootstrapTable('refresh');
+    }
+
+
+
+
+
+</script>
+</html>

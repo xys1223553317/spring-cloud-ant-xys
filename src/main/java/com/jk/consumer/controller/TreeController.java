@@ -1,5 +1,6 @@
 package com.jk.consumer.controller;
 
+import com.jk.consumer.pojo.AreaBean;
 import com.jk.consumer.pojo.DingdanBean;
 import com.jk.consumer.pojo.TreeBean;
 import com.jk.consumer.service.TreeService;
@@ -29,5 +30,13 @@ public class TreeController {
         param.put("rows",rows1);
         param.put("total",total);
         return param;
+    }
+    @RequestMapping("queryArea")
+    public List<AreaBean> queryArea(Integer pid){
+     return treeService.queryArea(pid);
+    }
+    @RequestMapping("queryAreaShi")
+    public List<AreaBean> queryAreaShi(Integer shengid){
+        return treeService.queryAreaShi(shengid);
     }
 }

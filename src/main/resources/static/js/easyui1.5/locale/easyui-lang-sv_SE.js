@@ -13,11 +13,19 @@ if ($.messager) {
     $.messager.defaults.ok = 'Ok';
     $.messager.defaults.cancel = 'Avbryt';
 }
+<<<<<<< HEAD
 $.map(['validatebox','textbox','passwordbox','filebox','searchbox',
         'combo','combobox','combogrid','combotree',
         'datebox','datetimebox','numberbox',
         'spinner','numberspinner','timespinner','datetimespinner'], function(plugin){
     if ($.fn[plugin]){
+=======
+$.map(['validatebox', 'textbox', 'passwordbox', 'filebox', 'searchbox',
+    'combo', 'combobox', 'combogrid', 'combotree',
+    'datebox', 'datetimebox', 'numberbox',
+    'spinner', 'numberspinner', 'timespinner', 'datetimespinner'], function (plugin) {
+    if ($.fn[plugin]) {
+>>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
         $.fn[plugin].defaults.missingMessage = 'Detta fält är obligatoriskt.';
     }
 });
