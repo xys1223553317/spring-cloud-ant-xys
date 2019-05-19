@@ -17,6 +17,8 @@
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Edgware.SR5</spring-cloud.version>
+        <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
+        <thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>
     </properties>
 
     <dependencies>
@@ -47,6 +49,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <!--热部署功能-添加依赖 by libingbin2015@aliyun.com -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <!-- optional=true,依赖不会传递，该项目依赖devtools；之后依赖myboot项目的项目如果想要使用devtools，需要重新引入 -->
+            <optional>true</optional>
         </dependency>
     </dependencies>
 
