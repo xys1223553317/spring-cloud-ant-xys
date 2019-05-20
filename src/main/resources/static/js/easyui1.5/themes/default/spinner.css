@@ -1,5 +1,8 @@
 .spinner-arrow {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   background-color: #E0ECFF;
   display: inline-block;
   overflow: hidden;
@@ -56,6 +59,7 @@
 }
 .spinner-button-down {
   background: url('images/spinner_arrows.png') no-repeat -48px center;
+<<<<<<< HEAD
 =======
     background-color: #E0ECFF;
     display: inline-block;
@@ -123,4 +127,6 @@
 .spinner-button-down {
     background: url('images/spinner_arrows.png') no-repeat -48px center;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

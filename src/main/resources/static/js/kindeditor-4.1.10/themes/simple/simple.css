@@ -1,6 +1,9 @@
 /* container */
 .ke-container-simple {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	display: block;
 	border: 1px solid #CCC;
 	background-color: #FFF;
@@ -98,6 +101,7 @@
 }
 .ke-colorpicker-simple .ke-colorpicker-cell-selected {
 	border: 1px solid #2446AB;
+<<<<<<< HEAD
 =======
     display: block;
     border: 1px solid #CCC;
@@ -211,4 +215,6 @@
 .ke-colorpicker-simple .ke-colorpicker-cell-selected {
     border: 1px solid #2446AB;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

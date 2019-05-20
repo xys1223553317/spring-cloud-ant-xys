@@ -1,10 +1,14 @@
 /**
  * jQuery EasyUI 1.5.1
 <<<<<<< HEAD
+<<<<<<< HEAD
  * 
 =======
  *
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+ * 
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
  * Copyright (c) 2009-2016 www.jeasyui.com. All rights reserved.
  *
  * Licensed under the freeware license: http://www.jeasyui.com/license_freeware.php
@@ -12,6 +16,9 @@
  *
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 (function($){
 function _1(_2,_3){
 var _4=$.data(_2,"window");
@@ -312,6 +319,7 @@ $.fn.window.parseOptions=function(_31){
 return $.extend({},$.fn.panel.parseOptions(_31),$.parser.parseOptions(_31,[{draggable:"boolean",resizable:"boolean",shadow:"boolean",modal:"boolean",inline:"boolean"}]));
 };
 $.fn.window.defaults=$.extend({},$.fn.panel.defaults,{zIndex:9000,draggable:true,resizable:true,shadow:true,modal:false,border:true,inline:false,title:"New Window",collapsible:true,minimizable:true,maximizable:true,closable:true,closed:false,constrain:false});
+<<<<<<< HEAD
 =======
 (function ($) {
     function _1(_2, _3) {
@@ -695,5 +703,7 @@ $.fn.window.defaults=$.extend({},$.fn.panel.defaults,{zIndex:9000,draggable:true
         constrain: false
     });
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 })(jQuery);
 

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 if ($.fn.pagination){
 	$.fn.pagination.defaults.beforePageText = 'Pagina';
 	$.fn.pagination.defaults.afterPageText = 'van {pages}';
@@ -42,6 +45,7 @@ if ($.fn.datetimebox && $.fn.datebox){
 		closeText: $.fn.datebox.defaults.closeText,
 		okText: $.fn.datebox.defaults.okText
 	});
+<<<<<<< HEAD
 =======
 if ($.fn.pagination) {
     $.fn.pagination.defaults.beforePageText = 'Pagina';
@@ -87,4 +91,6 @@ if ($.fn.datetimebox && $.fn.datebox) {
         okText: $.fn.datebox.defaults.okText
     });
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

@@ -1,5 +1,8 @@
 .combo-arrow {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   width: 18px;
   height: 20px;
   overflow: hidden;
@@ -33,6 +36,7 @@
 }
 .combo .textbox-icon-disabled:hover {
   cursor: default;
+<<<<<<< HEAD
 =======
     width: 18px;
     height: 20px;
@@ -76,4 +80,6 @@
 .combo .textbox-icon-disabled:hover {
     cursor: default;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

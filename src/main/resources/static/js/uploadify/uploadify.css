@@ -6,6 +6,9 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 
 .uploadify {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	position: relative;
 	margin-bottom: 1em;
 }
@@ -90,6 +93,7 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 	background-color: #0099FF;
 	height: 3px;
 	width: 1px;
+<<<<<<< HEAD
 =======
     position: relative;
     margin-bottom: 1em;
@@ -186,4 +190,6 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
     height: 3px;
     width: 1px;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

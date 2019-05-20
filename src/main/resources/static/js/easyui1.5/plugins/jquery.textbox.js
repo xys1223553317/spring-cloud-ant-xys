@@ -1,10 +1,14 @@
 /**
  * jQuery EasyUI 1.5.1
 <<<<<<< HEAD
+<<<<<<< HEAD
  * 
 =======
  *
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+ * 
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
  * Copyright (c) 2009-2016 www.jeasyui.com. All rights reserved.
  *
  * Licensed under the freeware license: http://www.jeasyui.com/license_freeware.php
@@ -12,6 +16,9 @@
  *
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 (function($){
 var _1=0;
 function _2(_3){
@@ -557,6 +564,7 @@ t.textbox("setValue",t.textbox("getText"));
 },onClickButton:function(){
 },onClickIcon:function(_70){
 }});
+<<<<<<< HEAD
 =======
 (function ($) {
     var _1 = 0;
@@ -1162,5 +1170,7 @@ t.textbox("setValue",t.textbox("getText"));
         }
     });
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 })(jQuery);
 

@@ -1,10 +1,14 @@
 /**
  * jQuery EasyUI 1.5.1
 <<<<<<< HEAD
+<<<<<<< HEAD
  * 
 =======
  *
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+ * 
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
  * Copyright (c) 2009-2016 www.jeasyui.com. All rights reserved.
  *
  * Licensed under the freeware license: http://www.jeasyui.com/license_freeware.php
@@ -12,6 +16,9 @@
  *
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 (function($){
 function _1(_2){
 var _3=$("<span class=\"switchbutton\">"+"<span class=\"switchbutton-inner\">"+"<span class=\"switchbutton-on\"></span>"+"<span class=\"switchbutton-handle\"></span>"+"<span class=\"switchbutton-off\"></span>"+"<input class=\"switchbutton-value\" type=\"checkbox\">"+"</span>"+"</span>").insertAfter(_2);
@@ -194,6 +201,7 @@ return $.extend({},$.parser.parseOptions(_38,["onText","offText","handleText",{h
 };
 $.fn.switchbutton.defaults={handleWidth:"auto",width:60,height:26,checked:false,disabled:false,readonly:false,reversed:false,onText:"ON",offText:"OFF",handleText:"",value:"on",onChange:function(_39){
 }};
+<<<<<<< HEAD
 =======
 (function ($) {
     function _1(_2) {
@@ -416,5 +424,7 @@ $.fn.switchbutton.defaults={handleWidth:"auto",width:60,height:26,checked:false,
         }
     };
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 })(jQuery);
 

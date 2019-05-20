@@ -1,5 +1,8 @@
 .datagrid .panel-body {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   overflow: hidden;
   position: relative;
 }
@@ -97,6 +100,7 @@
   margin: 0;
   padding: 0;
 }
+<<<<<<< HEAD
 =======
     overflow: hidden;
     position: relative;
@@ -213,11 +217,16 @@
 }
 
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 .datagrid-cell,
 .datagrid-cell-group,
 .datagrid-header-rownumber,
 .datagrid-cell-rownumber {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   margin: 0;
   padding: 0 4px;
   white-space: nowrap;
@@ -368,6 +377,7 @@
 .datagrid-pager {
   background: #555;
 }
+<<<<<<< HEAD
 =======
     margin: 0;
     padding: 0 4px;
@@ -551,11 +561,16 @@
 }
 
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 .datagrid-header,
 .datagrid-toolbar,
 .datagrid-pager,
 .datagrid-footer-inner {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   border-color: #222;
 }
 .datagrid-header td,
@@ -587,6 +602,7 @@
   -moz-border-radius: 0 0 0 0;
   -webkit-border-radius: 0 0 0 0;
   border-radius: 0 0 0 0;
+<<<<<<< HEAD
 =======
     border-color: #222;
 }
@@ -626,4 +642,6 @@
     -webkit-border-radius: 0 0 0 0;
     border-radius: 0 0 0 0;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

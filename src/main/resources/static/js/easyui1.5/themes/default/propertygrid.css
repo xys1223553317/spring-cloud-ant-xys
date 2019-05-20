@@ -1,5 +1,8 @@
 .propertygrid .datagrid-view1 .datagrid-body td {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   padding-bottom: 1px;
   border-width: 0 1px 0 0;
 }
@@ -21,6 +24,7 @@
 .propertygrid .datagrid-view2 .datagrid-group {
   border-color: #dddddd;
 }
+<<<<<<< HEAD
 =======
     padding-bottom: 1px;
     border-width: 0 1px 0 0;
@@ -50,13 +54,19 @@
 }
 
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 .propertygrid .datagrid-group,
 .propertygrid .datagrid-view1 .datagrid-body,
 .propertygrid .datagrid-view1 .datagrid-row-over,
 .propertygrid .datagrid-view1 .datagrid-row-selected {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background: #E0ECFF;
 =======
     background: #E0ECFF;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+  background: #E0ECFF;
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

@@ -310,7 +310,7 @@
         pictureselect();
         initSheng(1)
     })
-    //导航栏
+
     function initSheng(pid) {
         $.ajax({
             url:"/tree/queryArea",
@@ -319,7 +319,9 @@
                 var html="<option>省</option>";
                 for (var i = 0; i < data.length; i++) {
                     html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+
                 }
+
                 $("#sheng1").html(html);
             }
         })
@@ -339,6 +341,7 @@
             }
         })
     }
+    //导航栏
     function navigationbar() {
         $.ajax({
             url:'/navigation/findnavigationbar',
@@ -349,6 +352,7 @@
                     str+='<li><a href="'+data[i].url+'">'+data[i].text+'</a></li>';
                 }
                 $("#cc").html(str);
+                alert(str);
             }
         })
     }

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 .c1,.c1:hover,.c1>.panel-header{
 	color: #fff;
 	border-color: #3c8b3c;
@@ -208,6 +211,7 @@ a.c8:hover{
 }
 .c-raised{
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+<<<<<<< HEAD
 =======
 .c1, .c1:hover, .c1 > .panel-header {
     color: #fff;
@@ -462,4 +466,6 @@ a.c8:hover {
 .c-raised {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

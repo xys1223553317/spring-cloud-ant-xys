@@ -1,5 +1,8 @@
 .panel {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   overflow: hidden;
   text-align: left;
   margin: 0;
@@ -134,6 +137,7 @@
 }
 .panel-footer-noborder {
   border-width: 1px 0 0 0;
+<<<<<<< HEAD
 =======
     overflow: hidden;
     text-align: left;
@@ -300,4 +304,6 @@
 .panel-footer-noborder {
     border-width: 1px 0 0 0;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

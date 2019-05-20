@@ -1,14 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 =======
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 <%@ page import="java.util.*,java.io.*" %>
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="com.alibaba.fastjson.*" %>
 <%
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 /**
  * KindEditor JSP
  *
@@ -157,6 +164,7 @@ public class TypeComparator implements Comparator {
 		}
 	}
 }
+<<<<<<< HEAD
 =======
     /**
      * KindEditor JSP
@@ -309,4 +317,6 @@ public class TypeComparator implements Comparator {
         }
     }
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 %>

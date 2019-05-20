@@ -1,10 +1,14 @@
 /**
  * jQuery EasyUI 1.5.1
 <<<<<<< HEAD
+<<<<<<< HEAD
  * 
 =======
  *
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+ * 
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
  * Copyright (c) 2009-2016 www.jeasyui.com. All rights reserved.
  *
  * Licensed under the freeware license: http://www.jeasyui.com/license_freeware.php
@@ -12,6 +16,9 @@
  *
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 (function($){
 function _1(_2){
 var _3=$.data(_2,"splitbutton").options;
@@ -50,6 +57,7 @@ var t=$(_a);
 return $.extend({},$.fn.linkbutton.parseOptions(_a),$.parser.parseOptions(_a,["menu",{plain:"boolean",duration:"number"}]));
 };
 $.fn.splitbutton.defaults=$.extend({},$.fn.linkbutton.defaults,{plain:true,menu:null,duration:100,cls:{btn1:"m-btn-active s-btn-active",btn2:"m-btn-plain-active s-btn-plain-active",arrow:"m-btn-downarrow",trigger:"m-btn-line"}});
+<<<<<<< HEAD
 =======
 (function ($) {
     function _1(_2) {
@@ -105,5 +113,7 @@ $.fn.splitbutton.defaults=$.extend({},$.fn.linkbutton.defaults,{plain:true,menu:
         }
     });
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 })(jQuery);
 

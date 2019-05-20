@@ -1,5 +1,8 @@
 /*******************************************************************************
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 * KindEditor - WYSIWYG HTML Editor for Internet
 * Copyright (C) 2006-2011 kindsoft.net
 *
@@ -7,6 +10,7 @@
 * @site http://www.kindsoft.net/
 * @licence http://www.kindsoft.net/license.php
 *******************************************************************************/
+<<<<<<< HEAD
 =======
  * KindEditor - WYSIWYG HTML Editor for Internet
  * Copyright (C) 2006-2011 kindsoft.net
@@ -16,11 +20,16 @@
  * @licence http://www.kindsoft.net/license.php
  *******************************************************************************/
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 // google code prettify: http://google-code-prettify.googlecode.com/
 // http://google-code-prettify.googlecode.com/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 KindEditor.plugin('code', function(K) {
 	var self = this, name = 'code';
 	self.clickToolbar(name, function() {
@@ -70,6 +79,7 @@ KindEditor.plugin('code', function(K) {
 			textarea = K('textarea', dialog.div);
 		textarea[0].focus();
 	});
+<<<<<<< HEAD
 =======
 KindEditor.plugin('code', function (K) {
     var self = this, name = 'code';
@@ -121,4 +131,6 @@ KindEditor.plugin('code', function (K) {
         textarea[0].focus();
     });
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 });

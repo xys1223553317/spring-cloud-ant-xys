@@ -1,5 +1,8 @@
 .accordion {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   overflow: hidden;
   border-width: 1px;
   border-style: solid;
@@ -39,6 +42,7 @@
 }
 .accordion .accordion-header-selected .panel-title {
   color: #fff;
+<<<<<<< HEAD
 =======
     overflow: hidden;
     border-width: 1px;
@@ -91,4 +95,6 @@
 .accordion .accordion-header-selected .panel-title {
     color: #fff;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

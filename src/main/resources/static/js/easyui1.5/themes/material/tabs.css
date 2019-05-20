@@ -1,5 +1,8 @@
 .tabs-container {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   overflow: hidden;
 }
 .tabs-header {
@@ -340,6 +343,7 @@
 .tabs-header-plain {
   background: transparent;
 }
+<<<<<<< HEAD
 =======
     overflow: hidden;
 }
@@ -749,6 +753,8 @@
 }
 
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 .tabs-header,
 .tabs-scroller-left,
 .tabs-scroller-right,
@@ -761,6 +767,9 @@
 .tabs-header-left .tabs li.tabs-selected a.tabs-inner,
 .tabs-header-right .tabs li.tabs-selected a.tabs-inner {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   border-color: #ddd;
 }
 .tabs-p-tool a:hover,
@@ -785,6 +794,7 @@
   color: #fff;
   filter: none;
   border-color: #ddd;
+<<<<<<< HEAD
 =======
     border-color: #ddd;
 }
@@ -817,4 +827,6 @@
     filter: none;
     border-color: #ddd;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

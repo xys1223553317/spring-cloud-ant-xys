@@ -1,10 +1,14 @@
 /**
  * jQuery EasyUI 1.5.1
 <<<<<<< HEAD
+<<<<<<< HEAD
  * 
 =======
  *
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+ * 
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
  * Copyright (c) 2009-2016 www.jeasyui.com. All rights reserved.
  *
  * Licensed under the freeware license: http://www.jeasyui.com/license_freeware.php
@@ -12,6 +16,9 @@
  *
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 (function($){
 var _1;
 $(document).unbind(".propertygrid").bind("mousedown.propertygrid",function(e){
@@ -331,6 +338,7 @@ _5c+=_61.rows.length;
 $.fn.propertygrid.defaults=$.extend({},$.fn.datagrid.defaults,{groupHeight:21,expanderWidth:16,singleSelect:true,remoteSort:false,fitColumns:true,loadMsg:"",frozenColumns:[[{field:"f",width:16,resizable:false}]],columns:[[{field:"name",title:"Name",width:100,sortable:true},{field:"value",title:"Value",width:100,resizable:false}]],showGroup:false,groupView:_18,groupField:"group",groupFormatter:function(_62,_63){
 return _62;
 }});
+<<<<<<< HEAD
 =======
 (function ($) {
     var _1;
@@ -685,5 +693,7 @@ return _62;
         }
     });
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 })(jQuery);
 

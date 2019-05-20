@@ -1,5 +1,8 @@
 .textbox {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   position: relative;
   border: 1px solid #D3D3D3;
   background-color: #fff;
@@ -137,6 +140,7 @@
 .textbox-invalid {
   border-color: #ffa8a8;
   background-color: #fff3f3;
+<<<<<<< HEAD
 =======
     position: relative;
     border: 1px solid #D3D3D3;
@@ -297,4 +301,6 @@
     border-color: #ffa8a8;
     background-color: #fff3f3;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

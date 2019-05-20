@@ -11,45 +11,56 @@ public class PageController {
 
     @RequestMapping("test")
     @ResponseBody
+
     public String test() {
         return "test";
     }
+        @RequestMapping("xinwen")
+        public String xinwen () {
+            return "xinwen";
+        }
 
-    @RequestMapping("tolmybackground")
-    public String tolmybackground() {
-        return "lmybackground";
-    }
+        @RequestMapping("gouwu")
+        public String gouwu () {
+            return "gouwu";
+        }
 
-    @RequestMapping("tonavigationbar")
-    public String tonavigationbar() {
-        return "navigation";
-    }
 
-    @RequestMapping("toaddnavigationbar")
-    public String toaddnavigationbar() {
-        return "addnavigationbar";
-    }
+        @RequestMapping("tolmybackground")
+        public String tolmybackground () {
+            return "lmybackground";
+        }
 
-    @RequestMapping("show")
-    public String show() {
-        return "show";
-    }
+        @RequestMapping("tonavigationbar")
+        public String tonavigationbar () {
+            return "navigation";
+        }
 
-    @RequestMapping("luxian")
-    public String luxian() {
-        return "luxian";
-    }
+        @RequestMapping("toaddnavigationbar")
+        public String toaddnavigationbar () {
+            return "addnavigationbar";
+        }
 
-    @RequestMapping("shouye")
-    public String shouye() {
-        return "shouye";
-    }
+        @RequestMapping("show")
+        public String show () {
+            return "show";
+        }
 
-    @RequestMapping("queryDingdan")
-    public String queryDingdan() {
-        return "queryDingdan";
+        @RequestMapping("luxian")
+        public String luxian () {
+            return "luxian";
+        }
 
-    }
+        @RequestMapping("shouye")
+        public String shouye () {
+            return "shouye";
+        }
+
+        @RequestMapping("queryDingdan")
+        public String queryDingdan () {
+            return "queryDingdan";
+
+        }
         //财务报表
         @RequestMapping("findFinanceList")
         public String findFinanceList () {
@@ -82,5 +93,6 @@ public class PageController {
             return "zengzhi";
 
         }
+
 
 }

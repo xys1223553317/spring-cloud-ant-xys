@@ -1,5 +1,8 @@
 .searchbox-button {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   width: 18px;
   height: 20px;
   overflow: hidden;
@@ -59,6 +62,7 @@
 .searchbox .l-btn-plain-disabled:hover {
   opacity: 0.5;
   filter: alpha(opacity=50);
+<<<<<<< HEAD
 =======
     width: 18px;
     height: 20px;
@@ -130,4 +134,6 @@
     opacity: 0.5;
     filter: alpha(opacity=50);
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

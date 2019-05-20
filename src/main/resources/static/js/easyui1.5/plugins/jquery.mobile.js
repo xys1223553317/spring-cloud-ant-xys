@@ -1,10 +1,14 @@
 /**
  * jQuery EasyUI 1.5.1
 <<<<<<< HEAD
+<<<<<<< HEAD
  * 
 =======
  *
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+ * 
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
  * Copyright (c) 2009-2016 www.jeasyui.com. All rights reserved.
  *
  * Licensed under the freeware license: http://www.jeasyui.com/license_freeware.php
@@ -12,6 +16,9 @@
  *
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 (function($){
 $.fn.navpanel=function(_1,_2){
 if(typeof _1=="string"){
@@ -142,6 +149,7 @@ $.extend($.fn[_1a].defaults,{iconWidth:56,spinAlign:"horizontal"});
 if($.fn.menu){
 $.extend($.fn.menu.defaults,{itemHeight:30,noline:true});
 }
+<<<<<<< HEAD
 =======
 (function ($) {
     $.fn.navpanel = function (_1, _2) {
@@ -286,5 +294,7 @@ $.extend($.fn.menu.defaults,{itemHeight:30,noline:true});
         $.extend($.fn.menu.defaults, {itemHeight: 30, noline: true});
     }
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 })(jQuery);
 

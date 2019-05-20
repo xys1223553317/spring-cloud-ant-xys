@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 =======
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 <%@ page import="java.util.*,java.io.*" %>
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="org.apache.commons.fileupload.*" %>
@@ -12,6 +16,9 @@
 <%
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 /**
  * KindEditor JSP
  * 
@@ -125,6 +132,7 @@ private String getError(String message) {
 	obj.put("message", message);
 	return obj.toJSONString();
 }
+<<<<<<< HEAD
 =======
     /**
      * KindEditor JSP
@@ -240,4 +248,6 @@ private String getError(String message) {
         return obj.toJSONString();
     }
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 %>

@@ -4,21 +4,30 @@
 * Copyright (c) 2012 jQuery Foundation and other contributors Licensed MIT */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 (function( $, undefined ) {
 
 var uuid = 0,
 	runiqueId = /^ui-id-\d+$/;
+<<<<<<< HEAD
 =======
 (function ($, undefined) {
 
     var uuid = 0,
         runiqueId = /^ui-id-\d+$/;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 // prevent duplicate loading
 // this is only a problem because we proxy existing functions
 // and we don't want to double proxy them
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 $.ui = $.ui || {};
 if ( $.ui.version ) {
 	return;
@@ -270,6 +279,7 @@ if ( $( "<a>" ).data( "a-b", "a" ).removeData( "a-b" ).data( "a-b" ) ) {
 
 
 
+<<<<<<< HEAD
 =======
     $.ui = $.ui || {};
     if ($.ui.version) {
@@ -520,11 +530,16 @@ if ( $( "<a>" ).data( "a-b", "a" ).removeData( "a-b" ).data( "a-b" ) ) {
         })($.fn.removeData);
     }
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 
 // deprecated
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 (function() {
 	var uaMatch = /msie ([\w.]+)/.exec( navigator.userAgent.toLowerCase() ) || [];
 	$.ui.ie = uaMatch.length ? true : false;
@@ -3059,6 +3074,7 @@ $.extend( $.ui.autocomplete, {
 		});
 	}
 });
+<<<<<<< HEAD
 =======
     (function () {
         var uaMatch = /msie ([\w.]+)/.exec(navigator.userAgent.toLowerCase()) || [];
@@ -5603,12 +5619,17 @@ $.extend( $.ui.autocomplete, {
         }
     });
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 
 // live region extension, adding a `messages` option
 // NOTE: This is an experimental API. We are still investigating
 // a full solution for string manipulation and internationalization.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 $.widget( "ui.autocomplete", $.ui.autocomplete, {
 	options: {
 		messages: {
@@ -6050,6 +6071,7 @@ var dpuuid = new Date().getTime();
 var instActive;
 
 /* Date picker manager.
+<<<<<<< HEAD
 =======
     $.widget("ui.autocomplete", $.ui.autocomplete, {
         options: {
@@ -6493,11 +6515,16 @@ var instActive;
 
     /* Date picker manager.
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
    Use the singleton instance of this class, $.datepicker, to interact with the date picker.
    Settings for (groups of) date pickers are maintained in an instance object,
    allowing multiple different settings on the same page. */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 function Datepicker() {
 	this.debug = false; // Change this to true to start debugging
 	this._curInst = null; // The current instance in use
@@ -6769,6 +6796,7 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Pop-up the date picker in a "dialog" box.
+<<<<<<< HEAD
 =======
     function Datepicker() {
         this.debug = false; // Change this to true to start debugging
@@ -7043,6 +7071,8 @@ $.extend(Datepicker.prototype, {
 
         /* Pop-up the date picker in a "dialog" box.
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	   @param  input     element - ignored
 	   @param  date      string or Date - the initial date to display
 	   @param  onSelect  function - the function to call when a date is selected
@@ -7052,6 +7082,9 @@ $.extend(Datepicker.prototype, {
 	                     leave empty for default (screen centre)
 	   @return the manager object */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	_dialogDatepicker: function(input, date, onSelect, settings, pos) {
 		var inst = this._dialogInst; // internal instance
 		if (!inst) {
@@ -7192,6 +7225,7 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Update or retrieve the settings for a date picker attached to an input field or division.
+<<<<<<< HEAD
 =======
         _dialogDatepicker: function (input, date, onSelect, settings, pos) {
             var inst = this._dialogInst; // internal instance
@@ -7329,6 +7363,8 @@ $.extend(Datepicker.prototype, {
 
         /* Update or retrieve the settings for a date picker attached to an input field or division.
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	   @param  target  element - the target input field or division or span
 	   @param  name    object - the new settings to update or
 	                   string - the name of the setting to change or retrieve,
@@ -7337,6 +7373,9 @@ $.extend(Datepicker.prototype, {
 	   @param  value   any - the new value for the setting
 	                   (omit if above is an object or to retrieve a value) */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	_optionDatepicker: function(target, name, value) {
 		var inst = this._getInst(target);
 		if (arguments.length == 2 && typeof name == 'string') {
@@ -7858,6 +7897,7 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Parse a string value into a date object.
+<<<<<<< HEAD
 =======
         _optionDatepicker: function (target, name, value) {
             var inst = this._getInst(target);
@@ -8401,6 +8441,8 @@ $.extend(Datepicker.prototype, {
 
         /* Parse a string value into a date object.
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	   See formatDate below for the possible formats.
 
 	   @param  format    string - the expected format of the date
@@ -8413,6 +8455,9 @@ $.extend(Datepicker.prototype, {
 	                     monthNames       string[12] - names of the months (optional)
 	   @return  Date - the extracted date value or null if value is blank */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	parseDate: function (format, value, settings) {
 		if (format == null || value == null)
 			throw 'Invalid arguments';
@@ -8572,6 +8617,7 @@ $.extend(Datepicker.prototype, {
 		Math.floor(1970 / 400)) * 24 * 60 * 60 * 10000000),
 
 	/* Format a date object into a string value.
+<<<<<<< HEAD
 =======
         parseDate: function (format, value, settings) {
             if (format == null || value == null)
@@ -8733,6 +8779,8 @@ $.extend(Datepicker.prototype, {
 
         /* Format a date object into a string value.
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	   The format can be combinations of the following:
 	   d  - day of month (no leading zero)
 	   dd - day of month (two digit)
@@ -8760,6 +8808,9 @@ $.extend(Datepicker.prototype, {
 	                     monthNames       string[12] - names of the months (optional)
 	   @return  string - the date in the above format */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	formatDate: function (format, date, settings) {
 		if (!date)
 			return '';
@@ -8963,6 +9014,7 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Handle switch to/from daylight saving.
+<<<<<<< HEAD
 =======
         formatDate: function (format, date, settings) {
             if (!date)
@@ -9177,12 +9229,17 @@ $.extend(Datepicker.prototype, {
 
         /* Handle switch to/from daylight saving.
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	   Hours may be non-zero on daylight saving cut-over:
 	   > 12 when midnight changeover, but then cannot generate
 	   midnight datetime, so jump to 1AM, otherwise reset.
 	   @param  date  (Date) the date to check
 	   @return  (Date) the corrected date */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	_daylightSavingAdjust: function(date) {
 		if (!date) return null;
 		date.setHours(date.getHours() > 12 ? date.getHours() + 2 : 0);
@@ -9579,6 +9636,7 @@ $.extend(Datepicker.prototype, {
 });
 
 /*
+<<<<<<< HEAD
 =======
         _daylightSavingAdjust: function (date) {
             if (!date) return null;
@@ -9986,11 +10044,16 @@ $.extend(Datepicker.prototype, {
 
     /*
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
  * Bind hover events for datepicker elements.
  * Done via delegate so the binding only occurs once in the lifetime of the parent div.
  * Global instActive, set by _updateDatepicker allows the handlers to find their way back to the active picker.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 function bindHover(dpDiv) {
 	var selector = 'button, .ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-calendar td a';
 	return dpDiv.delegate(selector, 'mouseout', function() {
@@ -10870,6 +10933,7 @@ $.extend( $.ui.dialog.overlay, {
 
 	resize: function() {
 		/* If the dialog is draggable and the user drags it past the
+<<<<<<< HEAD
 =======
     function bindHover(dpDiv) {
         var selector = 'button, .ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-calendar td a';
@@ -11749,6 +11813,8 @@ $.extend( $.ui.dialog.overlay, {
         resize: function () {
             /* If the dialog is draggable and the user drags it past the
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 		 * right edge of the window, the document becomes wider so we
 		 * need to stretch the overlay. If the user then drags the
 		 * dialog back to the left, the document will become narrower,
@@ -11757,6 +11823,9 @@ $.extend( $.ui.dialog.overlay, {
 		 * to the full document size.
 		 */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 		var $overlays = $( [] );
 		$.each( $.ui.dialog.overlay.instances, function() {
 			$overlays = $overlays.add( this );
@@ -11871,6 +11940,7 @@ $.widget("ui.draggable", $.ui.mouse, {
 			$.ui.ddmanager.current = this;
 
 		/*
+<<<<<<< HEAD
 =======
             var $overlays = $([]);
             $.each($.ui.dialog.overlay.instances, function () {
@@ -11987,11 +12057,16 @@ $.widget("ui.draggable", $.ui.mouse, {
 
             /*
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 		 * - Position generation -
 		 * This block generates everything position related - it's the core of draggables.
 		 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 		//Cache the margins of the original element
 		this._cacheMargins();
 
@@ -12302,6 +12377,7 @@ $.widget("ui.draggable", $.ui.mouse, {
 		var pageY = event.pageY;
 
 		/*
+<<<<<<< HEAD
 =======
             //Cache the margins of the original element
             this._cacheMargins();
@@ -12619,11 +12695,16 @@ $.widget("ui.draggable", $.ui.mouse, {
 
             /*
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 		 * - Position constraining -
 		 * Constrain the position to a mix of grid, containment.
 		 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 		if(this.originalPosition) { //If we are not dragging yet, we won't check for options
 			var containment;
 			if(this.containment) {
@@ -13324,6 +13405,7 @@ $.effects = {
 };
 
 /*!
+<<<<<<< HEAD
 =======
             if (this.originalPosition) { //If we are not dragging yet, we won't check for options
                 var containment;
@@ -14071,6 +14153,8 @@ $.effects = {
 
     /*!
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
  * jQuery Color Animations v2.0.0
  * http://jquery.com/
  *
@@ -14081,6 +14165,9 @@ $.effects = {
  * Date: Mon Aug 13 13:41:02 2012 -0500
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 (function( jQuery, undefined ) {
 
 	var stepHooks = "backgroundColor borderBottomColor borderLeftColor borderRightColor borderTopColor color columnRuleColor outlineColor textDecorationColor textEmphasisColor".split(" "),
@@ -14491,6 +14578,7 @@ color.fn = jQuery.extend( color.prototype, {
 	}
 });
 color.fn.parse.prototype = color.fn;
+<<<<<<< HEAD
 =======
     (function (jQuery, undefined) {
 
@@ -14903,11 +14991,16 @@ color.fn.parse.prototype = color.fn;
         });
         color.fn.parse.prototype = color.fn;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 // hsla conversions adapted from:
 // https://code.google.com/p/maashaack/source/browse/packages/graphics/trunk/src/graphics/colors/HUE2RGB.as?r=5021
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 function hue2rgb( p, q, h ) {
 	h = ( h + 1 ) % 1;
 	if ( h * 6 < 1 ) {
@@ -15108,6 +15201,7 @@ jQuery.cssHooks.borderColor = {
 		return expanded;
 	}
 };
+<<<<<<< HEAD
 =======
         function hue2rgb(p, q, h) {
             h = (h + 1) % 1;
@@ -15310,11 +15404,16 @@ jQuery.cssHooks.borderColor = {
             }
         };
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 // Basic color names only.
 // Usage of any of the other color names requires adding yourself or including
 // jquery.color.svg-names.js.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 colors = jQuery.Color.names = {
 	// 4.1. Basic color keywords
 	aqua: "#00ffff",
@@ -19392,6 +19491,7 @@ $.widget("ui.sortable", $.ui.mouse, {
 		this._cacheHelperProportions();
 
 		/*
+<<<<<<< HEAD
 =======
         colors = jQuery.Color.names = {
             // 4.1. Basic color keywords
@@ -23556,11 +23656,16 @@ $.widget("ui.sortable", $.ui.mouse, {
 
             /*
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 		 * - Position generation -
 		 * This block generates everything position related - it's the core of draggables.
 		 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 		//Cache the margins of the original element
 		this._cacheMargins();
 
@@ -24353,6 +24458,7 @@ $.widget("ui.sortable", $.ui.mouse, {
 		var pageY = event.pageY;
 
 		/*
+<<<<<<< HEAD
 =======
             //Cache the margins of the original element
             this._cacheMargins();
@@ -25184,11 +25290,16 @@ $.widget("ui.sortable", $.ui.mouse, {
 
             /*
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 		 * - Position constraining -
 		 * Constrain the position to a mix of grid, containment.
 		 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 		if(this.originalPosition) { //If we are not dragging yet, we won't check for options
 
 			if(this.containment) {
@@ -27543,6 +27654,7 @@ $.widget( "ui.tooltip", {
 });
 
 }( jQuery ) );
+<<<<<<< HEAD
 =======
             if (this.originalPosition) { //If we are not dragging yet, we won't check for options
 
@@ -29932,3 +30044,5 @@ $.widget( "ui.tooltip", {
 
 }(jQuery));
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d

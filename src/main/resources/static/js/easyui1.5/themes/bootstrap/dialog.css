@@ -1,5 +1,8 @@
 .dialog-content {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   overflow: auto;
 }
 .dialog-toolbar {
@@ -45,6 +48,7 @@
   border-left: transparent;
   border-right: transparent;
   border-bottom: transparent;
+<<<<<<< HEAD
 =======
     overflow: auto;
 }
@@ -101,4 +105,6 @@
     border-right: transparent;
     border-bottom: transparent;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

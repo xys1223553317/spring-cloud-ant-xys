@@ -12,6 +12,9 @@
  * Date: Tue Nov 13 2012 08:20:33 GMT-0500 (Eastern Standard Time)
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 (function( window, undefined ) {
 var
 	// A central reference to the root jQuery(document)
@@ -918,6 +921,7 @@ function createOptions( options ) {
 }
 
 /*
+<<<<<<< HEAD
 =======
 (function (window, undefined) {
     var
@@ -1829,6 +1833,8 @@ function createOptions( options ) {
 
     /*
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
  * Create a callback list using the following parameters:
  *
  *	options: an optional list of space-separated options that will change how
@@ -1851,6 +1857,9 @@ function createOptions( options ) {
  *
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 jQuery.Callbacks = function( options ) {
 
 	// Convert options from String-formatted to Object-formatted if needed
@@ -4574,6 +4583,7 @@ jQuery.each( ("blur focus focusin focusout load resize scroll unload click dblcl
 	}
 });
 /*!
+<<<<<<< HEAD
 =======
     jQuery.Callbacks = function (options) {
 
@@ -7304,12 +7314,17 @@ jQuery.each( ("blur focus focusin focusout load resize scroll unload click dblcl
     });
     /*!
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
  * Sizzle CSS Selector Engine
  * Copyright 2012 jQuery Foundation and other contributors
  * Released under the MIT license
  * http://sizzlejs.com/
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 (function( window, undefined ) {
 
 var cachedruns,
@@ -7814,6 +7829,7 @@ Expr = Sizzle.selectors = {
 
 		"CHILD": function( match ) {
 			/* matches from matchExpr["CHILD"]
+<<<<<<< HEAD
 =======
     (function (window, undefined) {
 
@@ -8320,6 +8336,8 @@ Expr = Sizzle.selectors = {
                 "CHILD": function (match) {
                     /* matches from matchExpr["CHILD"]
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 				1 type (only|nth|...)
 				2 argument (even|odd|\d*|\d*n([+-]\d+)?|...)
 				3 xn-component of xn+y argument ([+-]?\d*n|)
@@ -8329,6 +8347,9 @@ Expr = Sizzle.selectors = {
 				7 y of y-component
 			*/
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 			match[1] = match[1].toLowerCase();
 
 			if ( match[1] === "nth" ) {
@@ -10627,6 +10648,7 @@ jQuery.extend({
 (function() {
 
 var matched, browser;
+<<<<<<< HEAD
 =======
                     match[1] = match[1].toLowerCase();
 
@@ -12935,11 +12957,16 @@ var matched, browser;
 
         var matched, browser;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 // Use of jQuery.browser is frowned upon.
 // More details: http://api.jquery.com/jQuery.browser
 // jQuery.uaMatch maintained for back-compat
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 jQuery.uaMatch = function( ua ) {
 	ua = ua.toLowerCase();
 
@@ -13756,6 +13783,7 @@ var
 	_load = jQuery.fn.load,
 
 	/* Prefilters
+<<<<<<< HEAD
 =======
         jQuery.uaMatch = function (ua) {
             ua = ua.toLowerCase();
@@ -14577,6 +14605,8 @@ var
 
         /* Prefilters
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	 * 1) They are useful to introduce custom dataTypes (see ajax/jsonp.js for an example)
 	 * 2) These are called:
 	 *    - BEFORE asking for a transport
@@ -14586,6 +14616,7 @@ var
 	 * 5) execution will start with transport dataType and THEN continue down to "*" if needed
 	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 	prefilters = {},
 
 	/* Transports bindings
@@ -14594,11 +14625,19 @@ var
 
         /* Transports bindings
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+	prefilters = {},
+
+	/* Transports bindings
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	 * 1) key is the dataType
 	 * 2) the catchall symbol "*" can be used
 	 * 3) selection will start with transport dataType and THEN go to "*" if needed
 	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	transports = {},
 
 	// Avoid comment-prolog char sequence (#10098); must appease lint and evade compression
@@ -14692,6 +14731,7 @@ function inspectPrefiltersOrTransports( structure, options, originalOptions, jqX
 	// but it'll be ignored by the caller in that case
 	return selection;
 }
+<<<<<<< HEAD
 =======
         transports = {},
 
@@ -14787,11 +14827,16 @@ function inspectPrefiltersOrTransports( structure, options, originalOptions, jqX
         return selection;
     }
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 // A special extend for ajax options
 // that takes "flat" options (not to be deep extended)
 // Fixes #9887
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 function ajaxExtend( target, src ) {
 	var key, deep,
 		flatOptions = jQuery.ajaxSettings.flatOptions || {};
@@ -14936,6 +14981,7 @@ jQuery.extend({
 		processData: true,
 		async: true,
 		/*
+<<<<<<< HEAD
 =======
     function ajaxExtend(target, src) {
         var key, deep,
@@ -15082,6 +15128,8 @@ jQuery.extend({
             async: true,
             /*
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 		timeout: 0,
 		data: null,
 		dataType: null,
@@ -15094,6 +15142,9 @@ jQuery.extend({
 		*/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 		accepts: {
 			xml: "application/xml, text/xml",
 			html: "text/html",
@@ -15539,6 +15590,7 @@ jQuery.extend({
 });
 
 /* Handles responses to an ajax request:
+<<<<<<< HEAD
 =======
             accepts: {
                 xml: "application/xml, text/xml",
@@ -15986,11 +16038,16 @@ jQuery.extend({
 
     /* Handles responses to an ajax request:
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
  * - sets all responseXXX fields accordingly
  * - finds the right dataType (mediates between content-type and expected dataType)
  * - returns the corresponding response
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 function ajaxHandleResponses( s, jqXHR, responses ) {
 
 	var ct, type, finalDataType, firstDataType,
@@ -16336,6 +16393,7 @@ function createActiveXHR() {
 // (This is still attached to ajaxSettings for backward compatibility)
 jQuery.ajaxSettings.xhr = window.ActiveXObject ?
 	/* Microsoft failed to properly
+<<<<<<< HEAD
 =======
     function ajaxHandleResponses(s, jqXHR, responses) {
 
@@ -16689,12 +16747,17 @@ jQuery.ajaxSettings.xhr = window.ActiveXObject ?
     jQuery.ajaxSettings.xhr = window.ActiveXObject ?
         /* Microsoft failed to properly
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	 * implement the XMLHttpRequest in IE7 (can't request local files),
 	 * so we use the ActiveXObject when it is available
 	 * Additionally XMLHttpRequest can be disabled in IE7/IE8 so
 	 * we need a fallback.
 	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	function() {
 		return !this.isLocal && createStandardXHR() || createActiveXHR();
 	} :
@@ -17327,6 +17390,7 @@ Tween.propHooks = {
 		}
 	}
 };
+<<<<<<< HEAD
 =======
         function () {
             return !this.isLocal && createStandardXHR() || createActiveXHR();
@@ -17963,11 +18027,16 @@ Tween.propHooks = {
         }
     };
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 // Remove in 2.0 - this supports IE8's panic based approach
 // to setting things on disconnected nodes
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 Tween.propHooks.scrollTop = Tween.propHooks.scrollLeft = {
 	set: function( tween ) {
 		if ( tween.elem.nodeType && tween.elem.parentNode ) {
@@ -18422,6 +18491,7 @@ jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 });
 // Expose jQuery to the global object
 window.jQuery = window.$ = jQuery;
+<<<<<<< HEAD
 =======
     Tween.propHooks.scrollTop = Tween.propHooks.scrollLeft = {
         set: function (tween) {
@@ -18879,6 +18949,8 @@ window.jQuery = window.$ = jQuery;
 // Expose jQuery to the global object
     window.jQuery = window.$ = jQuery;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 // Expose jQuery as an AMD module, but only for AMD loaders that
 // understand the issues with loading multiple versions of jQuery
@@ -18893,11 +18965,15 @@ window.jQuery = window.$ = jQuery;
 // Do this after creating the global so that if an AMD module wants to call
 // noConflict to hide this version of jQuery, it will work.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 	define( "jquery", [], function () { return jQuery; } );
 }
 
 })( window );
+<<<<<<< HEAD
 =======
     if (typeof define === "function" && define.amd && define.amd.jQuery) {
         define("jquery", [], function () {
@@ -18907,3 +18983,5 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 
 })(window);
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d

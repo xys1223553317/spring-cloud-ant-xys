@@ -1,5 +1,8 @@
 /*******************************************************************************
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 * KindEditor - WYSIWYG HTML Editor for Internet
 * Copyright (C) 2006-2013 kindsoft.net
 *
@@ -6286,6 +6289,7 @@ KindEditor.plugin('autoheight', function(K) {
 	} else {
 		self.afterCreate(init);
 	}
+<<<<<<< HEAD
 =======
  * KindEditor - WYSIWYG HTML Editor for Internet
  * Copyright (C) 2006-2013 kindsoft.net
@@ -12817,6 +12821,8 @@ KindEditor.plugin('autoheight', function (K) {
         self.afterCreate(init);
     }
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 });
 
 /*
@@ -12828,6 +12834,9 @@ KindEditor.plugin('autoheight', function (K) {
 * */
 /*******************************************************************************
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 * KindEditor - WYSIWYG HTML Editor for Internet
 * Copyright (C) 2006-2011 kindsoft.net
 *
@@ -12957,6 +12966,7 @@ KindEditor.plugin('clearhtml', function(K) {
 * @site http://www.kindsoft.net/
 * @licence http://www.kindsoft.net/license.php
 *******************************************************************************/
+<<<<<<< HEAD
 =======
  * KindEditor - WYSIWYG HTML Editor for Internet
  * Copyright (C) 2006-2011 kindsoft.net
@@ -13090,11 +13100,16 @@ KindEditor.plugin('clearhtml', function (K) {
  * @licence http://www.kindsoft.net/license.php
  *******************************************************************************/
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 // google code prettify: http://google-code-prettify.googlecode.com/
 // http://google-code-prettify.googlecode.com/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 KindEditor.plugin('code', function(K) {
 	var self = this, name = 'code';
 	self.clickToolbar(name, function() {
@@ -14794,6 +14809,7 @@ KindEditor.plugin('multiimage', function(K) {
 			}
 		});
 	});
+<<<<<<< HEAD
 =======
 KindEditor.plugin('code', function (K) {
     var self = this, name = 'code';
@@ -16521,6 +16537,8 @@ KindEditor.plugin('multiimage', function (K) {
         });
     });
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 });
 
 
@@ -16543,6 +16561,9 @@ KindEditor.plugin('multiimage', function (K) {
 /* ******************* */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 (function() {
 
 window.SWFUpload = function (settings) {
@@ -16836,6 +16857,7 @@ SWFUpload.prototype.buildParamString = function () {
 
 	return paramStringPairs.join("&amp;");
 };
+<<<<<<< HEAD
 =======
 (function () {
 
@@ -17131,12 +17153,17 @@ SWFUpload.prototype.buildParamString = function () {
         return paramStringPairs.join("&amp;");
     };
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 // Public: Used to remove a SWFUpload instance from the page. This method strives to remove
 // all references to the SWF, and other objects so memory is properly freed.
 // Returns true if everything was destroyed. Returns a false if a failure occurs leaving SWFUpload in an inconsistant state.
 // Credits: Major improvements provided by steffen
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 SWFUpload.prototype.destroy = function () {
 	try {
 		// Make sure Flash is done before we try to remove it
@@ -17182,6 +17209,7 @@ SWFUpload.prototype.destroy = function () {
 		return false;
 	}
 };
+<<<<<<< HEAD
 =======
     SWFUpload.prototype.destroy = function () {
         try {
@@ -17231,6 +17259,8 @@ SWFUpload.prototype.destroy = function () {
         }
     };
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 
 // Public: displayDebugInfo prints out settings and configuration
@@ -17238,6 +17268,9 @@ SWFUpload.prototype.destroy = function () {
 // This function (and any references to it) can be deleted when placing
 // SWFUpload in production.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 SWFUpload.prototype.displayDebugInfo = function () {
 	this.debug(
 		[
@@ -17311,6 +17344,7 @@ SWFUpload.prototype.getSetting = function (name) {
     return "";
 };
 
+<<<<<<< HEAD
 =======
     SWFUpload.prototype.displayDebugInfo = function () {
         this.debug(
@@ -17385,12 +17419,17 @@ SWFUpload.prototype.getSetting = function (name) {
         return "";
     };
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 
 // Private: callFlash handles function calls made to the Flash element.
 // Calls are made with a setTimeout for some functions to work around
 // bugs in the ExternalInterface library.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 SWFUpload.prototype.callFlash = function (functionName, argumentArray) {
 	argumentArray = argumentArray || [];
 
@@ -17414,6 +17453,7 @@ SWFUpload.prototype.callFlash = function (functionName, argumentArray) {
 };
 
 /* *****************************
+<<<<<<< HEAD
 =======
     SWFUpload.prototype.callFlash = function (functionName, argumentArray) {
         argumentArray = argumentArray || [];
@@ -17439,6 +17479,8 @@ SWFUpload.prototype.callFlash = function (functionName, argumentArray) {
 
     /* *****************************
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	-- Flash control methods --
 	Your UI should use these
 	to operate SWFUpload
@@ -17448,6 +17490,7 @@ SWFUpload.prototype.callFlash = function (functionName, argumentArray) {
 // Public: selectFile causes a File Selection Dialog window to appear.  This
 // dialog only allows 1 file to be selected.
 <<<<<<< HEAD
+<<<<<<< HEAD
 SWFUpload.prototype.selectFile = function () {
 	this.callFlash("SelectFile");
 };
@@ -17456,6 +17499,11 @@ SWFUpload.prototype.selectFile = function () {
         this.callFlash("SelectFile");
     };
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+SWFUpload.prototype.selectFile = function () {
+	this.callFlash("SelectFile");
+};
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 // WARNING: this function does not work in Flash Player 10
 // Public: selectFiles causes a File Selection Dialog window to appear/ This
@@ -17463,6 +17511,7 @@ SWFUpload.prototype.selectFile = function () {
 // Flash Bug Warning: Flash limits the number of selectable files based on the combined length of the file names.
 // If the selection name length is too long the dialog will fail in an unpredictable manner.  There is no work-around
 // for this bug.
+<<<<<<< HEAD
 <<<<<<< HEAD
 SWFUpload.prototype.selectFiles = function () {
 	this.callFlash("SelectFiles");
@@ -17472,10 +17521,16 @@ SWFUpload.prototype.selectFiles = function () {
         this.callFlash("SelectFiles");
     };
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+SWFUpload.prototype.selectFiles = function () {
+	this.callFlash("SelectFiles");
+};
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 
 // Public: startUpload starts uploading the first file in the queue unless
 // the optional parameter 'fileID' specifies the ID
+<<<<<<< HEAD
 <<<<<<< HEAD
 SWFUpload.prototype.startUpload = function (fileID) {
 	this.callFlash("StartUpload", [fileID]);
@@ -17485,11 +17540,19 @@ SWFUpload.prototype.startUpload = function (fileID) {
         this.callFlash("StartUpload", [fileID]);
     };
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+SWFUpload.prototype.startUpload = function (fileID) {
+	this.callFlash("StartUpload", [fileID]);
+};
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 // Public: cancelUpload cancels any queued file.  The fileID parameter may be the file ID or index.
 // If you do not specify a fileID the current uploading file or first file in the queue is cancelled.
 // If you do not want the uploadError event to trigger you can specify false for the triggerErrorEvent parameter.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 SWFUpload.prototype.cancelUpload = function (fileID, triggerErrorEvent) {
 	if (triggerErrorEvent !== false) {
 		triggerErrorEvent = true;
@@ -17504,6 +17567,7 @@ SWFUpload.prototype.stopUpload = function () {
 };
 
 /* ************************
+<<<<<<< HEAD
 =======
     SWFUpload.prototype.cancelUpload = function (fileID, triggerErrorEvent) {
         if (triggerErrorEvent !== false) {
@@ -17520,6 +17584,8 @@ SWFUpload.prototype.stopUpload = function () {
 
     /* ************************
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
  * Settings methods
  *   These methods change the SWFUpload settings.
  *   SWFUpload settings should not be changed directly on the settings object
@@ -17529,6 +17595,7 @@ SWFUpload.prototype.stopUpload = function () {
 
 // Public: getStats gets the file statistics object.
 <<<<<<< HEAD
+<<<<<<< HEAD
 SWFUpload.prototype.getStats = function () {
 	return this.callFlash("GetStats");
 };
@@ -17537,12 +17604,20 @@ SWFUpload.prototype.getStats = function () {
         return this.callFlash("GetStats");
     };
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+SWFUpload.prototype.getStats = function () {
+	return this.callFlash("GetStats");
+};
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 // Public: setStats changes the SWFUpload statistics.  You shouldn't need to
 // change the statistics but you can.  Changing the statistics does not
 // affect SWFUpload accept for the successful_uploads count which is used
 // by the upload_limit setting to determine how many files the user may upload.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 SWFUpload.prototype.setStats = function (statsObject) {
 	this.callFlash("SetStats", [statsObject]);
 };
@@ -17556,6 +17631,7 @@ SWFUpload.prototype.getFile = function (fileID) {
 		return this.callFlash("GetFile", [fileID]);
 	}
 };
+<<<<<<< HEAD
 =======
     SWFUpload.prototype.setStats = function (statsObject) {
         this.callFlash("SetStats", [statsObject]);
@@ -17571,11 +17647,16 @@ SWFUpload.prototype.getFile = function (fileID) {
         }
     };
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 // Public: addFileParam sets a name/value pair that will be posted with the
 // file specified by the Files ID.  If the name already exists then the
 // exiting value will be overwritten.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 SWFUpload.prototype.addFileParam = function (fileID, name, value) {
 	return this.callFlash("AddFileParam", [fileID, name, value]);
 };
@@ -17733,6 +17814,7 @@ SWFUpload.prototype.setButtonCursor = function (cursor) {
 };
 
 /* *******************************
+<<<<<<< HEAD
 =======
     SWFUpload.prototype.addFileParam = function (fileID, name, value) {
         return this.callFlash("AddFileParam", [fileID, name, value]);
@@ -17892,6 +17974,8 @@ SWFUpload.prototype.setButtonCursor = function (cursor) {
 
     /* *******************************
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	Flash Event Interfaces
 	These functions are used by Flash to trigger the various
 	events.
@@ -17905,6 +17989,9 @@ SWFUpload.prototype.setButtonCursor = function (cursor) {
 ******************************* */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 SWFUpload.prototype.queueEvent = function (handlerName, argumentArray) {
 	// Warning: Don't call this.debug inside here or you'll create an infinite loop
 
@@ -17941,6 +18028,7 @@ SWFUpload.prototype.executeNextEvent = function () {
 		f.apply(this);
 	}
 };
+<<<<<<< HEAD
 =======
     SWFUpload.prototype.queueEvent = function (handlerName, argumentArray) {
         // Warning: Don't call this.debug inside here or you'll create an infinite loop
@@ -17979,11 +18067,16 @@ SWFUpload.prototype.executeNextEvent = function () {
         }
     };
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 
 // Private: unescapeFileParams is part of a workaround for a flash bug where objects passed through ExternalInterface cannot have
 // properties that contain characters that are not valid for JavaScript identifiers. To work around this
 // the Flash Component escapes the parameter names and we must unescape again before passing them along.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 SWFUpload.prototype.unescapeFilePostParams = function (file) {
 	var reg = /[$]([0-9a-f]{4})/i;
 	var unescapedPost = {};
@@ -18147,6 +18240,7 @@ SWFUpload.prototype.debug = function (message) {
 
 
 /* **********************************
+<<<<<<< HEAD
 =======
     SWFUpload.prototype.unescapeFilePostParams = function (file) {
         var reg = /[$]([0-9a-f]{4})/i;
@@ -18311,6 +18405,8 @@ SWFUpload.prototype.debug = function (message) {
 
     /* **********************************
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	Debug Console
 	The debug console is a self contained, in page location
 	for debug message to be sent.  The Debug Console adds
@@ -18327,6 +18423,9 @@ SWFUpload.prototype.debug = function (message) {
 // call the debug() function.  When overriding the function your own function should
 // check to see if the debug setting is true before outputting debug information.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 SWFUpload.prototype.debugMessage = function (message) {
 	if (this.settings.debug) {
 		var exceptionMessage, exceptionValues = [];
@@ -18383,6 +18482,7 @@ SWFUpload.Console.writeLine = function (message) {
 
 (function() {
 /*
+<<<<<<< HEAD
 =======
     SWFUpload.prototype.debugMessage = function (message) {
         if (this.settings.debug) {
@@ -18441,6 +18541,8 @@ SWFUpload.Console.writeLine = function (message) {
 (function () {
     /*
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	Queue Plug-in
 
 	Features:
@@ -18454,6 +18556,9 @@ SWFUpload.Console.writeLine = function (message) {
 	*/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 if (typeof(SWFUpload) === "function") {
 	SWFUpload.queue = {};
 
@@ -19539,6 +19644,7 @@ KindEditor.plugin('wordpaste', function(K) {
 		}
 		iframe[0].contentWindow.focus();
 	});
+<<<<<<< HEAD
 =======
     if (typeof (SWFUpload) === "function") {
         SWFUpload.queue = {};
@@ -20638,4 +20744,6 @@ KindEditor.plugin('wordpaste', function (K) {
         iframe[0].contentWindow.focus();
     });
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 });

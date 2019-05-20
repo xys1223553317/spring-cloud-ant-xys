@@ -1,5 +1,8 @@
 .menu {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   position: absolute;
   margin: 0;
   padding: 2px;
@@ -117,6 +120,7 @@
   border-color: transparent;
   background: transparent;
   color: #404040;
+<<<<<<< HEAD
 =======
     position: absolute;
     margin: 0;
@@ -257,4 +261,6 @@
     background: transparent;
     color: #404040;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

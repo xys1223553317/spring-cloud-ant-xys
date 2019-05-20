@@ -1,5 +1,8 @@
 .tree {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -20,6 +23,7 @@
 .tree-hit {
   cursor: pointer;
 }
+<<<<<<< HEAD
 =======
     margin: 0;
     padding: 0;
@@ -47,6 +51,8 @@
 }
 
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 .tree-expanded,
 .tree-collapsed,
 .tree-folder,
@@ -54,6 +60,9 @@
 .tree-checkbox,
 .tree-indent {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   display: inline-block;
   width: 16px;
   height: 18px;
@@ -187,6 +196,7 @@
 }
 .tree-node-hidden {
   display: none;
+<<<<<<< HEAD
 =======
     display: inline-block;
     width: 16px;
@@ -353,4 +363,6 @@
 .tree-node-hidden {
     display: none;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

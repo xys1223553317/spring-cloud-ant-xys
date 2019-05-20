@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 if ($.fn.pagination){
 	$.fn.pagination.defaults.beforePageText = '第';
 	$.fn.pagination.defaults.afterPageText = '共{pages}页';
@@ -64,6 +67,7 @@ if ($.fn.datetimebox && $.fn.datebox){
 }
 if ($.fn.datetimespinner){
 	$.fn.datetimespinner.defaults.selections = [[0,4],[5,7],[8,10],[11,13],[14,16],[17,19]]
+<<<<<<< HEAD
 =======
 if ($.fn.pagination) {
     $.fn.pagination.defaults.beforePageText = '第';
@@ -131,4 +135,6 @@ if ($.fn.datetimebox && $.fn.datebox) {
 if ($.fn.datetimespinner) {
     $.fn.datetimespinner.defaults.selections = [[0, 4], [5, 7], [8, 10], [11, 13], [14, 16], [17, 19]]
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

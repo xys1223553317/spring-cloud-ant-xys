@@ -1,5 +1,8 @@
 .tooltip {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   position: absolute;
   display: none;
   z-index: 9900000;
@@ -101,6 +104,7 @@
 }
 .tooltip-bottom .tooltip-arrow {
   border-bottom-color: #666;
+<<<<<<< HEAD
 =======
     position: absolute;
     display: none;
@@ -224,4 +228,6 @@
 .tooltip-bottom .tooltip-arrow {
     border-bottom-color: #666;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

@@ -1,5 +1,8 @@
 .filebox .textbox-value {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   vertical-align: top;
   position: absolute;
   top: 0;
@@ -18,6 +21,7 @@
 }
 .l-btn-disabled .filebox-label {
   cursor: default;
+<<<<<<< HEAD
 =======
     vertical-align: top;
     position: absolute;
@@ -40,4 +44,6 @@
 .l-btn-disabled .filebox-label {
     cursor: default;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

@@ -1,5 +1,8 @@
 /*******************************************************************************
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 * KindEditor - WYSIWYG HTML Editor for Internet
 * Copyright (C) 2006-2011 kindsoft.net
 *
@@ -233,6 +236,7 @@ KindEditor.lang({
 		'2.html' : '表格',
 		'3.html' : '项目清單'
 	}
+<<<<<<< HEAD
 =======
  * KindEditor - WYSIWYG HTML Editor for Internet
  * Copyright (C) 2006-2011 kindsoft.net
@@ -468,4 +472,6 @@ KindEditor.lang({
         '3.html': '项目清單'
     }
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }, 'zh_TW');

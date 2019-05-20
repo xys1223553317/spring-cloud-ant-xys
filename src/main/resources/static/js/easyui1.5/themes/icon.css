@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 .icon-blank{
 	background:url('icons/blank.gif') no-repeat center center;
 }
@@ -94,6 +97,7 @@
 }
 .icon-large-chart{
 	background:url('icons/large_chart.png') no-repeat center center;
+<<<<<<< HEAD
 =======
 .icon-blank {
     background: url('icons/blank.gif') no-repeat center center;
@@ -219,4 +223,6 @@
 .icon-large-chart {
     background: url('icons/large_chart.png') no-repeat center center;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

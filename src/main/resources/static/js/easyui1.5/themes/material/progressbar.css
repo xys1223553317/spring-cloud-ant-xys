@@ -1,5 +1,8 @@
 .progressbar {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   border-width: 1px;
   border-style: solid;
   -moz-border-radius: 4px 4px 4px 4px;
@@ -30,6 +33,7 @@
 .progressbar-value .progressbar-text {
   background-color: #00bbee;
   color: #fff;
+<<<<<<< HEAD
 =======
     border-width: 1px;
     border-style: solid;
@@ -67,4 +71,6 @@
     background-color: #00bbee;
     color: #fff;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

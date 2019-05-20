@@ -1,5 +1,6 @@
 .validatebox-invalid {
 <<<<<<< HEAD
+<<<<<<< HEAD
   border-color: #ffa8a8;
   background-color: #fff;
   color: #404040;
@@ -8,4 +9,9 @@
     background-color: #fff;
     color: #404040;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+  border-color: #ffa8a8;
+  background-color: #fff;
+  color: #404040;
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

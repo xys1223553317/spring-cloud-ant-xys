@@ -1,5 +1,8 @@
 .calendar {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   border-width: 1px;
   border-style: solid;
   padding: 1px;
@@ -40,6 +43,7 @@
   -webkit-border-radius: 4px 4px 4px 4px;
   border-radius: 4px 4px 4px 4px;
 }
+<<<<<<< HEAD
 =======
     border-width: 1px;
     border-style: solid;
@@ -89,11 +93,16 @@
 }
 
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 .calendar-prevmonth,
 .calendar-nextmonth,
 .calendar-prevyear,
 .calendar-nextyear {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   position: absolute;
   top: 50%;
   margin-top: -7px;
@@ -250,6 +259,7 @@
   color: #fff;
   border: 1px solid #9cc8f7;
   padding: 0;
+<<<<<<< HEAD
 =======
     position: absolute;
     top: 50%;
@@ -437,4 +447,6 @@
     border: 1px solid #9cc8f7;
     padding: 0;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

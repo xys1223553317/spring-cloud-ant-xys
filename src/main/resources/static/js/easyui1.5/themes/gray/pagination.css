@@ -1,5 +1,8 @@
 .pagination {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
   zoom: 1;
 }
 .pagination table {
@@ -69,6 +72,7 @@
 .pagination-page-list,
 .pagination .pagination-num {
   border-color: #D3D3D3;
+<<<<<<< HEAD
 =======
     zoom: 1;
 }
@@ -155,4 +159,6 @@
 .pagination .pagination-num {
     border-color: #D3D3D3;
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

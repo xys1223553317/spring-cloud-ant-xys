@@ -1,10 +1,14 @@
 /**
  * jQuery EasyUI 1.5.1
 <<<<<<< HEAD
+<<<<<<< HEAD
  * 
 =======
  *
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+ * 
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
  * Copyright (c) 2009-2016 www.jeasyui.com. All rights reserved.
  *
  * Licensed under the freeware license: http://www.jeasyui.com/license_freeware.php
@@ -12,6 +16,9 @@
  *
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 (function($){
 $.easyui={indexOfArray:function(a,o,id){
 for(var i=0,_1=a.length;i<_1;i++){
@@ -387,6 +394,7 @@ document.addEventListener("touchstart",_32,true);
 document.addEventListener("touchmove",_34,true);
 document.addEventListener("touchend",_35,true);
 }
+<<<<<<< HEAD
 =======
 (function ($) {
     $.easyui = {
@@ -781,5 +789,7 @@ document.addEventListener("touchend",_35,true);
         document.addEventListener("touchend", _35, true);
     }
 >>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
+=======
+>>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 })(jQuery);
 
