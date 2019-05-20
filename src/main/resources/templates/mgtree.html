@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/js/bootstrap3/css/bootstrap.css">
+    <script src="/js/bootstrap3/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/js/bootstrap-treeview/bootstrap-treeview.min.css">
+    <script src="/js/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="stylesheet" href="/js/bootStrap-addTabs/bootstrap.addtabs.css">
+    <script src="/js/bootStrap-addTabs/bootstrap.addtabs.min.js"></script>
+
+    <title>Title</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 col-sm-2 col-xs-2">
+            <div id="mytree"></div>
+        </div>
+        <div class="col-md-10 col-sm-10 col-xs-10">
+            <div id="myTabs">
+                <!-- 新选项卡 -->
+                <ul class="nav nav-tabs" id="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#home" role="tab" data-toggle="tab">欢迎</a>
+                    </li>
+                </ul>
+                <!-- 选项卡下内容 -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    //左侧树
+    $(function(){
+        initTree();
+    })
+    function initTree(){
+        $.ajax({
+            url:"/tree/findtree",
+            type:'post',
+            data:{},
+            dataType:'json',
+            success:function(data){
+                $('#mytree').treeview({
+                    data:data,
+                    onNodeSelected:function(event, node) {
+                        //选项卡中内容
+                        $.addtabs({iframeHeight:$(window).height()-120});
+                        $.addtabs.add({
+                            id:node.id,
+                            title:node.text,
+                            url:node.href
+                        });
+                    }
+                });
+            }
+        })
+    }
+</script>
+</html>

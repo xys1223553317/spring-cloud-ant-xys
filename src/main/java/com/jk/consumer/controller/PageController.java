@@ -75,6 +75,22 @@ public class PageController {
     public String toaddnavigationbar() {
         return "addnavigationbar";
     }
+    //树
+    @RequestMapping("tomgtree")
+    public String tomgtree(){
+        return "mgtree";
+    }
+    //图片
+    @RequestMapping("topicture")
+    public String topicture(){
+        return "Picture";
+    }
+    //新增图片页面
+    @RequestMapping("toaddpicture")
+    public String toaddpicture(){
+        return "addPicture";
+    }
+
 
     @RequestMapping("show")
     public String show() {
