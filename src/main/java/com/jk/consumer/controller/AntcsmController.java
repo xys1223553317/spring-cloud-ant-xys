@@ -25,18 +25,18 @@ public class AntcsmController {
 
     //新增订单
     @RequestMapping("addDingdan")
-    @ResponseBody
-    public void addDingdan(Dingdan dingdan){
+    /*@ResponseBody*/
+    public String addDingdan(Dingdan dingdan){
         antcsmService.addDingdan(dingdan);
-        String sss = redisTemplate.opsForValue().get("sss").toString();
-        System.out.println(sss);
+        return "yundanxinxi";
     }
 
-   /* @RequestMapping("selectdingdan")
+    @RequestMapping("selectdingdan")
     @ResponseBody
-    public List<Dingdan>selectdingdan(Integer id){
-        return antcsmService.selectdingdan(id);
-    }*/
+    public List<Dingdan>selectdingdan(String id){
+        String sss = redisTemplate.opsForValue().get("sss").toString();
+        return antcsmService.selectdingdan(sss);
+    }
 
     @RequestMapping("selectWuliugsXinxi")
     @ResponseBody
