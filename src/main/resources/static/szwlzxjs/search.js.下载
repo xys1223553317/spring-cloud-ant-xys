@@ -1,0 +1,70 @@
+$(function() {
+
+	// //Tab切换
+	// $('.block-wrapper').each(function() {
+	// 	var title = $(this).find('ul.tab-title');
+	// 	var content = $(this).find('.block-body');
+	// 	$(title).tabs(content, {});
+	// });
+	// $('.placeholder-box').placeholder();
+	var status1 = true;
+	$('.icons-change').click(function() {
+		var faHuoVal = $('#faHuo').val();
+		var shouHuoVal = $('#shouHuo').val();
+		if (status1) {
+			$('#faHuo').val(shouHuoVal);
+			$('#shouHuo').val(faHuoVal);
+			status1 = false;
+		} else {
+			status1 = true;
+			$('#shouHuoVal').val(faHuoVal);
+			$('#faHuo').val();
+		}
+	});
+	$.fn.tips = function(options) {
+		var opts = $.fn.extend({
+			top: 0
+		}, options);
+		return this.each(function() {
+			var that = this;
+			var data = $(this).data('html');
+			var $myTips = $('.my-tips');
+			var pos = $(this).offset();
+			var size = {
+				width: $(this).outerWidth(),
+				height: $(this).outerHeight()
+			};
+			if ($myTips.length === 0) {
+				$('body').append('<div class="my-tips"></div>');
+				$myTips = $('.my-tips');
+			}
+			$(that)
+				.mouseenter(function() {
+					$myTips
+						.html(data)
+						.show()
+						.css({
+							width: opts.width,
+							left: pos.left,
+							top: pos.top + size.height + opts.top
+						});
+				})
+				.mouseleave(function() {
+
+					$myTips
+						.hide()
+						.html('');
+				});
+
+		});
+	}
+	$('.js-1').tips({
+		width: 304
+	});
+	$('.js-tel').tips({
+		width: 144
+	});
+	$('.js-price').tips({
+		width: 284
+	});
+})
