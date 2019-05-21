@@ -21,4 +21,10 @@ public class RegionController {
     public List<RegionBean> findregion(){
         return tuneport.findregion();
     }
+    //查询城市
+    @RequestMapping("findregionpid")
+    @ResponseBody
+    public List<RegionBean> findregionpid(Integer pid){
+        return tuneport.findregionpid(pid);
+    }
 }
