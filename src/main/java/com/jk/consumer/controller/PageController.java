@@ -16,4 +16,14 @@ public class PageController {
     public String  gouwu(){
         return "gouwu";
     }
+
+    @RequestMapping("zhaobiao")
+    public String  zhaobiao(){
+        return "zhaobiao";
+    }
+
+    @RequestMapping("xiangqing")
+    public String  xiangqing(){
+        return "xiangqing";
+    }
 }

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/jdbc">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="/bootstrap/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap3/css/bootstrap.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap-table/bootstrap-table.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap-fileinput/css/fileinput.css">
+    <script src="/bootstrap/easyui1.5/jquery.min.js"></script>
+    <script src="/bootstrap/bootstrap3/js/bootstrap.js"></script>
+    <script src="/bootstrap/bootstrap-table/bootstrap-table.js"></script>
+    <script src="/bootstrap/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+    <script src="/bootstrap/bootbox/bootbox.all.min.js"></script>
+    <script src="/bootstrap/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script src="/bootstrap/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="/bootstrap/bootstrap-fileinput/js/fileinput.js"></script>
+    <script src="/bootstrap/bootstrap-fileinput/js/locales/zh.js"></script>
+</head>
+<body>
+
+<div id="toolbar">
+    <form class="form-inline">
+    <div class="form-group">
+        省:<select id="sheng" name="sarea" class="form-control" onChange="queryShi()"></select>
+        市:<select id="shi" name="scity" class="form-control"></select>
+    </div>
+    </form>
+    <button class="btn btn-info" onclick="searchBtn()">
+        <i class="glyphicon glyphicon-search"></i>
+        搜索
+    </button>
+</div>
+
+<table id="zbTable"></table>
+</body>
+
+<script type="text/javascript" th:inline="none">
+
+    /*页面加载*/
+    $(function () {
+        initBuyTable();
+        initSheng(1);
+    });
+
+
+    function initSheng(pid) {
+        $.ajax({
+            url:"/queryArea",
+            data:{pid:pid},
+            success:function (data) {
+                var html="<option>请选择</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                }
+                $("#sheng").html(html);
+            }
+        })
+
+    }
+    function queryShi() {
+        var shengid =$("#sheng").val()
+        $.ajax({
+            url:"/queryAreaShi",
+            data:{shengid:shengid},
+            success:function (data) {
+                var html="<option>市</option>";
+                var  str="";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                    var  str=data[i].name
+                }
+                $("#shi").html(html);
+            }
+        })
+    }
+
+    function searchBtn(){
+        $('#zbTable').bootstrapTable('refresh');
+    }
+
+    /*查询展示*/
+    function initBuyTable() {
+
+        $("#zbTable").bootstrapTable({
+            url: '/findBids',
+            toolbar: '#toolbar',
+            pagination: true, //是否展示分页
+            pageList: [3, 5, 10, 20, 50],//分页组件
+            pageNumber: 1,
+            pageSize: 3,//默认每页条数
+            //页面修饰
+            showRefresh: true,//是否显示刷新按钮
+            showToggle: true,//是否显示 切换试图（table/card）按钮
+            detailView: true,//设置为 true 可以显示详细页面模式。
+            showColumns: true,//是否显示 内容列下拉框
+            clickToSelect: true, //是否启用点击选中行
+            showPaginationSwitch: true,//是否显示 数据条数选择框
+            //解决条查乱码
+            method: "post",
+            contentType:'application/x-www-form-urlencoded;charset=UTF-8',   //数据编码纯文本  offset=0&limit=5
+            //传递参数,条件查询,分页传参
+            queryParams: function () {
+                var city=$("#shi").val();
+                return {
+                    //有分页的固定传值
+                    page: this.pageNumber,
+                    rows: this.pageSize,
+                    scity:city,
+                }
+            },
+
+            sidePagination: 'server',
+            columns: [
+                {field: 'scityname', title: '所在地区'},
+                {field: 'title', title: '标题'},
+                {field: 'type', title: '类型'},
+                {field: 'industry', title: '行业'},
+                {field: 'startTime', title: '开始时间'},
+                {field: 'endTime', title: '结束时间'},
+                {field: 'inputtime', title: '录入时间'},
+                {field: '123123', title: '',formatter:function(value,row,index) {
+                    return "<button class='btn btn-primary' data-loading-text='Loading...'onclick='onc()'>查看详情</button>"
+                }
+                    }
+
+            ]
+        })
+    }
+
+   function onc() {
+       window.location.href="http://www.lvmae.com/bid/583.html";
+   }
+
+</script>
+
+</html>

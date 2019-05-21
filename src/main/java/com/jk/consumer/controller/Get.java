@@ -14,6 +14,8 @@ import java.util.HashMap;
 @Controller
 public class Get {
 
+
+
     public static final String APPKEY = "2dfddc90a9b655ab";// 你的appkey
     public static final String URL = "https://api.jisuapi.com/news/get";
     public static final String channel = "头条";// utf8  新闻频道(头条,财经,体育,娱乐,军事,教育,科技,NBA,股票,星座,女性,健康,育儿)
@@ -61,6 +63,8 @@ public class Get {
 
 
     }
+
+
 
 
 }
