@@ -34,7 +34,15 @@ public class WlgsXinxi implements Serializable {
     private String cyrZherenxian;
     private String xczyLiucheng;
     private String genzhongxiantong;
+    private String xianluId;
 
+    public String getXianluId() {
+        return xianluId;
+    }
+
+    public void setXianluId(String xianluId) {
+        this.xianluId = xianluId;
+    }
 
     public Integer getQyzcZhijin() {
         return qyzcZhijin;

@@ -45,6 +45,7 @@ var userLogoPath = "http://img.lvmae.com/image/UserHeadPortrait/";
   $(function () {
     initdingdan();
   })
+
   function initdingdan(id) {
     $.ajax({
       url: '/ant/selectdingdan',
@@ -57,19 +58,19 @@ var userLogoPath = "http://img.lvmae.com/image/UserHeadPortrait/";
         for (var i = 0; i < data.length; i++) {
           html += "<tr>\n" +
                   "<td class=\"tab-name\">绿蚂蚁订单号：</td>\n" +
-                  "<td class=\"tab-con\">"+data[i].goosNumber+"</td>\n" +
+                  "<td class=\"tab-con\">"+data[i].goodsNumber+"</td>\n" +
                   "</tr>\n" +
                   "<tr>\n" +
                   "<td class=\"tab-name\">物流线路：</td>\n" +
-                  "<td class=\"tab-con\"><a href=\"http://www.lvmae.com/road/11504-19279/13492408.html\" target=\"_blank\">（零担运输）</td>\n" +
+                  "<td class=\"tab-con\"><a href=\"http://www.lvmae.com/road/11504-19279/13492408.html\" target=\"_blank\">"+data[i].luxianname+"（零担运输）</td>\n" +
                   "</tr>\n" +
                   "<tr>\n" +
                   "<td class=\"tab-name\">物流公司：</td>\n" +
-                  "<td class=\"tab-con\"><a href=\"http://www.lvmae.com/company/36009/index.html\" target=\"_blank\">京联物流(苏州）有限公司</a></td>\n" +
+                  "<td class=\"tab-con\"><a href=\"http://www.lvmae.com/company/36009/index.html\" target=\"_blank\">"+data[i].qyQuancheng+"</a></td>\n" +
                   "</tr>\n" +
                   "<tr>\n" +
                   "<td class=\"tab-name\">发货人信息：</td>\n" +
-                  "<td class=\"tab-con\">"+data[i].sendName+"+"+data[i].sendPhone+"</td>\n" +
+                  "<td class=\"tab-con\">"+data[i].sendName+"("+data[i].sendPhone+")</td>\n" +
                   "</tr>\n" +
                   "<tr>\n" +
                   "<td class=\"tab-name\">收货人信息：</td>\n" +
@@ -77,7 +78,7 @@ var userLogoPath = "http://img.lvmae.com/image/UserHeadPortrait/";
                   "</tr>\n" +
                   "<tr>\n" +
                   "<td class=\"tab-name\">货物名称：</td>\n" +
-                  "<td class=\"tab-con\">请问请问（轻货）</td>\n" +
+                  "<td class=\"tab-con\">"+data[i].goodsName+"（轻货）</td>\n" +
                   "</tr>\n" +
                   "<tr>\n" +
                   "<td class=\"tab-name\">支付方式：</td>\n" +
@@ -85,7 +86,7 @@ var userLogoPath = "http://img.lvmae.com/image/UserHeadPortrait/";
                   "</tr>\n" +
                   "<tr>\n" +
                   "<td class=\"tab-name\">货物信息：</td>\n" +
-                  "<td class=\"tab-con\">11.00公斤，22.00立方米</td>\n" +
+                  "<td class=\"tab-con\">"+data[i].goodsWeight+"公斤，"+data[i].goodsVolume+"立方米</td>\n" +
                   "</tr>\n" +
                   "<tr>\n" +
                   "<td class=\"tab-name\">绿蚂蚁预估总额：</td>\n" +
@@ -93,7 +94,7 @@ var userLogoPath = "http://img.lvmae.com/image/UserHeadPortrait/";
                   "</tr>\n" +
                   "<tr>\n" +
                   "<td class=\"tab-name\">其他说明：</td>\n" +
-                  "<td class=\"tab-con\">啦啦啦</td>\n" +
+                  "<td class=\"tab-con\">"+data[i].note+"</td>\n" +
                   "</tr>";
         }
 

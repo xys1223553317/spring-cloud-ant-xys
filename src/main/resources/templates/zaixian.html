@@ -98,16 +98,16 @@ var userLogoPath = "http://img.lvmae.com/image/UserHeadPortrait/";
 </div>
 <div class="nav">
 <div class="wrap">
-<ul>
-<li><a href="http://www.lvmae.com/">首页</a></li>
-<li><a href="http://www.lvmae.com/road/">物流专线</a></li>
-<li><a href="http://www.lvmae.com/road/deliver.html">在线发货</a></li>
-<li><a href="http://www.lvmae.com/seaport/">国际海运</a></li>
-<li><a href="http://www.lvmae.com/company/">物流公司</a></li>
-<li><a href="http://www.lvmae.com/news/">物流新闻</a></li>
-<li><a href="http://www.lvmae.com/bid/">物流招标</a></li>
-<li><a href="http://www.lvmae.com/goods/">在线购买</a></li>
-</ul>
+    <ul>
+        <li><a href="http://www.lvmae.com/">首页</a></li>
+        <li><a href="http://www.lvmae.com/road/">物流专线</a></li>
+        <li><a href="/page/tozaixian">在线发货</a></li>
+        <li><a href="http://www.lvmae.com/seaport/">国际海运</a></li>
+        <li><a href="/page/towuliugs/">物流公司</a></li>
+        <li><a href="http://www.lvmae.com/news/">物流新闻</a></li>
+        <li><a href="http://www.lvmae.com/bid/">物流招标</a></li>
+        <li><a href="http://www.lvmae.com/goods/">在线购买</a></li>
+    </ul>
 </div>
 </div>
 <div class="user-center">
@@ -237,6 +237,7 @@ var userLogoPath = "http://img.lvmae.com/image/UserHeadPortrait/";
     <tr class="last-item">
 <td class="tab-name  vt">其他说明：</td>
 <td class="tab-con" colspan="3">
+    <input type="hidden" name="gsId" id="gsidzhi" value="222222">
    <textarea name="note" id="goodsDescription" placeholder="请输入其他说明" cols="30" rows="10" maxlength="250"></textarea>
 </td>
 </tr>
@@ -258,6 +259,9 @@ var userLogoPath = "http://img.lvmae.com/image/UserHeadPortrait/";
 <input name="amount" type="hidden" value="0">
 <input name="fee" type="hidden" value="0">
 </form>
+
+
+
 </div>
 <div class="sider fr">
  <div class="title-2">
@@ -288,7 +292,7 @@ $(function(){
         tipsClass: "",
         valueClass: "black",
         callback: function (data) {
-oCity.arrive = data;
+        oCity.arrive = data;
         }
     })
    //提交按钮
@@ -308,8 +312,8 @@ $("#btn").click(function(){
 if( beforcheck() === false ){
 return false;
 }
-/*layer_show('选择承运商', '/page/toxzgs?action=com&l='+oCity.leave.cityID+'&a='+oCity.arrive.cityID, '1000', '580');
-return false;*/
+layer_show('选择承运商', '/page/toxzgs?action=com&l='+oCity.leave.cityID+'&a='+oCity.arrive.cityID, '1000', '580');
+return false;
 })
 
 

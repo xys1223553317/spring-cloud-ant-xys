@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0049)http://www.lvmae.com/road/deliver.html?action=com -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>选择物流公司</title>
 <meta name="renderer" content="webkit">
@@ -21,6 +21,8 @@
 </head>
 
 <body>
+<input type="hidden" id="idzhi" th:value="${ll}">
+<input type="hidden" id="idzhi2" th:value="${aa}">
 <table class="layui-table" id="table_box">
 <thead>
 <tr>
@@ -32,26 +34,83 @@
 </tr>
 </thead>
 <tbody id="content">
-<tr><td colspan="15">暂无关招标信息</td></tr>
 </tbody>
 </table>
 <div class="pagination">
-        </div>
+</div>
 <script type="text/javascript">
-$('input[name="lid"]').click(function(){
-var val = $(this).val();
-obj = JSON.parse(val);
-parent.$('input[name=carrierId]').val(obj[6]);
-parent.$('input[name=itemid]').val(obj[0]);
-parent.$('input[name=carrierName]').val(obj[5]);
-parent.$('input[name=carrierMobile]').val(obj[8]);
-parent.$('input[name=lineName]').val('到物流专线');
-parent.$('input[name=businessPhone]').val(obj[9]);
-parent.$('#orderinfo').attr('action','http://www.lvmae.com/road/-/fahuo-'+obj[0]+'.html');
-parent.$('#orderinfo').submit();
-    var index = parent.layer.getFrameIndex(window.name);
-    parent.layer.close(index);
-})
+        $(function(){
+            initNewsTable();
+        })
+
+        function initNewsTable(){
+            var leaveid= $("#idzhi").val();
+            var arriveid= $("#idzhi2").val();
+            alert(leaveid);
+                $.ajax({
+                        url: '/ant/selectdingdanxinxi',
+                        data: {leaveid: leaveid,arriveid:arriveid},
+                        dataType: 'json',
+                        success: function (data) {
+                                var html = "";
+                                for (var i = 0; i < data.length; i++) {
+                                    /*var id=data.toString()*/
+                                    alert(data[i].gsId);
+                                        html += "<tr>\n" +
+                                                "        <td>\n" +
+                                                "      <input type=\"checkbox\" name=\"lid\" style=\"border: 0\" onclick='cccc()'>\n" +
+                                                "        </td>\n" +
+                                                "        <td>\n" +
+                                                "                "+data[i].qyQuancheng+"\n" +
+                                                "                <span>\n" +
+                                                "                        <i class=\"icon zheng\">证</i>\n" +
+                                                "                </span>\n" +
+                                                "        </td>\n" +
+                                                "        <td>\n" +
+                                                "              "+data[i].minPrice+"\n" +
+                                                "        </td>\n" +
+                                                "        <td>\n" +
+                                                "              "+data[i].zprice+"\n" +
+                                                "        </td>\n" +
+                                                "        <td>\n" +
+                                                "              "+data[i].qprice+"\n" +
+                                                "        </td>\n" +
+                                                "        <td>\n" +
+                                                "              "+data[i].time+"\n" +
+                                                "        </td>\n" +
+                                                "</tr>";
+                                }
+                                $("#content").html(html);
+                        }
+                })
+        }
+
+        function cccc(){
+     /*     var a = new Array(10);
+            a[0]=id;
+            a[1]=zprice;
+            a[2]=qprice;
+            a[3]=minPrice;
+            a[4]=time;
+            a[5]=luxianname;
+            a[6]=marea;
+            a[7]=gsZhongji;
+            a[8]=jiedandianhua;
+            a[9]=null;
+               parent.$('input[name=carrierId]').val(a[6]);
+               parent.$('input[name=itemid]').val(a[0]);
+
+               parent.$('input[name=carrierMobile]').val(a[8]);
+               parent.$('input[name=lineName]').val('到物流专线');
+               parent.$('input[name=businessPhone]').val(a[9]);
+                parent.$('input[name=carrierName]').val(a[5]);*/
+                parent.$('#orderinfo').attr('action','/ant/addDingdan');
+                parent.$('#orderinfo').submit();
+                var index = parent.layer.getFrameIndex(window.name);
+                parent.layer.close(index);
+        }
+
+
 </script>
 
 </body></html>

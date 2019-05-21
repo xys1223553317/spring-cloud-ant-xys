@@ -15,7 +15,11 @@ public class PageController {
 
 
     @RequestMapping("toxzgs")
-    public String  toxzgs(){
+    public String  toxzgs(Integer l,Integer a,Model model){
+        System.out.println(l);
+        System.out.println(a);
+        model.addAttribute("ll",l);
+        model.addAttribute("aa",a);
         return "xzgs";
     }
     @RequestMapping("toszwlzx")

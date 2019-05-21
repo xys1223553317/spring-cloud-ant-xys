@@ -12,6 +12,52 @@ public class Dingdan {
     private Integer goodsVolume;//货物立方米
     private Integer goodsNumber;//订单号
     private String note;//其他说明
+    private Integer luxianId;
+    private String luxianname;//其他说明
+    private String qyQuancheng;//其他说明
+
+    private Integer yn; //是否受理
+    private String shengchengTime;//生成时间
+
+    public String getShengchengTime() {
+        return shengchengTime;
+    }
+
+    public void setShengchengTime(String shengchengTime) {
+        this.shengchengTime = shengchengTime;
+    }
+
+    public Integer getYn() {
+        return yn;
+    }
+
+    public void setYn(Integer yn) {
+        this.yn = yn;
+    }
+
+    public Integer getLuxianId() {
+        return luxianId;
+    }
+
+    public void setLuxianId(Integer luxianId) {
+        this.luxianId = luxianId;
+    }
+
+    public String getLuxianname() {
+        return luxianname;
+    }
+
+    public void setLuxianname(String luxianname) {
+        this.luxianname = luxianname;
+    }
+
+    public String getQyQuancheng() {
+        return qyQuancheng;
+    }
+
+    public void setQyQuancheng(String qyQuancheng) {
+        this.qyQuancheng = qyQuancheng;
+    }
 
     public Integer getGoodsNumber() {
         return goodsNumber;
