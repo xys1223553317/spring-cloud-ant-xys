@@ -1,8 +1,6 @@
 package com.jk.consumer.port;
 
-import com.jk.consumer.pojo.PictureBean;
-import com.jk.consumer.pojo.mgTreeBean;
-import com.jk.consumer.pojo.navigationBean;
+import com.jk.consumer.pojo.*;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,10 +35,17 @@ public interface tuneport {
     void deletepicture(@RequestParam("id")Integer id);
     @RequestMapping("addpicturelist")
     void addpicturelist(@RequestBody PictureBean pictureBean);
-    @RequestMapping("findpicture2")
-    List<PictureBean> findpicture2();
     @RequestMapping("updatepicture")
     PictureBean updatepicture(@RequestParam("id")Integer id);
     @RequestMapping("addpicturelist")
     void updatepictures(@RequestBody PictureBean pictureBean);
+    //查询地区
+    @RequestMapping("findregion")
+    List<RegionBean> findregion();
+    @RequestMapping("findregionpid")
+    List<RegionBean> findregionpid(@RequestParam("pid")Integer pid);
+    @RequestMapping("findviewinformationlist")
+    List<viewinformationBean> findviewinformationlist(viewinformationBean viewinformationBean);
+    @RequestMapping("findcityslist")
+    List<CityBean> findcityslist();
 }
