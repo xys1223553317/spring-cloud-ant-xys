@@ -2,11 +2,15 @@ package com.jk.consumer.controller;
 
 import com.jk.consumer.pojo.AreaBean;
 import com.jk.consumer.pojo.DingdanBean;
+import com.jk.consumer.pojo.GongSiiXanLu;
 import com.jk.consumer.pojo.TreeBean;
 import com.jk.consumer.service.TreeService;
 import org.apache.catalina.LifecycleState;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
@@ -38,5 +42,25 @@ public class TreeController {
     @RequestMapping("queryAreaShi")
     public List<AreaBean> queryAreaShi(Integer shengid){
         return treeService.queryAreaShi(shengid);
+    }
+    @RequestMapping("queryAreaXian")
+    @ResponseBody
+    public  List<AreaBean> queryAreaXian( Integer shi){
+        return treeService.queryAreaXian(shi);
+    }
+    @RequestMapping("queryRoad")
+    public  HashMap<String ,Object> queryRoad(Integer shi, Integer daodashi,String queryzl){
+      //  List<GongSiiXanLu> gongSiiXanLus = ;
+        //model.addAttribute("list",gongSiiXanLus);
+        try {
+            HashMap<String, Object> map = treeService.queryRoad(shi, daodashi);
+            return map;
+        }catch (Exception e){
+            e.printStackTrace();
+            System.out.println(1);
+            return null;
+        }
+
+
     }
 }

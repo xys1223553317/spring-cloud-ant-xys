@@ -20,4 +20,7 @@ public interface AntcsmService {
 
     @RequestMapping("queryWuliugsXinxixiangqing")
     List<WlgsXinxi> queryWuliugsXinxixiangqing(@RequestParam("id") Integer id);
+
+    @RequestMapping("selectdingdan")
+    List<Dingdan> selectdingdan(@RequestParam("id")String id);
 }

@@ -143,6 +143,13 @@ public class PageController {
     @RequestMapping("findList")
     public String findList() {
         return "zengzhi";
-
+    }
+    //首页条件查询
+    @RequestMapping("toload")
+    public String toload(Integer daodashi,Integer shi,Model model) {
+        model.addAttribute("shi",shi);
+        model.addAttribute("daodashi",daodashi);
+        //System.out.println(shi);
+        return "load";
     }
 }

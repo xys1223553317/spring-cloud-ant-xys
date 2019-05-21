@@ -159,7 +159,7 @@
                                 </div>
                                 <div class="reset-show"><span class="bold color-1">2630633</span>条物流线路、<span class="bold color-1">10888</span>家物流承运商供您选择！</div>
                                 <div class="btn-box">
-                                    <button class="btn b-6" onclick="RoadQuery();">即刻查询</button>
+                                    <button class="btn b-6" onclick="queryRoad()">即刻查询</button>
                                 </div>
                             </div>
                             <span class="arrow-left"></span>
@@ -278,13 +278,13 @@
                                        </td>
                                         <td>-</td>
                                        <td>
-                                           <select id="bookType" name="typeId" class="form-control">
+                                           <select id="shi" name="typeId" class="form-control" onChange="queryXian()">
 
                                            </select>
                                        </td>
                                        <td>-</td>
                                        <td>
-                                           <select id="bookType" name="typeId" class="form-control">
+                                           <select id="xian" name="typeId" class="form-control">
 
                                            </select>
                                        </td>
@@ -294,19 +294,19 @@
                                     <tr>
                                         <td>收货地</td>
                                         <td>
-                                            <select id="sheng2" name="typeId" class="form-control">
+                                            <select id="sheng2" name="typeId" class="form-control" onchange="querysheng2()">
 
                                             </select>
                                         </td>
                                         <td>-</td>
                                         <td>
-                                            <select id="bookType" name="typeId" class="form-control">
+                                            <select id="shi2" name="typeId" class="form-control" onchange="queryshi2()">
 
                                             </select>
                                         </td>
                                         <td>-</td>
                                         <td>
-                                            <select id="bookType" name="typeId" class="form-control">
+                                            <select id="xian2" name="typeId" class="form-control">
 
                                             </select>
                                         </td>
@@ -315,7 +315,7 @@
 
                                 <div class="reset-show"><span class="bold color-1">2630633</span>条物流线路、<span class="bold color-1">10888</span>家物流承运商供您选择！</div>
                                 <div class="btn-box">
-                                    <button class="btn b-6" onclick="RoadQuery();">即刻查询</button>
+                                    <button class="btn b-6" onclick="queryRoad();">即刻查询</button>
                                 </div>
                             </div>
                             <span class="arrow-left"></span>
@@ -433,9 +433,57 @@
         pictureselect();
         pictureselect2();
         pictureselect();
-        initSheng(1)
-    })
+        initSheng(1);
+        initFsheng(1);
 
+    })
+   function initFsheng(pid) {
+        alert(pid)
+       $.ajax({
+           url:"/tree/queryArea",
+           data:{pid:pid},
+           success:function (data) {
+               var html="<option>省</option>";
+               for (var i = 0; i < data.length; i++) {
+                   html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+
+               }
+
+               $("#sheng2").html(html);
+           }
+       })
+   }
+   function querysheng2() {
+       var shengid =$("#sheng2").val()
+       $.ajax({
+           url:"/tree/queryAreaShi",
+           data:{shengid:shengid},
+           success:function (data) {
+               var html="<option>市</option>";
+               var  str="";
+               for (var i = 0; i < data.length; i++) {
+                   html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                   var  str=data[i].name
+               }
+               alert(str)
+               $("#shi2").html(html);
+           }
+       })
+   }
+   function queryshi2() {
+       var shi =$("#shi2").val();
+       $.ajax({
+           url:"/tree/queryAreaXian",
+           data:{shi:shi},
+           success:function (data) {
+               var html="<option>县</option>";
+               for (var i = 0; i < data.length; i++) {
+                   html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+               }
+               $("#xian2").html(html);
+           }
+       })
+   }
     function initSheng(pid) {
         $.ajax({
             url:"/tree/queryArea",
@@ -452,21 +500,46 @@
         })
 
     }
+
     function queryShi() {
         var shengid =$("#sheng1").val()
         $.ajax({
             url:"/tree/queryAreaShi",
             data:{shengid:shengid},
             success:function (data) {
-                var html="<option>省</option>";
+                var html="<option>市</option>";
+                var  str="";
                 for (var i = 0; i < data.length; i++) {
                     html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                    var  str=data[i].name
                 }
-                $("#sheng1").html(html);
+                alert(str)
+                $("#shi").html(html);
             }
         })
     }
-    //导航栏
+   function queryRoad() {
+       var shi=$("#shi").val();
+       var daodashi=$("#shi2").val();
+
+           location="/page/toload?shi="+shi+"&"+"daodashi="+daodashi
+
+
+   }
+    function queryXian() {
+        var shi =$("#shi").val();
+        $.ajax({
+            url:"/tree/queryAreaXian",
+            data:{shi:shi},
+            success:function (data) {
+                var html="<option>县</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                }
+                $("#xian").html(html);
+            }
+        })
+    }
     //导航栏
     function navigationbar() {
         $.ajax({
