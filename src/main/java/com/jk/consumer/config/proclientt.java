@@ -1,7 +1,8 @@
-package com.jk.config;
+package com.jk.consumer.config;
 
-import com.jk.pojo.AreaBean;
-import com.jk.pojo.Bids;
+
+import com.jk.consumer.pojo.AreaBean;
+import com.jk.consumer.pojo.Bids;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

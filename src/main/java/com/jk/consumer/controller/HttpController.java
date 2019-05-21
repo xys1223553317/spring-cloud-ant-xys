@@ -1,8 +1,9 @@
 package com.jk.consumer.controller;
 
-import com.jk.config.proclientt;
-import com.jk.pojo.AreaBean;
-import com.jk.pojo.Bids;
+
+import com.jk.consumer.config.proclientt;
+import com.jk.consumer.pojo.AreaBean;
+import com.jk.consumer.pojo.Bids;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
