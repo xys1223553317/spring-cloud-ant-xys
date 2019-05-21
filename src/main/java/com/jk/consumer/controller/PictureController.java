@@ -22,11 +22,6 @@ public class PictureController {
     public List<PictureBean> findpicture(){
         return tuneport.findpicture();
     }
-    @RequestMapping("findpicture2")
-    @ResponseBody
-    public List<PictureBean> findpicture2(){
-        return tuneport.findpicture2();
-    }
     //后台查询图片
     @RequestMapping("findpicturelist")
     @ResponseBody
