@@ -9,9 +9,19 @@ public class Road {
 
     private Integer sarea;
     private String sareaname;
+    private Integer scity;
+    private String scityname;
+    private Integer sregion;
+    private String sregionname;
+
+
 
     private Integer marea;
     private String mareaname;
+    private Integer mregion;
+    private String mregionname;
+    private Integer mcity;
+    private String mcityname;
 
     private String time;
 

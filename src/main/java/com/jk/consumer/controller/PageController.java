@@ -42,9 +42,26 @@ public class PageController {
         return "roadlist";
     }
 
-    //线路管理
+    //增值服务
     @RequestMapping("findList")
     public String findList(){
         return "zengzhi";
+    }
+
+    //线路管理
+    @RequestMapping("toAddUser")
+    public String toAddUser(){
+        return "addRoad";
+    }
+
+    @RequestMapping("toAdd")
+    public String toAdd(){
+        return "add";
+    }
+
+
+    @RequestMapping("toEdit")
+    public String toEdit(){
+        return "bianji";
     }
 }

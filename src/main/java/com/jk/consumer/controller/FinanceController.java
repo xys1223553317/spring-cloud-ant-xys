@@ -1,18 +1,13 @@
 package com.jk.consumer.controller;
 
-import com.jk.consumer.bean.Buy;
-import com.jk.consumer.bean.Finance;
-import com.jk.consumer.bean.Money;
-import com.jk.consumer.bean.Road;
+import com.jk.consumer.bean.*;
 import com.jk.consumer.rmi.UserClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 
 @RestController
 public class FinanceController {
@@ -48,8 +43,24 @@ public class FinanceController {
     public HashMap<String, Object> findRoadList(Integer page, Integer rows, Road road){
 
         return userClient.findRoadList(page, rows, road);
-
     }
 
+
+
+    /*@RequestMapping("queryArea")
+
+    public List<Area>queryArea(@RequestParam("id") Integer pid){
+        return userClient.queryArea(pid);
+    }
+    @RequestMapping("queryAreaShi")
+
+    public  List<Area> queryAreaShi(@RequestParam("shengid") Integer shengid){
+        return userClient.queryAreaShi(shengid);
+    }
+    @RequestMapping("queryAreaXian")
+
+    public  List<Area> queryAreaXian(@RequestParam("shi") Integer shi){
+        return userClient.queryAreaXian(shi);
+    }*/
 
 }

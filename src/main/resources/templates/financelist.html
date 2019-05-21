@@ -60,6 +60,8 @@
     </style>
 </head>
 <body>
+<font size="4px">当前账户余额：￥28523000.00</font></font>
+
 <form:form modelAttribute="organizationManageDto">
     <div class="panel">
         <div class="panel-body">
@@ -67,7 +69,7 @@
                 <span class="title">筛选条件</span>
                 <div  class="row">
                     <div class="col-md-2">
-                        <label class="control-label" for="number">用户名>交易编号：</label>
+                        <label class="control-label" for="number">交易编号：</label>
 
                     </div>
                     <div class="col-md-4">
@@ -181,9 +183,6 @@
                 {field: 'type', title: '交易类型'},
                 {field: 'ztype', title: '收支类型'},
                 {field: 'detail', title: '备注'},
-                {field:'abc',title:'操作',formatter:function(value,row,index){
-                        return '<a href="javascript:del('+row.id+');">删除</a> | <a href="javascript:openUpdate('+row.id+');">修改</a>';
-                    }}
             ]
         })
     }

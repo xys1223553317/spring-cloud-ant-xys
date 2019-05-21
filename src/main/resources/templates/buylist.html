@@ -60,6 +60,7 @@
     </style>
 </head>
 <body>
+<font size="4px">当前账户余额：￥28523000.00</font>&nbsp;&nbsp;&nbsp;&nbsp;<font size="4px">当前待审核提现金额：￥23000.00</font>
 <form:form modelAttribute="organizationManageDto">
     <div class="panel">
         <div class="panel-body">
@@ -185,10 +186,10 @@
 
                 {field:'status',title:'结算状态',formatter:function(value,row,index){
                         if(value == 1){
-                            return "<input type='button' value='待结算'>";
+                            return '<button type="button" class="btn-info">待结算</button>';
                         }
                         if(value == 2){
-                            return "<input type='button' value='已结算'>";
+                            return '<button type="button" class="btn-info">已结算</button>';
                         }
                     }},
                 {field:'abc',title:'操作',formatter:function(value,row,index){

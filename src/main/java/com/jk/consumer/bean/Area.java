@@ -9,6 +9,8 @@ public class Area {
 
     private String name;
 
-    private Integer pid;
+    private Integer arealevel;
+
+    private Integer parent_id;
 
 }

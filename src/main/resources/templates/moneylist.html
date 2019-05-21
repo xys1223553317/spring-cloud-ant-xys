@@ -60,6 +60,8 @@
     </style>
 </head>
 <body>
+<font size="4px">当前账户余额：￥28523000.00</font>&nbsp;&nbsp;&nbsp;&nbsp;<font size="4px">当前待审核提现金额：￥23000.00</font>
+<button type="button" class="btn btn-primary" onclick="Money()" style="margin-left:700px">申请提现</button>
 <form:form modelAttribute="organizationManageDto">
     <div class="panel">
         <div class="panel-body">
@@ -172,10 +174,10 @@
                 {field: 'bank', title: '提现银行卡'},
                 {field:'status',title:'审核状态',formatter:function(value,row,index){
                         if(value == 1){
-                            return "<input type='button' value='待审核'>";
+                            return '<button type="button" class="btn-info">待审核</button>';
                         }
                         if(value == 2){
-                            return "<input type='button' value='已审核'>";
+                            return '<button type="button" class="btn-info">已审核</button>';
                         }
                     }},
                 {field:'abc',title:'操作',formatter:function(value,row,index){
@@ -191,8 +193,28 @@
         $("#MoneyTable").bootstrapTable('refresh');
     }
 
+    function Money() {
+        //打开新增弹框
+            bootbox.dialog({
+                title:'<font size="4px">余额提现</font>',
+                message: createAddContent("/page/toAdd"),
+                closeButton: true,//是否显示关闭按钮
 
+            });
 
+    }
+
+    var res;
+    function createAddContent(url){
+        $.ajax({
+            url:url,
+            async:false,
+            success:function(data){
+                res = data;
+            }
+        });
+        return res;
+    }
 
 
 </script>

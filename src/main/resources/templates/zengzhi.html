@@ -31,6 +31,11 @@
             <td colspan="4"></td>
         </tr>
         <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
             <td><input type="checkbox">支持货物保险</td>
             <td></td>
             <td><input type="checkbox">支持代收货款</td>
@@ -38,30 +43,39 @@
         <tr>
             <td>收费标准：</td>
             <td cols="3"><input  type="text" style="width:50px" value="1.5">%。</td>
+            <td></td>
             <td>收费标准：</td>
             <td cols="3"><input  type="text" style="width:50px" value="0">%。</td>
         </tr>
         <tr>
             <td>最低收费：</td>
             <td cols="3"><input  type="text" style="width:50px" value="5">元/单</td>
+            <td></td>
             <td>最低收费：</td>
             <td cols="3"><input  type="text" style="width:50px" value="5">元/单</td>
         </tr>
         <tr>
             <td>最高保额：</td>
             <td cols="3"><input  type="text" style="width:50px" value="100000">元</td>
+            <td></td>
             <td>代收范围：</td>
             <td cols="3"><input  type="text" style="width:50px" value="0">-<input  type="text" style="width:50px" value="50000">元</td>
         </tr>
         <tr>
             <td>是否强制：</td>
+            <td></td>
             <td><input type="checkbox">强制购买保险</td>
         </tr>
     </table>
 
-    <button id="fat-btn" data-loading-text="loading..." class="btn btn-primary">保存</button>
+    <button type="button" class="btn btn-primary" onclick="save()">保存</button>
     <font size="3px">编辑后，不影响已有订单的运费</font>
 </form>
 </body>
-
+<script>
+    function save() {
+           location.href="/page/findRoadList";
+    }
+    
+</script>
 </html>

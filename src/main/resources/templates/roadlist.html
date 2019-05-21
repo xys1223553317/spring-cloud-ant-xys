@@ -43,7 +43,7 @@
             width:95%;
             height:200%;
             padding:5px 30px;
-            margin-top:30px;
+            margin-top:10px;
             margin-left:30px;
             border:2px solid #CCCCCC;
         }
@@ -60,12 +60,61 @@
     </style>
 </head>
 <body>
+<button type="button" class="btn btn-primary" onclick="openRoadAdd()">添加线路</button>
+<button type="button" class="btn btn-primary" onclick="zengzhi()" style="margin-left:1000px">查看增值服务</button>
 <form:form modelAttribute="organizationManageDto">
     <div class="panel">
         <div class="panel-body">
             <div class="aaa">
                 <span class="title">筛选条件</span>
                 <div  class="row">
+                    <div class="form-group">
+                       <!-- <table>
+                            <tr>
+                                <td>发货地</td>
+                                <td>
+                                    <select id="sheng1" name="typeId" class="form-control" onChange="queryShi()">
+
+                                    </select>
+                                </td>
+                                <td>-</td>
+                                <td>
+                                    <select id="shi" name="typeId" class="form-control" onChange="queryXian()">
+
+                                    </select>
+                                </td>
+                                <td>-</td>
+                                <td>
+                                    <select id="xian" name="typeId" class="form-control">
+
+                                    </select>
+                                </td>
+                            </tr>
+                        </table><br>
+                        <table>
+                            <tr>
+                                <td>收货地</td>
+                                <td>
+                                    <select id="sheng2" name="typeId" class="form-control" onchange="querysheng2()">
+
+                                    </select>
+                                </td>
+                                <td>-</td>
+                                <td>
+                                    <select id="shi2" name="typeId" class="form-control" onchange="queryshi2()">
+
+                                    </select>
+                                </td>
+                                <td>-</td>
+                                <td>
+                                    <select id="xian2" name="typeId" class="form-control">
+
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+-->
+
 
                     <button type="button" class="btn btn-primary">筛选</button>
                     <button type="button" class="btn btn-primary">重置</button>
@@ -76,6 +125,7 @@
 
         </div>
     </div>
+</div>
 </form:form>
 
 <form:form modelAttribute="organizationManageDto">
@@ -101,6 +151,10 @@
     /*页面加载*/
     $(function () {
         initRoadTable();//商品查询展示
+
+       /* initSheng(1);
+        initFsheng(1);*/
+
     });
     /*查询展示*/
     function initRoadTable() {
@@ -135,24 +189,36 @@
             sidePagination: 'server',
             columns: [
                 {field: 'id', title: 'id'},
-                {field: 'sareaname', title: '始发地'},
-                {field: 'mareaname', title: '目的地'},
-                {field: 'time', title: '运输时效'},
-                {field: 'zprice', title: '重货价格'},
-                {field: 'qprice', title: '清货价格'},
-                {field: 'minPrice', title: '最低一票价格'},
+                {field:"sareaname",title:"始发地",formatter:function(value,row,index){
+                        return value + "-" + row.scityname + "-" + row.sregionname;
+                    }},
+                {field:"mareaname",title:"目的地",formatter:function(value,row,index){
+                        return value + "-" + row.mcityname + "-" + row.mregionname;
+                    }},
+                {field: 'time', title: '运输时效',formatter:function(value,row,index){
+                        return value + "小时";
+                    }},
+                {field: 'zprice', title: '重货价格',formatter:function(value,row,index){
+                        return value + "元/kg";
+                    }},
+                {field: 'qprice', title: '清货价格',formatter:function(value,row,index){
+                        return value + "元/m³";
+                    }},
+                {field: 'minPrice', title: '最低一票价格',formatter:function(value,row,index){
+                        return value + "元";
+                    }},
                 {field: 'good', title: '上门提货'},
                 {field: 'sgood', title: '送货上门'},
                 {field:'status',title:'发布状态',formatter:function(value,row,index){
                         if(value == 1){
-                            return "<input type='button' value='待发布'>";
+                            return '<button type="button" class="btn-info">已发布</button>';
                         }
                         if(value == 2){
-                            return "<input type='button' value='已发布'>";
+                            return '<button type="button" class="btn-info">已发布</button>';
                         }
                     }},
                 {field:'abc',title:'操作',formatter:function(value,row,index){
-                        return '<input type="button" value="编辑"/>';
+                        return '<button type="button" class="btn-info" onclick="bianjie()">编辑</button>';
                     }}
             ]
         })
@@ -160,90 +226,109 @@
 
 
 
-
-
-    function xianid1() {
-        var a=document.getElementById("shiid");
-        a=a.value
+   /* function initFsheng(pid) {
+        alert(pid)
         $.ajax({
-            url:"/getxian",
-            type: "post",
-            data:{typeid:a},
-            success : function (data) {
-                var hi="";
+            url:"/queryArea",
+            data:{pid:pid},
+            success:function (data) {
+                var html="<option>省</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
 
-                for (var i = 0; i <data.length; i++) {
-
-                    hi+="<option value='"+data[i].id+"'>"+data[i].name+"</option>";
                 }
-                $("#xianid").html(hi);
 
+                $("#sheng2").html(html);
+            }
+        })
+    }
+    function querysheng2() {
+        var shengid =$("#sheng2").val()
+        $.ajax({
+            url:"/queryAreaShi",
+            data:{shengid:shengid},
+            success:function (data) {
+                var html="<option>市</option>";
+                var  str="";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                    var  str=data[i].name
+                }
+                alert(str)
+                $("#shi2").html(html);
+            }
+        })
+    }
+    function queryshi2() {
+        var shi =$("#shi2").val();
+        $.ajax({
+            url:"/queryAreaXian",
+            data:{shi:shi},
+            success:function (data) {
+                var html="<option>县</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                }
+                $("#xian2").html(html);
+            }
+        })
+    }
+    function initSheng(pid) {
+        $.ajax({
+            url:"/queryArea",
+            data:{pid:pid},
+            success:function (data) {
+                var html="<option>省</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+
+                }
+
+                $("#sheng1").html(html);
             }
         })
 
     }
 
-
-
-    function shiid1() {
-        var a=document.getElementById("slid");
-        debugger;
-        a=a.value
+    function queryShi() {
+        var shengid =$("#sheng1").val()
         $.ajax({
-            url:"/getshi",
-            type: "post",
-            data:{typeid:a},
-            success : function (data) {
-                var hi="";
-
-                for (var i = 0; i <data.length; i++) {
-
-                    hi+="<option value='"+data[i].id+"'>"+data[i].name+"</option>";
+            url:"/queryAreaShi",
+            data:{shengid:shengid},
+            success:function (data) {
+                var html="<option>市</option>";
+                var  str="";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                    var  str=data[i].name
                 }
-
-                $("#shiid").html(hi);
-                $("#xianid").html("");
-
-
-
-
-
-
-
+                alert(str)
+                $("#shi").html(html);
             }
         })
-
     }
 
-
-
-    $(function () {
+    function queryXian() {
+        var shi =$("#shi").val();
         $.ajax({
-            url:"/getsheng",
-            type: "post",
-            success : function (data) {
-                var hi="";
-
-                for (var i = 0; i <data.length; i++) {
-
-                    hi+="<option value='"+data[i].id+"'>"+data[i].name+"</option>";
+            url:"/queryAreaXian",
+            data:{shi:shi},
+            success:function (data) {
+                var html="<option>县</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
                 }
-
-                $("#slid").html(hi);
-                $("#sslid").html(hi);
-
-
-
-
-
-
-
+                $("#xian").html(html);
             }
         })
-    })
+    }*/
 
 
-
-
+   function zengzhi() {
+       location.href="/page/findList";
+   }
+   function bianjie() {
+       location.href="/page/toEdit";
+   }
 </script>
 </html>
