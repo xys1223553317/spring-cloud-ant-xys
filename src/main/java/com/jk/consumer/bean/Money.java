@@ -9,7 +9,7 @@ public class Money {
 
     private String createTime;
 
-    private Double money;
+    private Double group;
 
     private String bank ;
 
@@ -18,6 +18,10 @@ public class Money {
     private String startTime;
 
     private String endTime;
+
+    private String name;
+
+    private String value;
 
 
 }

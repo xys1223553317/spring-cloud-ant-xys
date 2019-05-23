@@ -25,17 +25,25 @@ public class Road {
 
     private String time;
 
-    private String zprice;
+    private Double zprice;
 
-    private String qprice;
+    private Double qprice;
 
-    private String minPrice;
+    private Double minPrice;
 
     private String good;
 
     private String sgood;
 
     private Integer status;
+
+    private String createTime;
+
+    private Integer gsId;
+
+    private Integer remen;
+
+    private String luxianname;
 
 
 }

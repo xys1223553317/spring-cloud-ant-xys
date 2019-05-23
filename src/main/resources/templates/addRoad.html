@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .myrow{
+            margin-bottom:10px
+        }
+    </style>
+</head>
+<body>
+<form id="roadFrom">
+    <div class="row myrow">
+        <div class="col-md-2">
+            <label for="time">始发地:</label>
+        </div>
+        <div class="col-md-4">
+            <label for="sheng11">省</label>
+            <select id="sheng11" name="sarea" class="form-control" onChange="queryShi()">
+
+            </select>
+            <label for="xian1">市</label>
+            <select id="shi1" name="scity" class="form-control" onChange="queryXian()">
+
+            </select>
+            <label for="xian1">县</label>
+            <select id="xian1" name="sregion" class="form-control">
+
+            </select>
+        </div>
+    </div>
+    <div class="row myrow">
+        <div class="col-md-2">
+            <label for="time">目的地：</label>
+        </div>
+        <div class="col-md-4">
+            <label for="sheng21">省</label>
+            <select id="sheng21" name="marea" class="form-control" onchange="querysheng2()">
+
+            </select>
+            <label for="shi21">市</label>
+            <select id="shi21" name="mcity" class="form-control" onchange="queryshi2()">
+
+            </select>
+            <label for="xian21">县</label>
+            <select id="xian21" name="mregion" class="form-control">
+
+            </select>
+        </div>
+    </div>
+    <div class="row myrow">
+        <div class="col-md-2">
+            <label for="time">运输时效</label>
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" id="time" name="time">
+        </div>
+        <div class="col-md-2">
+            <label for="zprice">重货价格</label>
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" id="zprice" name="zprice">
+        </div>
+    </div>
+    <div class="row myrow">
+        <div class="col-md-2">
+            <label for="qprice">轻货价格</label>
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" id="qprice" name="qprice">
+        </div>
+        <div class="col-md-2">
+            <label for="minPrice">最低一票价格</label>
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" id="minPrice" name="minPrice">
+        </div>
+    </div>
+
+    <div class="row myrow">
+        <div class="col-md-2">
+            <label for="luxianname">路线名称</label>
+        </div>
+        <div class="col-md-4">
+            <input type="hidden" class="form-control" id="luxianname" name="luxianname">
+        </div>
+        <div class="col-md-2">
+    </div>
+
+    </div>
+
+
+
+
+</form>
+</body>
+<script>
+
+   $(function () {
+        initSheng(1);//商品查询展示
+        initFsheng(1);
+    });
+
+    function initFsheng(pid) {
+        $.ajax({
+            url:"/queryArea",
+            data:{pid:pid},
+            success:function (data) {
+                var html="<option>省</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                }
+                $("#sheng21").html(html);
+            }
+        })
+    }
+    function querysheng2() {
+        var shengid =$("#sheng21").val()
+        $.ajax({
+            url:"/queryAreaShi",
+            data:{shengid:shengid},
+            success:function (data) {
+                var html="<option>市</option>";
+                var  str="";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                    var  str=data[i].name
+                }
+                $("#shi21").html(html);
+            }
+        })
+    }
+    function queryshi2() {
+        var shi =$("#shi21").val();
+        $.ajax({
+            url:"/queryAreaXian",
+            data:{shi:shi},
+            success:function (data) {
+                var html="<option>县</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                }
+
+                $("#xian21").html(html);
+            }
+        })
+    }
+    function initSheng(pid) {
+        $.ajax({
+            url:"/queryArea",
+            data:{pid:pid},
+            success:function (data) {
+                var html="<option>省</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+
+                }
+
+                $("#sheng11").html(html);
+            }
+        })
+
+    }
+
+    function queryShi() {
+        var shengid =$("#sheng11").val()
+        $.ajax({
+            url:"/queryAreaShi",
+            data:{shengid:shengid},
+            success:function (data) {
+                var html="<option>市</option>";
+                var  str="";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                    var  str=data[i].name
+                }
+
+                $("#shi1").html(html);
+            }
+        })
+    }
+
+    function queryXian() {
+        var shi =$("#shi1").val();
+        $.ajax({
+            url:"/queryAreaXian",
+            data:{shi:shi},
+            success:function (data) {
+                var html="<option>县</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                }
+                $("#xian1").html(html);
+            }
+        })
+    }
+
+</script>
+
+</html>

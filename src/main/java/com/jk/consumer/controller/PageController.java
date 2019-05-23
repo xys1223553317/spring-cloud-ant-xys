@@ -56,12 +56,30 @@ public class PageController {
 
     @RequestMapping("toAdd")
     public String toAdd(){
-        return "add";
+        return "addMoney";
     }
 
 
     @RequestMapping("toEdit")
     public String toEdit(){
         return "bianji";
+    }
+
+    //线路新增
+    @RequestMapping("toAddRoad")
+    public String toAddRoad(){
+        return "addroad";
+    }
+
+    //导出
+    @RequestMapping("findTreeList")
+    public String findTreeList(){
+        return "daochu";
+    }
+
+    @RequestMapping("toUpdateMoney")
+    public String toUpdateMoney() {
+        return "updateMoney";
+
     }
 }

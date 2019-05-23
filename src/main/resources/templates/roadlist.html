@@ -69,9 +69,9 @@
                 <span class="title">筛选条件</span>
                 <div  class="row">
                     <div class="form-group">
-                       <!-- <table>
+                      <table>
                             <tr>
-                                <td>发货地</td>
+                                <td>始发站</td>
                                 <td>
                                     <select id="sheng1" name="typeId" class="form-control" onChange="queryShi()">
 
@@ -93,7 +93,7 @@
                         </table><br>
                         <table>
                             <tr>
-                                <td>收货地</td>
+                                <td>目的地</td>
                                 <td>
                                     <select id="sheng2" name="typeId" class="form-control" onchange="querysheng2()">
 
@@ -113,7 +113,7 @@
                                 </td>
                             </tr>
                         </table>
--->
+
 
 
                     <button type="button" class="btn btn-primary">筛选</button>
@@ -127,20 +127,6 @@
     </div>
 </div>
 </form:form>
-
-<form:form modelAttribute="organizationManageDto">
-    <div class="panel">
-        <div class="panel-body">
-            <div class="bbb">
-                <span class="title1">排序规则</span>
-                  <a href="javascript:shijian('+id+');">按发布时间排序</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:jine('+id+');">按始发地排序</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <a href="javascript:jaioyi('+id+');">按目的地排序</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:jine('+id+');">按运输时效排序</a>
-
-            </div>
-
-        </div>
-    </div>
-</form:form>
 <table id="roadTable"></table>
 </body>
 <script>
@@ -152,8 +138,8 @@
     $(function () {
         initRoadTable();//商品查询展示
 
-       /* initSheng(1);
-        initFsheng(1);*/
+       initSheng(1);
+        initFsheng(1);
 
     });
     /*查询展示*/
@@ -214,7 +200,7 @@
                             return '<button type="button" class="btn-info">已发布</button>';
                         }
                         if(value == 2){
-                            return '<button type="button" class="btn-info">已发布</button>';
+                            return '<button type="button" class="btn-info">未发布</button>';
                         }
                     }},
                 {field:'abc',title:'操作',formatter:function(value,row,index){
@@ -226,8 +212,8 @@
 
 
 
-   /* function initFsheng(pid) {
-        alert(pid)
+    function initFsheng(pid) {
+
         $.ajax({
             url:"/queryArea",
             data:{pid:pid},
@@ -321,7 +307,7 @@
                 $("#xian").html(html);
             }
         })
-    }*/
+    }
 
 
    function zengzhi() {
@@ -330,5 +316,53 @@
    function bianjie() {
        location.href="/page/toEdit";
    }
+
+
+    //打开新增弹框
+    function openRoadAdd(){
+
+        bootbox.dialog({
+            title:'添加用户',
+            message: createAddContent("/page/toAddRoad"),
+            closeButton: true,//是否显示关闭按钮
+            buttons : {
+                "success" : {
+                    "label" : "<i class='icon-ok'></i> 保存",
+                    "className" : "btn-sm btn-success",
+                    "callback" : function() {
+                        $.ajax({
+                            url:'/saveRoad',
+                            type:'post',
+                            data:$("#roadFrom").serialize(),
+                            success:function(){
+                                $('#roadTable').bootstrapTable('refresh');
+
+                            }
+                        });
+                    }
+                },
+                "cancel" : {
+                    "label" : "<i class='icon-info'></i> 取消",
+                    "className" : "btn-sm btn-danger",
+                    "callback" : function() {
+
+                    }
+                }
+            }
+
+        });
+    }
+
+    var res;
+    function createAddContent(url){
+        $.ajax({
+            url:url,
+            async:false,
+            success:function(data){
+                res = data;
+            }
+        });
+        return res;
+    }
 </script>
 </html>

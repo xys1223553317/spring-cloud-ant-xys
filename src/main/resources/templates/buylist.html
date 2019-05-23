@@ -83,31 +83,10 @@
                     </div>
                 </div>
                 <div  class="row">
-                    <div>
-                        <div class="col-md-2">
-                            <label class="control-label">结算状态:</label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" value="option1">全部
-
-                            </label>
-                            <label>
-                            <input type="radio" value="option2">已结算
-
-                            </label>
-                            <label>
-                                <input type="radio" value="option3">待结算
-
-                            </label>
-
                             <button type="button" class="btn btn-primary" onclick="searchBuy()">筛选</button>
                             <button type="button" class="btn btn-primary">重置</button>
                             <button type="button" class="btn btn-primary">导出</button>
                             <font size="3px">共有20条结果</font>
-                        </div>
-
-                    </div>
                 </div>
             </div>
 
@@ -115,19 +94,6 @@
     </div>
 </form:form>
 
-<form:form modelAttribute="organizationManageDto">
-    <div class="panel">
-        <div class="panel-body">
-            <div class="bbb">
-                <span class="title1">排序规则</span>
-                  <a href="javascript:shijian('+id+');">按下单时间排序</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:jine('+id+');">按结算状态排序</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <a href="javascript:jaioyi('+id+');">按运费金额排序</a>
-
-            </div>
-
-        </div>
-    </div>
-</form:form>
 <table id="buyTable"></table>
 </body>
 <script>
