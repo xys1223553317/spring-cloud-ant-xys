@@ -1,20 +1,6 @@
 .s-btn:hover .m-btn-line,
 .s-btn-active .m-btn-line,
 .s-btn-plain-active .m-btn-line {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
-  display: inline-block;
-}
-.l-btn:hover .s-btn-downarrow,
-.s-btn-active .s-btn-downarrow,
-.s-btn-plain-active .s-btn-downarrow {
-  border-style: solid;
-  border-color: #cccccc;
-  border-width: 0 0 0 1px;
-<<<<<<< HEAD
-=======
     display: inline-block;
 }
 
@@ -24,7 +10,4 @@
     border-style: solid;
     border-color: #cccccc;
     border-width: 0 0 0 1px;
->>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
-=======
->>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

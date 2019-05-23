@@ -1,5 +1,6 @@
 package com.jk.consumer.port;
 
+import com.jk.consumer.bean.GoodModel;
 import com.jk.consumer.pojo.*;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@FeignClient(value="zzl")
+@FeignClient(value="zss")
 public interface tuneport {
 
     @RequestMapping("findnavigationbar")
@@ -48,4 +49,7 @@ public interface tuneport {
     List<viewinformationBean> findviewinformationlist(viewinformationBean viewinformationBean);
     @RequestMapping("findcityslist")
     List<CityBean> findcityslist();
+
+    @RequestMapping("addgood")
+    void addFood(GoodModel user);
 }

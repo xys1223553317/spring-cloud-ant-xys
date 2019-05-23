@@ -1,40 +1,4 @@
 .progressbar {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
-  border-width: 1px;
-  border-style: solid;
-  -moz-border-radius: 5px 5px 5px 5px;
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-  overflow: hidden;
-  position: relative;
-}
-.progressbar-text {
-  text-align: center;
-  position: absolute;
-}
-.progressbar-value {
-  position: relative;
-  overflow: hidden;
-  width: 0;
-  -moz-border-radius: 5px 0 0 5px;
-  -webkit-border-radius: 5px 0 0 5px;
-  border-radius: 5px 0 0 5px;
-}
-.progressbar {
-  border-color: #D3D3D3;
-}
-.progressbar-text {
-  color: #000000;
-  font-size: 12px;
-}
-.progressbar-value .progressbar-text {
-  background-color: #0092DC;
-  color: #fff;
-<<<<<<< HEAD
-=======
     border-width: 1px;
     border-style: solid;
     -moz-border-radius: 5px 5px 5px 5px;
@@ -70,7 +34,4 @@
 .progressbar-value .progressbar-text {
     background-color: #0092DC;
     color: #fff;
->>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
-=======
->>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

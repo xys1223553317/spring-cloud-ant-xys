@@ -1,9 +1,5 @@
 <!doctype html>
 <html>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	<head>
 		<meta charset="utf-8" />
 		<title>Dynamic Load Examples</title>
@@ -40,46 +36,4 @@
 			</p>
 		</form>
 	</body>
-<<<<<<< HEAD
-=======
-<head>
-    <meta charset="utf-8"/>
-    <title>Dynamic Load Examples</title>
-    <style>
-        form {
-            margin: 0;
-        }
-
-        textarea {
-            display: block;
-        }
-    </style>
-    <script charset="utf-8" src="jquery.js"></script>
-    <script>
-        $(function () {
-            $('input[name=load]').click(function () {
-                $.getScript('../kindeditor-min.js', function () {
-                    KindEditor.basePath = '../';
-                    KindEditor.create('textarea[name="content"]');
-                });
-            });
-            $('input[name=remove]').click(function () {
-                KindEditor.remove('textarea[name="content"]');
-            });
-        });
-    </script>
-</head>
-<body>
-<h3>异步加载</h3>
-<form>
-    <textarea name="content" style="width:800px;height:200px;"></textarea>
-    <p>
-        <input type="button" name="load" value="加载JS并创建编辑器"/>
-        <input type="button" name="remove" value="删除编辑器"/>
-    </p>
-</form>
-</body>
->>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
-=======
->>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 </html>

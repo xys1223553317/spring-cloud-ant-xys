@@ -1,9 +1,5 @@
 <!doctype html>
 <html>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 	<head>
 		<meta charset="utf-8" />
 		<title>Newline Examples</title>
@@ -46,52 +42,4 @@
 			<textarea name="content" style="width:800px;height:200px;"></textarea>
 		</form>
 	</body>
-<<<<<<< HEAD
-=======
-<head>
-    <meta charset="utf-8"/>
-    <title>Newline Examples</title>
-    <style>
-        form {
-            margin: 0;
-        }
-
-        textarea {
-            display: block;
-        }
-    </style>
-    <link rel="stylesheet" href="../themes/default/default.css"/>
-    <script charset="utf-8" src="../kindeditor-min.js"></script>
-    <script charset="utf-8" src="../lang/zh_CN.js"></script>
-    <script>
-        KindEditor.ready(function (K) {
-            var editor;
-            K('select[name=newlineTag]').change(function () {
-                if (editor) {
-                    editor.remove();
-                    editor = null;
-                }
-                editor = K.create('textarea[name="content"]', {
-                    newlineTag: this.value
-                });
-            });
-            K('select[name=newlineTag]').change();
-        });
-    </script>
-</head>
-<body>
-<h3>回车换行设置</h3>
-<form>
-    <p>
-        <select name="newlineTag">
-            <option value="br">BR换行</option>
-            <option value="p">P换行</option>
-        </select>
-    </p>
-    <textarea name="content" style="width:800px;height:200px;"></textarea>
-</form>
-</body>
->>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
-=======
->>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 </html>

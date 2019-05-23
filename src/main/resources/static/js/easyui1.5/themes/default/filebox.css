@@ -1,28 +1,4 @@
 .filebox .textbox-value {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
-  vertical-align: top;
-  position: absolute;
-  top: 0;
-  left: -5000px;
-}
-.filebox-label {
-  display: inline-block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  left: 0;
-  top: 0;
-  z-index: 10;
-  background: url('images/blank.gif') no-repeat;
-}
-.l-btn-disabled .filebox-label {
-  cursor: default;
-<<<<<<< HEAD
-=======
     vertical-align: top;
     position: absolute;
     top: 0;
@@ -43,7 +19,4 @@
 
 .l-btn-disabled .filebox-label {
     cursor: default;
->>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
-=======
->>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 }

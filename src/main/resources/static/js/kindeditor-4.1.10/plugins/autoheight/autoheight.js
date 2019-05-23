@@ -1,8 +1,4 @@
 /*******************************************************************************
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 * KindEditor - WYSIWYG HTML Editor for Internet
 * Copyright (C) 2006-2011 kindsoft.net
 *
@@ -47,55 +43,6 @@ KindEditor.plugin('autoheight', function(K) {
 	} else {
 		self.afterCreate(init);
 	}
-<<<<<<< HEAD
-=======
- * KindEditor - WYSIWYG HTML Editor for Internet
- * Copyright (C) 2006-2011 kindsoft.net
- *
- * @author Roddy <luolonghao@gmail.com>
- * @site http://www.kindsoft.net/
- * @licence http://www.kindsoft.net/license.php
- *******************************************************************************/
-
-KindEditor.plugin('autoheight', function (K) {
-    var self = this;
-
-    if (!self.autoHeightMode) {
-        return;
-    }
-
-    var minHeight;
-
-    function hideScroll() {
-        var edit = self.edit;
-        var body = edit.doc.body;
-        edit.iframe[0].scroll = 'no';
-        body.style.overflowY = 'hidden';
-    }
-
-    function resetHeight() {
-        var edit = self.edit;
-        var body = edit.doc.body;
-        edit.iframe.height(minHeight);
-        self.resize(null, Math.max((K.IE ? body.scrollHeight : body.offsetHeight) + 76, minHeight));
-    }
-
-    function init() {
-        minHeight = K.removeUnit(self.height);
-
-        self.edit.afterChange(resetHeight);
-        hideScroll();
-        resetHeight();
-    }
-
-    if (self.isCreated) {
-        init();
-    } else {
-        self.afterCreate(init);
-    }
->>>>>>> 6f52d5ba06d475efef117561f74d26b3f4345452
-=======
->>>>>>> 5015bc2c1aab6efba5f481d960db7d224786927d
 });
 
 /*
