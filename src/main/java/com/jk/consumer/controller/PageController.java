@@ -39,4 +39,19 @@ public class PageController {
     public String toaddpicture(){
         return "addPicture";
     }
+    //后台登录
+    @RequestMapping("tohtlogin")
+    public String tohtlogin(){
+        return "htlogin";
+    }
+    //信息页面
+    @RequestMapping("toviewinformation")
+    public String toviewinformation(){
+        return "viewinformation";
+    }
+    //信息新增页面
+    @RequestMapping("toaddviewinformation")
+    public String toaddviewinformation(){
+        return "addviewinformation";
+    }
 }

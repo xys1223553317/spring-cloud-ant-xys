@@ -12,4 +12,6 @@ public class viewinformationBean {
     private String city;
     private Double yuan;
     private Double yuan2;
+    private Integer privoince;
+    private String privoinceName;
 }
