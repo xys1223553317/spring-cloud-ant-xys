@@ -27,4 +27,10 @@ public interface TreeService {
     List<AreaBean> queryAreaXian(@RequestParam("shi") Integer shi);
     @RequestMapping("queryRoad")
     HashMap<String ,Object>  queryRoad(@RequestParam("shi") Integer shi, @RequestParam("daodashi") Integer daodashi);
+    @RequestMapping("updateSouli")
+    void updateSouli(@RequestParam("id") Integer id);
+    @RequestMapping("queryDingdanZaaitu")
+    HashMap<String, Object> queryDingdanZaaitu(@RequestBody DingdanBean dingdanBean,@RequestParam("page") Integer page,@RequestParam("rows") Integer rows);
+    @RequestMapping("queryfukuan")
+    HashMap<String, Object> queryfukuan(@RequestBody DingdanBean dingdanBean,@RequestParam("page") Integer page,@RequestParam("rows") Integer rows);
 }

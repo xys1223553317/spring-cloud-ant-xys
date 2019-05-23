@@ -7,7 +7,6 @@
     <meta name="description" content="绿蚂蚁：领先的物流搜索平台，提供深圳、广州、上海、北京等全国的物流专线、物流公司、物流新闻、在线发货服务，涵盖了德邦物流、天地华宇、佳吉快运、新邦物流等10000多家物流公司"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="renderer" content="webkit|ie-stand|ie-comp" />
-    <script src="../js/easyui1.5/jquery.min.js"></script>
     <link rel="stylesheet" href="/js/layui/css/layui.css">
 
     <link rel="shortcut icon" type="image/x-icon" href="http://www.lvmae.com/favicon.ico" />
@@ -30,21 +29,6 @@
     <script type="text/javascript" src="http://www.lvmae.com/file/script/index/jquery.plugins.js" charset="UTF-8"></script>
     <link rel="stylesheet" type="text/css" href="http://www.lvmae.com/skin/default/css/index.v1.css"></link>
     <script src="https://static.pdflibr.com/SuperSlide/2.1.3/jquery.SuperSlide.2.1.3.js"></script>
-    <script src="/js/jquery.min.js"></script>
-
-
-
-    <link rel="stylesheet" href="../bootstrap3/css/bootstrap.css">
-    <script src="../bootstrap3/js/bootstrap.js"></script>
-
-    <link rel="stylesheet" href="../bootstrap-table/bootstrap-table.css">
-    <script src="../bootstrap-table/bootstrap-table.js"></script>
-
-    <script src="../bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
-
-    <link rel="stylesheet" href="../bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
-    <script src="../bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
-    <script src="../bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
     <script type="text/javascript">
         var _HotLineScrollTop = "";
         var basePath = "http://www.lvmae.com/";
@@ -54,31 +38,40 @@
     </script>
     <script type="text/javascript" src="http://www.lvmae.com/file/script/index/hj.common.js" charset="UTF-8"></script>
     <link rel="canonical" href="http://www.lvmae.com"/>
+
+    <script src="/bootstrap3/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/bootstrap3/css/bootstrap.css">
+
+    <link rel="stylesheet" href="/bootstrap-treeview/bootstrap-treeview.min.css">
+    <script src="/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+
+    <script src="/bootStrap-addTabs/bootstrap.addtabs.min.js"></script>
+    <link rel="stylesheet" href="/bootStrap-addTabs/bootstrap.addtabs.css">
 </head>
 <style type="text/css">
     div.aaa{
-    width:77%;
-    height:92%;
-    margin-top:350px;
-    margin-left:155px;
+        width:77%;
+        height:92%;
+        margin-top:350px;
+        margin-left:155px;
     }
 </style>
 
 <body>
 <!-- Header Start -->
-    <div class="header-content">
-        <div class="wrap">
-            <div class="logo icons-logo fl"><a href="http://www.lvmae.com/" title="上绿蚂蚁发货，说走就走">上绿蚂蚁发货，说走就走</a></div>
-            <div class="icons-wuli fr" style="background-image:none;"><script type="text/javascript" src="http://www.lvmae.com/file/script/A47.js"></script></div>
-        </div>
+<div class="header-content">
+    <div class="wrap">
+        <div class="logo icons-logo fl"><a href="http://www.lvmae.com/" title="上绿蚂蚁发货，说走就走">上绿蚂蚁发货，说走就走</a></div>
+        <div class="icons-wuli fr" style="background-image:none;"><script type="text/javascript" src="http://www.lvmae.com/file/script/A47.js"></script></div>
     </div>
-    <div class="nav">
-        <div class="wrap">
-            <ul>
-                <span id="cc"></span>
-               </ul>
-        </div>
+</div>
+<div class="nav">
+    <div class="wrap">
+        <ul>
+            <span id="cc"></span>
+        </ul>
     </div>
+</div>
 <div class="substation-box">
     <div class="substation">
         <div class="sub-title">分站</div>
@@ -124,340 +117,10 @@
 <div>
     <div class="layui-carousel" id="test1" style="position: absolute;z-index: 0">
         <div class="banner-box" style="  ">
-        <div class="kSlide" id="kSlide">
-            <ul id="luntu">
+            <div class="kSlide" id="kSlide">
+                <ul id="luntu">
 
-            </ul>
-        <div carousel-item>
-            <!-- <span id="aa"></span>-->
-            <div><img src="/js/img/me.jpg" height="350" width="1583"/></div>
-            <div><img src="/js/img/u=846181890,1412064009&fm=26&gp=0.jpg" height="350" width="1583"/></div>
-            <div>
-                <span id="aa"></span>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="aaa">
-    <div class="wrap">
-        <a href="http://www.lvmae.com/extend/redirect.php?aid=94">
-            <img src="/js/img/u=846181890,1412064009&fm=26&gp=0.jpg" height="85" width="1200"/>
-        </a>
-    </div>
-</div>
-<div class="block-wrapper zuangche-fache">
-    <div class="wrap">
-        <div class="block-header">
-            <h3>专线发车时刻表</h3>
-            <ul class="tab-title" id="tab1">
-                <span id="dd" onclick="aaa()"></span>
-            </ul>
-        </div>
-        <div class="block-body" id="con1">
-            <div class="tab-content tab-active" data-tab="city_1">
-                <div class="section-1">
-                    <div class="section-left">
-                        <h4><span class="icons-i1"></span><strong>热门送达城市</strong></h4>
-                        <div class="tag-box-1">
-                           <span id="ff"></span>
-                        </div>
-                </div>
-                    <table id="hyskb1" class="hyskb">
-                        <thead>
-                        <tr>
-                            <th class="wp15">物流线路</th>
-                            <th class="wp30">运输班次 / <span style="color:red;">预计到达时间</span></th>
-                            <th class="wp3"></th>
-                            <th class="wp15">运输价格</th>
-                            <th class="wp15">保障</th>
-                            <th class="wp12">发货</th>
-                        </tr>
-                        </thead>
-                    </table>
-            </div>
-        </div>
-    </div>
-    </div>
-</div>
-<div class="block-wrapper teijia">
-   <div class="wrap">
-       <div class="block-header">
-           <p style="float:left;line-height: 30px;text-indent: 20px;width: 80px;">特价线路</p>
-           <select id="citys"></select>
-        </div>
-    </div>
-</div>
-<div class="block-body">
-    <div class="tab-content tab-active"  data-tab="jg_28373" style="margin-left:180px">
-        <div class="section-3">
-           <ul class="teijia-list">
-              <sqan id="mm"></sqan>
-           </ul>
-         </div>
-     </div>
-</div>
-<div class="block-content"style="margin-left:180px">
-    <div class="section-4">
-        <div class="block-body">
-        </div>
-    </div>
-    <div class="section-5" id="order_list">
-        <div class="t-1">最新发货单</div>
-        <ul class="order-list" style="max-height: 239.413px; margin-top: 0.586761px;"><li class="item" style="opacity: 0.0225677;"><span class=" color-1">1533619****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/14198-41665/13178173.html" target="_blank">合肥到西安物流专线</a></li><li class="item" style=""><span class=" color-1">1533619****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/14198-41665/12207752.html" target="_blank">合肥到西安物流专线</a></li><li class="item" style=""><span class=" color-1">1813216****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/23842-657/12585932.html" target="_blank">武汉到石家庄物流专线</a></li><li class="item" style=""><span class=" color-1">1860544****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/3139-19684/13022049.html" target="_blank">太原到烟台物流专线</a></li><li class="item" style=""><span class=" color-1">1860544****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/3139-19684/12839266.html" target="_blank">太原到烟台物流专线</a></li><li class="item" style=""><span class=" color-1">1761511****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/19852-6238/3349904.html" target="_blank">潍坊到大连物流专线</a></li><li class="item" style=""><span class=" color-1">1761511****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/19852-6238/11498745.html" target="_blank">潍坊到大连物流专线</a></li><li class="item" style=""><span class=" color-1">1761511****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/19852-6238/11543679.html" target="_blank">潍坊到大连物流专线</a></li><li class="item" style=""><span class=" color-1">1353754****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/28373-28062/10123864.html" target="_blank">深圳到广州物流专线</a></li><li class="item" style=""><span class=" color-1">1353754****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/28373-28062/10515007.html" target="_blank">深圳到广州物流专线</a></li><li class="item" style=""><span class=" color-1">1399406****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/23842-3139/12396218.html" target="_blank">武汉到太原物流专线</a></li><li class="item" style=""><span class=" color-1">1775655****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/14354-14198/10010758.html" target="_blank">芜湖到合肥物流专线</a></li><li class="item" style=""><span class=" color-1">1876162****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/10996-17236/10005113.html" target="_blank">南京到南昌物流专线</a></li><li class="item" style=""><span class=" color-1">1860220****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/344-958/11584868.html" target="_blank">天津到唐山物流专线</a></li><li class="item" style=""><span class=" color-1">1381796****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/20250-2/10158018.html" target="_blank">威海到北京物流专线</a></li><li class="item" style=""><span class=" color-1">1340252****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/11243-11504/11563608.html" target="_blank">徐州到苏州物流专线</a></li><li class="item" style=""><span class=" color-1">1368192****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/29694-10747/11507734.html" target="_blank">中山到上海物流专线</a></li><li class="item" style=""><span class=" color-1">1517545****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/2880-1582/13333623.html" target="_blank">廊坊到邢台物流专线</a></li><li class="item" style=""><span class=" color-1">1526913****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/21150-28373/13107648.html" target="_blank">郑州到深圳物流专线</a></li><li class="item" style=""><span class=" color-1">1778897****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/16165-28062/11676806.html" target="_blank">厦门到广州物流专线</a></li>
-        </ul>
-    </div>
-</div>
-<div class="block-wrapper wuliuquan">
-    <div class="wrap">
-        <div class="block-header">
-            <h3>物流商圈</h3>
-        </div>
-        <div class="block-body">
-            <div class="block-content">
-                <div class="section-box">
-                    <div class="section-4">
-                        <ul class="wuliu-list">
-                            <li class="item">
-                                <a href="http://www.lvmae.com/road/wuliuyuan/269.html" target="_blank">
-                                    <img src="/js/img/635562339668156847.jpg" alt="" width="170" height="170">
-                                    <div class="item-bg"></div>
-                                    <div class="item-name">深国际华通源物流中心</div>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="http://www.lvmae.com/road/wuliuyuan/274.html" target="_blank">
-                                    <img src="/js/img/635562368067427276.jpg" alt="" width="170" height="170">
-                                    <div class="item-bg"></div>
-                                    <div class="item-name">金鹏物流园</div>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="http://www.lvmae.com/road/wuliuyuan/278.html" target="_blank">
-                                    <img src="/js/img/635563094262507066.jpg" alt="" width="170" height="170">
-                                    <div class="item-bg"></div>
-                                    <div class="item-name">宝运达物流中心</div>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="http://www.lvmae.com/road/wuliuyuan/285.html" target="_blank">
-                                    <img src="/js/img/635584892072959886.jpg" alt="" width="170" height="170">
-                                    <div class="item-bg"></div>
-                                    <div class="item-name">石岩物流园</div>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="http://www.lvmae.com/road/wuliuyuan/286.html" target="_blank">
-                                    <img src="/js/img/635592780938709416.jpg" alt="" width="170" height="170">
-                                    <div class="item-bg"></div>
-                                    <div class="item-name">钟屋物流园</div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="section-5">
-                        <a href="http://www.lvmae.com/about/6.html" target="_blank"><img src="http://www.lvmae.com/file/upload/201607/18/16-23-43-62-1.jpg" width="235" height="230" alt=""></a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="block-wrapper dongtai">
-    <div class="wrap">
-        <div class="block-header">
-            <h3>最新物流专线</h3>
-            <h3>最新物流动态</h3>
-            <h3>热门城市</h3>
-        </div>
-        <div class="block-body">
-            <div class="block-content">
-                <div class="section-box">
-                    <div class="section-5">
-                        <ul class="dongtai-list">
-                            <li class="item"><a href="http://www.lvmae.com/road/10747-34248/index.html" target="_blank">上海到内江物流专线</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/road/10747-34607/index.html" target="_blank">上海到南充物流专线</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/road/10747-33557/index.html" target="_blank">上海到绵阳物流专线</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/road/10747-34375/index.html" target="_blank">上海到乐山物流专线</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/road/10747-35372/index.html" target="_blank">上海到广安物流专线</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/road/10747-33860/index.html" target="_blank">上海到广元物流专线</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/road/10747-34116/index.html" target="_blank">上海到遂宁物流专线</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/road/10747-35176/index.html" target="_blank">上海到宜宾物流专线</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/road/10747-33423/index.html" target="_blank">上海到德阳物流专线</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/road/10747-35038/index.html" target="_blank">上海到眉山物流专线</a></li>
-                        </ul>
-                    </div>
-                    <div class="section-5">
-                        <ul class="dongtai-list">
-                            <li class="item"><a href="http://www.lvmae.com/news/line/7120.html" target="_blank">铁岭到阿拉善物流专线</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/news/hangye/7119.html" target="_blank">10月份中国大宗商品指数显示：供应压力有所加大，市场调整风险加剧</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/news/line/7118.html" target="_blank">铁岭到沈阳物流专线</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/news/hangye/7117.html" target="_blank">2018年10月中国物流业景气指数为54.5%</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/news/line/7116.html" target="_blank">铁岭到大连物流专线</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/news/hangye/7115.html" target="_blank">11月份这些新规将影响快递从业人员</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/news/line/7114.html" target="_blank">铁岭到鞍山物流专线</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/news/hangye/7113.html" target="_blank">中欧班列（西安）2018年首超千列开行仪式在西安新建新筑物流基地举行</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/news/line/7112.html" target="_blank">铁岭到抚顺物流专线</a></li>
-                            <li class="item"><a href="http://www.lvmae.com/news/company/7111.html" target="_blank">中国邮政已完成组建省级寄递事业部</a></li>
-                        </ul>
-                    </div>
-                    <div class="section-5">
-                        <ul class="dongtai-list">
-                            <li class="item"><span class="li_icon">1</span><a href="http://www.lvmae.com/company/10747-0.html" target="_blank">上海 上海市</a></li>
-                            <li class="item"><span class="li_icon">2</span><a href="http://www.lvmae.com/company/11504-0.html" target="_blank">江苏 苏州市</a></li>
-                            <li class="item"><span class="li_icon">3</span><a href="http://www.lvmae.com/company/2-0.html" target="_blank">北京 北京市</a></li>
-                            <li class="item"><span class="li_icon">4</span><a href="http://www.lvmae.com/company/28062-0.html" target="_blank">广东 广州市</a></li>
-                            <li class="item"><span class="li_icon">5</span><a href="http://www.lvmae.com/company/32756-0.html" target="_blank">四川 成都市</a></li>
-                            <li class="item"><span class="li_icon">6</span><a href="http://www.lvmae.com/company/16449-0.html" target="_blank">福建 泉州市</a></li>
-                            <li class="item"><span class="li_icon">7</span><a href="http://www.lvmae.com/company/344-0.html" target="_blank">天津 天津市</a></li>
-                            <li class="item"><span class="li_icon">8</span><a href="http://www.lvmae.com/company/13542-0.html" target="_blank">浙江 金华市</a></li>
-                            <li class="item"><span class="li_icon">9</span><a href="http://www.lvmae.com/company/10996-0.html" target="_blank">江苏 南京市</a></li>
-                            <li class="item"><span class="li_icon">10</span><a href="http://www.lvmae.com/company/29658-0.html" target="_blank">广东 东莞市</a></li>
-                        </ul>
-                    </div>
-                    <div class="section-6">
-                        <div class="partner">
-                            <div class="t-1">合作伙伴</div>
-                            <ul class="partner-list">
-                                <li class="item">
-                                    <a href="http://www.csc86.com" target="_blank" rel="external nofollow"><img src="http://www.lvmae.com/file/upload/201509/08/13-50-28-40-25696.jpg" alt="" width="120" height="38" title="华南城网"></a>
-                                </li>
-                                <li class="item">
-                                    <a href="http://www.yogapay.com" target="_blank" rel="external nofollow"><img src="http://www.lvmae.com/file/upload/201509/08/13-49-24-74-25696.jpg" alt="" width="120" height="38" title="支付界"></a>
-                                </li>
-                                <li class="item">
-                                    <a href="http://www.supaide.com" target="_blank" rel="external nofollow"><img src="http://www.lvmae.com/file/upload/201509/08/13-34-36-65-25696.jpg" alt="" width="120" height="38" title="速派得"></a>
-                                </li>
-                                <li class="item">
-                                    <a href="http://www.lvmae.net/" target="_blank"><img src="http://www.lvmae.com/file/upload/201605/24/10-41-36-54-31604.png" alt="" width="120" height="38" title="禾嘉科技"></a>
-                                </li>
-                                <li class="item">
-                                    <a href="http://www.chinaports.com/shiptracker/shipinit.do?method=forIndex" target="_blank" rel="external nofollow"><img src="http://www.lvmae.com/file/upload/201509/21/14-04-52-83-25696.jpg" alt="" width="120" height="38" title="船舶动态查询"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-            <div>
-                <span id="bb"></span>
-            </div>
-        </div>
-        <div class="search-area">
-            <div class="wrap">
-                <div class="search-box">
-                    <div class="search-aside">
-                        <ul class="item-list" id="searchTitle">
-                            <li data-tab="m-zx" class="item tab-active">专线</li>
-                            <li class="hr"></li>
-                            <li data-tab="m-sq" class="item">商圈</li>
-                            <li class="hr"></li>
-                            <li data-tab="m-cy" class="item">承运商</li>
-                            <li class="hr"></li>
-                            <!--<li data-tab="m-gc" class="item">同城</li>-->
-                        </ul>
-                    </div>
-                    <div class="search-content" id="searchContent">
-                        <div class="tab-content tab-content-1 tab-active" data-tab="m-zx">
-                            <div class="search-1">
-                                <div class="t-1">线路查询</div>
-                                <div class="placeholder-box" placeholder="">
-                                    <label for="faHuo">发货地</label>
-                                    <div class="placeholder" placeholder=""></div>
-                                    <div class="sel"><a href="javascript:void(0);" class="icon_list"></a><input type="text" name="place1" class="fahuo input placeholder inp_regis inp_grey tipInput" id="road_leave_city" placeholder="" readonly="readonly" tiptextobjectlist="请选择发货地"></div>
-                                    <span class="icon_list icons-position-1"></span>
-                                </div>
-                                <div class="placeholder-box" placeholder="">
-                                    <label for="shouHuo">收货地</label>
-                                    <div class="placeholder" placeholder=""></div>
-                                    <div class="sel"><a href="javascript:void(0);" class="icon_list"></a><input type="text" name="palce2" class="shouhuo input placeholder inp_regis inp_grey tipInput" id="road_arrive_city" placeholder="" readonly="readonly" tiptextobjectlist="请选择收货地"></div>
-                                    <span class="icons-position-1"></span>
-                                </div>
-                                <div class="reset-show"><span class="bold color-1">2630633</span>条物流线路、<span class="bold color-1">10888</span>家物流承运商供您选择！</div>
-                                <div class="btn-box">
-                                    <button class="btn b-6" onclick="queryRoad()">即刻查询</button>
-                                </div>
-                            </div>
-                            <span class="arrow-left"></span>
-                        </div>
-                        <div class="tab-content tab-content-2" data-tab="m-sq">
-                            <div class="search-1">
-                                <div class="t-1">物流商圈查询</div>
-                                <div class="placeholder-box" placeholder="">
-                                    <label for="faHuo">商圈名</label>
-                                    <div class="placeholder" placeholder="" style="height: 46px; line-height: 46px; left: 10px;"></div>
-                                    <input type="text" name="place1" class="sqfahuo input placeholder" readonly="" id="sqFaHuo" placeholder="请选择商圈名" data-type="1">
-                                    <span class="icons-position-1"></span>
-                                </div>
-                                <div class="select-city clearfix" id="selectCitye">
-                                    <select class="fl" name="provinces">
-                                        <option value="">省份</option>
-                                        <option value="656">河北</option><option value="3138">山西</option><option value="4641">内蒙古</option><option value="5997">辽宁</option><option value="7689">吉林</option><option value="8784">黑龙江</option><option value="10995">江苏</option><option value="12733">浙江</option><option value="14197">安徽</option><option value="15956">福建</option><option value="17235">江西</option><option value="19126">山东</option><option value="21149">河南</option><option value="23841">湖北</option><option value="25444">湖南</option><option value="28061">广东</option><option value="29968">广西</option><option value="31364">海南</option><option value="32755">四川</option><option value="37646">贵州</option><option value="39350">云南</option><option value="40890">西藏</option><option value="41664">陕西</option><option value="43221">甘肃</option><option value="44746">青海</option><option value="45211">宁夏</option><option value="45501">新疆</option><option value="46991">香港</option><option value="47007">台湾</option><option value="47020">澳门</option><option value="1">北京</option><option value="343">天津</option><option value="10746">上海</option><option value="31699">重庆</option></select>
-                                    <select class="fl" name="city">
-                                        <option value="">城市</option>
-                                    </select>
-                                    <select class="fl" name="park">
-                                        <option value="">商圈</option>
-                                    </select>
-                                    <button class="fl btn b-6" id="enterCity">确定</button>
-                                </div>
-                                <div class="reset-show"><span class="bold color-1">2630633</span>条物流线路、<span class="bold color-1">10888</span>家物流承运商供您选择！</div>
-                                <div class="btn-box">
-
-                                </div>
-                            </div>
-                            <span class="arrow-left"></span>
-                        </div>
-                        <div class="tab-content tab-content-3" data-tab="m-cy">
-                            <div class="search-1">
-                                <div class="t-1">请输入承运商公司名称</div>
-                                <div class="placeholder-box" placeholder="">
-                                    <label>公司名称</label>
-                                    <input type="text" class="  input placeholder" id="companyName" inputcid="" placeholder="请输入承运商公司名称">
-                                    <span class="icons-position-1"></span>
-                                </div>
-                                <div class="reset-show"><span class="bold color-1">2630633</span>条物流线路、<span class="bold color-1">10888</span>家物流承运商供您选择！</div>
-                                <div class="btn-box">
-                                    <button class="btn b-6" onclick="m.searchCompany();">即刻查询</button>
-                                </div>
-                            </div>
-                            <!-- 下接选项 start-->
-                            <div id="companySelect" class="tangram-suggestion companySelect">
-                                <table cellspacing="0" cellpadding="2">
-                                    <tbody>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- 下接选项 end-->
-                            <span class="arrow-left"></span>
-                        </div>
-                        <div id="l-map" style="overflow: hidden; position: relative; z-index: 0; background-color: rgb(243, 241, 236); color: rgb(0, 0, 0); text-align: left;"><div style="overflow: visible; position: absolute; z-index: 0; left: 0px; top: 0px; cursor: url(&quot;http://api0.map.bdimg.com/images/openhand.cur&quot;) 8 8, default;"><div class="BMap_mask" style="position: absolute; left: 0px; top: 0px; z-index: 9; overflow: hidden; user-select: none; width: 455px; height: 0px;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 600;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 500;"><label class="BMapLabel" unselectable="on" style="position: absolute; display: none; cursor: inherit; background-color: rgb(190, 190, 190); border: 1px solid rgb(190, 190, 190); padding: 1px; white-space: nowrap; font: 12px arial, sans-serif; z-index: -20000; color: rgb(190, 190, 190);">shadow</label></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 400;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 300;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 201;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 1;"><div style="position: absolute; overflow: visible; z-index: -100; left: 228px; top: 0px; display: block; transform: translate3d(0px, 0px, 0px);"><img src="http://online1.map.bdimg.com/tile/?qt=vtile&amp;x=775&amp;y=156&amp;z=12&amp;styles=pl&amp;scaler=1&amp;udt=20190517" style="position: absolute; border: none; width: 256px; height: 256px; left: -2px; top: -176px; max-width: none; opacity: 1;"><img src="http://online0.map.bdimg.com/tile/?qt=vtile&amp;x=774&amp;y=156&amp;z=12&amp;styles=pl&amp;scaler=1&amp;udt=20190517" style="position: absolute; border: none; width: 256px; height: 256px; left: -258px; top: -176px; max-width: none; opacity: 1;"></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 2; display: none;"><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 0; display: none;"></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 3;"></div></div><div class="pano_close" title="退出全景" style="z-index: 1201; display: none;"></div><a class="pano_pc_indoor_exit" title="退出室内景" style="z-index: 1201; display: none;"><span style="float:right;margin-right:12px;">出口</span></a><div id="zoomer" style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:url(http://api0.map.bdimg.com/images/openhand.cur) 8 8,default"><div class="BMap_zoomer" style="top:0;left:0;"></div><div class="BMap_zoomer" style="top:0;right:0;"></div><div class="BMap_zoomer" style="bottom:0;left:0;"></div><div class="BMap_zoomer" style="bottom:0;right:0;"></div></div><div class=" anchorBL" style="height: 32px; position: absolute; z-index: 30; text-size-adjust: none; bottom: 20px; right: auto; top: auto; left: 1px; display: none;"><a title="到百度地图查看此区域" target="_blank" href="http://map.baidu.com/?sr=1" style="outline: none;"><img style="border:none;width:77px;height:32px" src="http://api0.map.bdimg.com/images/copyright_logo.png"></a></div><div unselectable="on" class=" BMap_cpyCtrl BMap_noprint anchorBL" style="cursor: default; white-space: nowrap; color: black; background: none; font: 11px/15px arial, sans-serif; bottom: 2px; right: auto; top: auto; left: 4px; position: absolute; z-index: 10; text-size-adjust: none;"><span _cid="1" style="display: inline;"><span style="background: rgba(255, 255, 255, 0.701961);padding: 0px 1px;line-height: 16px;display: inline;height: 16px;">©&nbsp;2019 Baidu - GS(2018)5572号 - 甲测资字1100930 - 京ICP证030173号 - Data © 长地万方</span></span></div></div>
-                        <div class="tab-content tab-content-4" data-tab="m-gc">
-                            <form action="http://www.lvmae.com/api/supaide/" method="post" target="_blank" autocomplete="off">
-                                <div class="search-1">
-                                    <div class="t-1">报价查询</div>
-                                    <div class="placeholder-box" placeholder="">
-                                        <label for="">发货地</label>
-                                        <input type="text" name="saddrTitle" class=" input " id="saddrTitle" value="" placeholder="请输入发货地" autocomplete="off">
-                                        <span class="icons-position-1"></span>
-                                        <div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
-                                    </div>
-                                    <div class="placeholder-box" placeholder="">
-                                        <label for="">收货地</label>
-                                        <input type="text" name="raddrTitle" class=" input " id="raddrTitle" placeholder="请输入收货地" autocomplete="off">
-                                        <span class="icons-position-1"></span>
-                                    </div>
-                                    <div class="reset-show"><span class="bold color-1">2630633</span>条物流线路、<span class="bold color-1">10888</span>家物流承运商供您选择！</div>
-                                    <div class="btn-box">
-                                        <button class="btn b-6">即刻查询</button>
-                                    </div>
-                                </div>
-                            </form>
-                            <span class="arrow-left"></span>
-                        </div>
-                    </div>
-                </div>
+                </ul>
             </div>
         </div>
         <div class="search-area">
@@ -484,28 +147,28 @@
                                     <div class="sel"><a href="javascript:void(0);" class="icon_list"></a><input type="text" name="place1" class="fahuo input placeholder inp_regis inp_grey tipInput" id="road_leave_city" placeholder="" readonly="readonly" tiptextobjectlist="请选择发货地"></div>
                                     <span class="icon_list icons-position-1"></span>
                                 </div>-->
-                               <table>
-                                   <tr>
-                                       <td>发货地</td>
-                                       <td>
-                                           <select id="sheng1" name="typeId" class="form-control" onChange="queryShi()">
+                                <table>
+                                    <tr>
+                                        <td>发货地</td>
+                                        <td>
+                                            <select id="sheng1" name="typeId" class="form-control" onChange="queryShi()">
 
-                                           </select>
-                                       </td>
+                                            </select>
+                                        </td>
                                         <td>-</td>
-                                       <td>
-                                           <select id="shi" name="typeId" class="form-control" onChange="queryXian()">
+                                        <td>
+                                            <select id="shi" name="typeId" class="form-control" onChange="queryXian()">
 
-                                           </select>
-                                       </td>
-                                       <td>-</td>
-                                       <td>
-                                           <select id="xian" name="typeId" class="form-control">
+                                            </select>
+                                        </td>
+                                        <td>-</td>
+                                        <td>
+                                            <select id="xian" name="typeId" class="form-control">
 
-                                           </select>
-                                       </td>
-                                   </tr>
-                               </table><br>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table><br>
                                 <table>
                                     <tr>
                                         <td>收货地</td>
@@ -622,11 +285,209 @@
         </div>
     </div>
 </div>
+</div>
+</div>
 <div class="aaa">
     <div class="wrap">
         <a href="http://www.lvmae.com/extend/redirect.php?aid=94">
             <img src="/js/img/u=846181890,1412064009&fm=26&gp=0.jpg" height="85" width="1200"/>
         </a>
+    </div>
+</div>
+<div class="block-wrapper zuangche-fache">
+    <div class="wrap">
+        <div class="block-header">
+            <h3>专线发车时刻表</h3>
+            <ul class="tab-title" id="tab1">
+                <span id="dd" onclick="aaa()"></span>
+            </ul>
+        </div>
+        <div class="block-body" id="con1">
+            <div class="tab-content tab-active" data-tab="city_1">
+                <div class="section-1">
+                    <div class="section-left">
+                        <h4><span class="icons-i1"></span><strong>热门送达城市</strong></h4>
+                        <div class="tag-box-1">
+                            <span id="ff"></span>
+                        </div>
+                    </div>
+                    <table id="hyskb1" class="hyskb">
+                        <thead>
+                        <tr>
+                            <th class="wp15">物流线路</th>
+                            <th class="wp30">运输班次 / <span style="color:red;">预计到达时间</span></th>
+                            <th class="wp3"></th>
+                            <th class="wp15">运输价格</th>
+                            <th class="wp15">保障</th>
+                            <th class="wp12">发货</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="block-wrapper teijia">
+    <div class="wrap">
+        <div class="block-header">
+            <p style="float:left;line-height: 30px;text-indent: 20px;width: 80px;">特价线路</p>
+            <select id="citys"></select>
+        </div>
+    </div>
+</div>
+<div class="block-body">
+    <div class="tab-content tab-active"  data-tab="jg_28373" style="margin-left:180px">
+        <div class="section-3">
+            <ul class="teijia-list">
+                <sqan id="mm"></sqan>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="block-content"style="margin-left:180px">
+    <div class="section-4">
+        <div class="block-body">
+        </div>
+    </div>
+    <div class="section-5" id="order_list">
+        <div class="t-1">最新发货单</div>
+        <ul class="order-list" style="max-height: 239.413px; margin-top: 0.586761px;"><li class="item" style="opacity: 0.0225677;"><span class=" color-1">1533619****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/14198-41665/13178173.html" target="_blank">合肥到西安物流专线</a></li><li class="item" style=""><span class=" color-1">1533619****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/14198-41665/12207752.html" target="_blank">合肥到西安物流专线</a></li><li class="item" style=""><span class=" color-1">1813216****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/23842-657/12585932.html" target="_blank">武汉到石家庄物流专线</a></li><li class="item" style=""><span class=" color-1">1860544****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/3139-19684/13022049.html" target="_blank">太原到烟台物流专线</a></li><li class="item" style=""><span class=" color-1">1860544****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/3139-19684/12839266.html" target="_blank">太原到烟台物流专线</a></li><li class="item" style=""><span class=" color-1">1761511****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/19852-6238/3349904.html" target="_blank">潍坊到大连物流专线</a></li><li class="item" style=""><span class=" color-1">1761511****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/19852-6238/11498745.html" target="_blank">潍坊到大连物流专线</a></li><li class="item" style=""><span class=" color-1">1761511****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/19852-6238/11543679.html" target="_blank">潍坊到大连物流专线</a></li><li class="item" style=""><span class=" color-1">1353754****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/28373-28062/10123864.html" target="_blank">深圳到广州物流专线</a></li><li class="item" style=""><span class=" color-1">1353754****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/28373-28062/10515007.html" target="_blank">深圳到广州物流专线</a></li><li class="item" style=""><span class=" color-1">1399406****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/23842-3139/12396218.html" target="_blank">武汉到太原物流专线</a></li><li class="item" style=""><span class=" color-1">1775655****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/14354-14198/10010758.html" target="_blank">芜湖到合肥物流专线</a></li><li class="item" style=""><span class=" color-1">1876162****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/10996-17236/10005113.html" target="_blank">南京到南昌物流专线</a></li><li class="item" style=""><span class=" color-1">1860220****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/344-958/11584868.html" target="_blank">天津到唐山物流专线</a></li><li class="item" style=""><span class=" color-1">1381796****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/20250-2/10158018.html" target="_blank">威海到北京物流专线</a></li><li class="item" style=""><span class=" color-1">1340252****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/11243-11504/11563608.html" target="_blank">徐州到苏州物流专线</a></li><li class="item" style=""><span class=" color-1">1368192****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/29694-10747/11507734.html" target="_blank">中山到上海物流专线</a></li><li class="item" style=""><span class=" color-1">1517545****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/2880-1582/13333623.html" target="_blank">廊坊到邢台物流专线</a></li><li class="item" style=""><span class=" color-1">1526913****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/21150-28373/13107648.html" target="_blank">郑州到深圳物流专线</a></li><li class="item" style=""><span class=" color-1">1778897****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/16165-28062/11676806.html" target="_blank">厦门到广州物流专线</a></li>
+        </ul>
+    </div>
+</div>
+<div class="block-wrapper wuliuquan">
+    <div class="wrap">
+        <div class="block-header">
+            <h3>物流商圈</h3>
+        </div>
+        <div class="block-body">
+            <div class="block-content">
+                <div class="section-box">
+                    <div class="section-4">
+                        <ul class="wuliu-list">
+                            <li class="item">
+                                <a href="http://www.lvmae.com/road/wuliuyuan/269.html" target="_blank">
+                                    <img src="/js/img/635562339668156847.jpg" alt="" width="170" height="170">
+                                    <div class="item-bg"></div>
+                                    <div class="item-name">深国际华通源物流中心</div>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="http://www.lvmae.com/road/wuliuyuan/274.html" target="_blank">
+                                    <img src="/js/img/635562368067427276.jpg" alt="" width="170" height="170">
+                                    <div class="item-bg"></div>
+                                    <div class="item-name">金鹏物流园</div>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="http://www.lvmae.com/road/wuliuyuan/278.html" target="_blank">
+                                    <img src="/js/img/635563094262507066.jpg" alt="" width="170" height="170">
+                                    <div class="item-bg"></div>
+                                    <div class="item-name">宝运达物流中心</div>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="http://www.lvmae.com/road/wuliuyuan/285.html" target="_blank">
+                                    <img src="/js/img/635592780938709416.png" alt="" width="170" height="170">
+                                    <div class="item-bg"></div>
+                                    <div class="item-name">石岩物流园</div>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="http://www.lvmae.com/road/wuliuyuan/286.html" target="_blank">
+                                    <img src="/js/img/635584892072959886.jpg" alt="" width="170" height="170">
+                                    <div class="item-bg"></div>
+                                    <div class="item-name">钟屋物流园</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="section-5">
+                        <a href="http://www.lvmae.com/about/6.html" target="_blank"><img src="http://www.lvmae.com/file/upload/201607/18/16-23-43-62-1.jpg" width="235" height="230" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="block-wrapper dongtai">
+    <div class="wrap">
+        <div class="block-header">
+            <h3>最新物流专线</h3>
+            <h3>最新物流动态</h3>
+            <h3>热门城市</h3>
+        </div>
+        <div class="block-body">
+            <div class="block-content">
+                <div class="section-box">
+                    <div class="section-5">
+                        <ul class="dongtai-list">
+                            <li class="item"><a href="http://www.lvmae.com/road/10747-34248/index.html" target="_blank">上海到内江物流专线</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/road/10747-34607/index.html" target="_blank">上海到南充物流专线</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/road/10747-33557/index.html" target="_blank">上海到绵阳物流专线</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/road/10747-34375/index.html" target="_blank">上海到乐山物流专线</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/road/10747-35372/index.html" target="_blank">上海到广安物流专线</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/road/10747-33860/index.html" target="_blank">上海到广元物流专线</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/road/10747-34116/index.html" target="_blank">上海到遂宁物流专线</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/road/10747-35176/index.html" target="_blank">上海到宜宾物流专线</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/road/10747-33423/index.html" target="_blank">上海到德阳物流专线</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/road/10747-35038/index.html" target="_blank">上海到眉山物流专线</a></li>
+                        </ul>
+                    </div>
+                    <div class="section-5">
+                        <ul class="dongtai-list">
+                            <li class="item"><a href="http://www.lvmae.com/news/line/7120.html" target="_blank">铁岭到阿拉善物流专线</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/news/hangye/7119.html" target="_blank">10月份中国大宗商品指数显示：供应压力有所加大，市场调整风险加剧</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/news/line/7118.html" target="_blank">铁岭到沈阳物流专线</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/news/hangye/7117.html" target="_blank">2018年10月中国物流业景气指数为54.5%</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/news/line/7116.html" target="_blank">铁岭到大连物流专线</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/news/hangye/7115.html" target="_blank">11月份这些新规将影响快递从业人员</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/news/line/7114.html" target="_blank">铁岭到鞍山物流专线</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/news/hangye/7113.html" target="_blank">中欧班列（西安）2018年首超千列开行仪式在西安新建新筑物流基地举行</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/news/line/7112.html" target="_blank">铁岭到抚顺物流专线</a></li>
+                            <li class="item"><a href="http://www.lvmae.com/news/company/7111.html" target="_blank">中国邮政已完成组建省级寄递事业部</a></li>
+                        </ul>
+                    </div>
+                    <div class="section-5">
+                        <ul class="dongtai-list">
+                            <li class="item"><span class="li_icon">1</span><a href="http://www.lvmae.com/company/10747-0.html" target="_blank">上海 上海市</a></li>
+                            <li class="item"><span class="li_icon">2</span><a href="http://www.lvmae.com/company/11504-0.html" target="_blank">江苏 苏州市</a></li>
+                            <li class="item"><span class="li_icon">3</span><a href="http://www.lvmae.com/company/2-0.html" target="_blank">北京 北京市</a></li>
+                            <li class="item"><span class="li_icon">4</span><a href="http://www.lvmae.com/company/28062-0.html" target="_blank">广东 广州市</a></li>
+                            <li class="item"><span class="li_icon">5</span><a href="http://www.lvmae.com/company/32756-0.html" target="_blank">四川 成都市</a></li>
+                            <li class="item"><span class="li_icon">6</span><a href="http://www.lvmae.com/company/16449-0.html" target="_blank">福建 泉州市</a></li>
+                            <li class="item"><span class="li_icon">7</span><a href="http://www.lvmae.com/company/344-0.html" target="_blank">天津 天津市</a></li>
+                            <li class="item"><span class="li_icon">8</span><a href="http://www.lvmae.com/company/13542-0.html" target="_blank">浙江 金华市</a></li>
+                            <li class="item"><span class="li_icon">9</span><a href="http://www.lvmae.com/company/10996-0.html" target="_blank">江苏 南京市</a></li>
+                            <li class="item"><span class="li_icon">10</span><a href="http://www.lvmae.com/company/29658-0.html" target="_blank">广东 东莞市</a></li>
+                        </ul>
+                    </div>
+                    <div class="section-6">
+                        <div class="partner">
+                            <div class="t-1">合作伙伴</div>
+                            <ul class="partner-list">
+                                <li class="item">
+                                    <a href="http://www.csc86.com" target="_blank" rel="external nofollow"><img src="http://www.lvmae.com/file/upload/201509/08/13-50-28-40-25696.jpg" alt="" width="120" height="38" title="华南城网"></a>
+                                </li>
+                                <li class="item">
+                                    <a href="http://www.yogapay.com" target="_blank" rel="external nofollow"><img src="http://www.lvmae.com/file/upload/201509/08/13-49-24-74-25696.jpg" alt="" width="120" height="38" title="支付界"></a>
+                                </li>
+                                <li class="item">
+                                    <a href="http://www.supaide.com" target="_blank" rel="external nofollow"><img src="http://www.lvmae.com/file/upload/201509/08/13-34-36-65-25696.jpg" alt="" width="120" height="38" title="速派得"></a>
+                                </li>
+                                <li class="item">
+                                    <a href="http://www.lvmae.net/" target="_blank"><img src="http://www.lvmae.com/file/upload/201605/24/10-41-36-54-31604.png" alt="" width="120" height="38" title="禾嘉科技"></a>
+                                </li>
+                                <li class="item">
+                                    <a href="http://www.chinaports.com/shiptracker/shipinit.do?method=forIndex" target="_blank" rel="external nofollow"><img src="http://www.lvmae.com/file/upload/201509/21/14-04-52-83-25696.jpg" alt="" width="120" height="38" title="船舶动态查询"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>
 </body>
@@ -638,12 +499,11 @@
         aaa();
         viewinformation();
         cityslist();
-        pictureselect();
-        pictureselect2();
-        pictureselect();
+        //pictureselect();
+        //pictureselect2();
+       // pictureselect();
         initSheng(1);
         initFsheng(1);
-
     })
     //轮播图片
     function getBroadcastMap() {
@@ -663,53 +523,53 @@
             }
         })
     }
-   function initFsheng(pid) {
+    function initFsheng(pid) {
         alert(pid)
-       $.ajax({
-           url:"/tree/queryArea",
-           data:{pid:pid},
-           success:function (data) {
-               var html="<option>省</option>";
-               for (var i = 0; i < data.length; i++) {
-                   html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+        $.ajax({
+            url:"/tree/queryArea",
+            data:{pid:pid},
+            success:function (data) {
+                var html="<option>省</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
 
-               }
+                }
 
-               $("#sheng2").html(html);
-           }
-       })
-   }
-   function querysheng2() {
-       var shengid =$("#sheng2").val()
-       $.ajax({
-           url:"/tree/queryAreaShi",
-           data:{shengid:shengid},
-           success:function (data) {
-               var html="<option>市</option>";
-               var  str="";
-               for (var i = 0; i < data.length; i++) {
-                   html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
-                   var  str=data[i].name
-               }
-               alert(str)
-               $("#shi2").html(html);
-           }
-       })
-   }
-   function queryshi2() {
-       var shi =$("#shi2").val();
-       $.ajax({
-           url:"/tree/queryAreaXian",
-           data:{shi:shi},
-           success:function (data) {
-               var html="<option>县</option>";
-               for (var i = 0; i < data.length; i++) {
-                   html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
-               }
-               $("#xian2").html(html);
-           }
-       })
-   }
+                $("#sheng2").html(html);
+            }
+        })
+    }
+    function querysheng2() {
+        var shengid =$("#sheng2").val()
+        $.ajax({
+            url:"/tree/queryAreaShi",
+            data:{shengid:shengid},
+            success:function (data) {
+                var html="<option>市</option>";
+                var  str="";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                    var  str=data[i].name
+                }
+                alert(str)
+                $("#shi2").html(html);
+            }
+        })
+    }
+    function queryshi2() {
+        var shi =$("#shi2").val();
+        $.ajax({
+            url:"/tree/queryAreaXian",
+            data:{shi:shi},
+            success:function (data) {
+                var html="<option>县</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                }
+                $("#xian2").html(html);
+            }
+        })
+    }
     function initSheng(pid) {
         $.ajax({
             url:"/tree/queryArea",
@@ -744,14 +604,14 @@
             }
         })
     }
-   function queryRoad() {
-       var shi=$("#shi").val();
-       var daodashi=$("#shi2").val();
+    function queryRoad() {
+        var shi=$("#shi").val();
+        var daodashi=$("#shi2").val();
 
-           location="/page/toload?shi="+shi+"&"+"daodashi="+daodashi
+        location="/page/toload?shi="+shi+"&"+"daodashi="+daodashi
 
 
-   }
+    }
     function queryXian() {
         var shi =$("#shi").val();
         $.ajax({
@@ -777,21 +637,6 @@
                     str+='<li><a href="'+data[i].url+'">'+data[i].text+'</a></li>';
                 }
                 $("#cc").html(str);
-                alert(str);
-            }
-        })
-    }
-    //图片
-    function pictureselect(){
-        $.ajax({
-            url:'/navigation/findpicture',
-            dataType:'json',
-            success:function (data) {
-                var str="";
-                for (var i = 0; i < data.length; i++) {
-                    str+='<div><img src="'+data[i].img+'" height="350px" width="1583px"/></div>';
-                }
-                $("#aa").html(str);
             }
         })
     }
@@ -813,7 +658,7 @@
         $.ajax({
             url:'/region/findregionpid',
             data:{
-              pid:pid
+                pid:pid
             },
             dataType:'json',
             success:function (data) {
@@ -826,31 +671,136 @@
         })
     }
     //查看信息
-   function viewinformation() {
-        var citys=$("#citys").val()
-       $.ajax({
-           url:'/message/findviewinformationlist',
-           data:{citys:citys},
-           dataType:'json',
-           success:function (data) {
-               var str="";
-               for (var i = 0; i < data.length; i++) {
-                   str+='<li class="item"><div class="item-header"><div class="teijia-limit"><a href="'+data[i].href+'"  target="_blank">'+data[i].qyQuancheng+'</a></div><div style="float:left;">发往</div> </div><div class="item-name"><a href="'+data[i].href2+'"  target="_blank">'+data[i].city+'</a></div><div class="item-des">￥<span class=" color-1">'+data[i].yuan*data[i].yuan2+'元/公斤</span>￥'+data[i].yuan2+'</div><div class="item-btn"> <a class="btn b-5" href="'+data[i].href3+'" title="联系发货" target="_blank">联系发货</a> </div><div class="fix-tips">'+data[i].yuan+'折</div> </li>';
-               }
-               $("#mm").html(str);
-           }
-       })
-   }
-   //城市条查
+    function viewinformation() {
+        var cityss=$("#citys").val();
+        $.ajax({
+            url:'/message/findviewinformationlist',
+            data:{
+                citys:cityss
+            },
+            dataType:'json',
+            success:function (data) {
+                var str="";
+                for (var i = 0; i < data.length; i++) {
+                    str+='<li class="item"><div class="item-header"><div class="teijia-limit"><a href="'+data[i].href+'"  target="_blank">'+data[i].qyQuancheng+'</a></div><div style="float:left;">发往</div> </div><div class="item-name"><a href="'+data[i].href2+'"  target="_blank">'+data[i].city+'</a></div><div class="item-des">￥<span class=" color-1">'+data[i].yuan*data[i].yuan2+'元/公斤</span>￥'+data[i].yuan2+'</div><div class="item-btn"> <a class="btn b-5" href="'+data[i].href3+'" title="联系发货" target="_blank">联系发货</a> </div><div class="fix-tips">'+data[i].yuan+'折</div> </li>';
+                }
+                $("#mm").html(str);
+            }
+        })
+    }
+    //城市条查
     function cityslist(){
         $.ajax({
             url:"/message/findcityslist",
             success:function(data){
                 var html="<option value='-1'>请选择</option>";
                 for (var i = 0; i < data.length; i++) {
-                    html+="<option value='"+data[i].name+"'>"+data[i].name+"</option>"
+                    html+="<option value='"+data[i].name+"'>"+data[i].name+"</option>";
                 }
                 $("#citys").html(html);
+            }
+        })
+    }
+    function initFsheng(pid) {
+        alert(pid)
+        $.ajax({
+            url:"/tree/queryArea",
+            data:{pid:pid},
+            success:function (data) {
+                var html="<option>省</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+
+                }
+
+                $("#sheng2").html(html);
+            }
+        })
+    }
+    function querysheng2() {
+        var shengid =$("#sheng2").val()
+        $.ajax({
+            url:"/tree/queryAreaShi",
+            data:{shengid:shengid},
+            success:function (data) {
+                var html="<option>市</option>";
+                var  str="";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                    var  str=data[i].name
+                }
+                alert(str)
+                $("#shi2").html(html);
+            }
+        })
+    }
+    function queryshi2() {
+        var shi =$("#shi2").val();
+        $.ajax({
+            url:"/tree/queryAreaXian",
+            data:{shi:shi},
+            success:function (data) {
+                var html="<option>县</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                }
+                $("#xian2").html(html);
+            }
+        })
+    }
+    function initSheng(pid) {
+        $.ajax({
+            url:"/tree/queryArea",
+            data:{pid:pid},
+            success:function (data) {
+                var html="<option>省</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+
+                }
+
+                $("#sheng1").html(html);
+            }
+        })
+
+    }
+
+    function queryShi() {
+        var shengid =$("#sheng1").val()
+        $.ajax({
+            url:"/tree/queryAreaShi",
+            data:{shengid:shengid},
+            success:function (data) {
+                var html="<option>市</option>";
+                var  str="";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                    var  str=data[i].name
+                }
+                alert(str)
+                $("#shi").html(html);
+            }
+        })
+    }
+    function queryRoad() {
+        var shi=$("#shi").val();
+        var daodashi=$("#shi2").val();
+
+        location="/page/toload?shi="+shi+"&"+"daodashi="+daodashi
+
+
+    }
+    function queryXian() {
+        var shi =$("#shi").val();
+        $.ajax({
+            url:"/tree/queryAreaXian",
+            data:{shi:shi},
+            success:function (data) {
+                var html="<option>县</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                }
+                $("#xian").html(html);
             }
         })
     }

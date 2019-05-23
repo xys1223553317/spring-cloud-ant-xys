@@ -60,7 +60,20 @@ public class TreeController {
             System.out.println(1);
             return null;
         }
-
-
+    }
+    @RequestMapping("updateSouli")
+    @ResponseBody
+    public void updateSouli(Integer id){
+            treeService.updateSouli(id);
+    }
+    @RequestMapping("queryDingdanZaaitu")
+    @ResponseBody
+    public HashMap<String,Object> queryDingdanZaaitu(DingdanBean dingdanBean,Integer page,Integer rows){
+        return treeService.queryDingdanZaaitu(dingdanBean,page,rows);
+    }
+    @RequestMapping("queryfukuan")
+    @ResponseBody
+    public HashMap<String,Object> queryfukuan(DingdanBean dingdanBean,Integer page,Integer rows) {
+        return treeService.queryfukuan(dingdanBean, page, rows);
     }
 }

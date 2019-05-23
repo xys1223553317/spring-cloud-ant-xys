@@ -152,4 +152,16 @@ public class PageController {
         //System.out.println(shi);
         return "load";
     }
+    @RequestMapping("adddingdan")
+    public String adddingdan(Integer daodashi,Integer shi,Model model) {
+        return "adddingdan";
+    }
+    @RequestMapping("querydingdanzaitu")
+    public String querydingdanzaitu() {
+        return "querydingdanzaitu";
+    }
+    @RequestMapping("queryfukuan")
+    public String queryfukuan() {
+        return "queryfukuan";
+    }
 }

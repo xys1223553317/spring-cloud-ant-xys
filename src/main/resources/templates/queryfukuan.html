@@ -129,7 +129,7 @@
     function initcommentsTable() {
 
         $("#dingdanTable").bootstrapTable({
-            url: "/tree/queryDingdan",
+            url: "/tree/queryfukuan",
             toolbar: "#toolbar",
             pagination: true,
             pageList: [5, 10, 20, 50],
@@ -143,19 +143,19 @@
             showToggle: true,
             detailView: false,
             queryParams: function () {
-                      var type = $("#type").val();
+                   /*   var type = $("#type").val();
                       var queryType = $("#queryType").val();
                      // var goodsNumber = $("#goodsNumber").val();
                       var startTime = $("#startTime").val();
-                      var endTime = $("#endTime").val();
+                      var endTime = $("#endTime").val();*/
 
                 return {
                     page: this.pageNumber,
                     rows: this.pageSize,
-                    type:type,
+             /*       type:type,
                     queryType:queryType,
                     startTime:startTime,
-                    endTime:endTime
+                    endTime:endTime*/
                 };
             },
             columns: [
@@ -173,22 +173,19 @@
                         return value +'m³';
                     }},
                 {field: 'note', title: '订单信息'},
+              /*  {
+                    field: 'fukuan', title: '支付方式', formatter: function (value, row, index) {
+                        return value == 1 ? "已支付" : "未支付";
+                    }
+                },*/
                 {
-                    field: 'shengchengTime', title: '下单时间'
+                    field: 'shonghuo', title: '取货方式', formatter: function (value, row, index) {
+                        return value == 1 ? "上门提货" : "送货上门";
+                    }
                 },
-                {field: '12313', title: '处理订单',formatter: function (value, row, index) {
-                       var str=''
-                       if (row.yn==1) {
-                           str='<button type="button" class="btn btn-info" onclick="souli('+row.id+')">受理订单</button>  <button type="button" class="btn btn-info" onclick="jujue('+row.id+')">拒绝订单</button>'
-                       }
-                        if (row.yn==2) {
-                            str='已受理'
-                        }
-                        if (row.yn==3) {
-                            str='已拒绝'
-                        }
-                        return str;
-                    }},
+               /* {field: '12313', title: '处理订单',formatter: function (value, row, index) {
+                        return row.yn==1? '<button type="button" class="btn btn-info" onclick="souli('+row.id+')">受理订单</button> | <button type="button" class="btn btn-info" onclick="jujue('+row.id+')">拒绝订单</button>':"已受理";
+                    }},*/
 
             ]
         })

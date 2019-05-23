@@ -10,6 +10,7 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:1001/eureka/
 
+
   redis:
     host: 192.168.1.131
     port: 6379
