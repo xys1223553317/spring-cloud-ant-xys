@@ -1,17 +1,12 @@
 package com.jk.consumer.controller;
 
-import com.jk.consumer.pojo.AreaBean;
-import com.jk.consumer.pojo.DingdanBean;
-import com.jk.consumer.pojo.GongSiiXanLu;
-import com.jk.consumer.pojo.TreeBean;
+import com.jk.consumer.pojo.*;
 import com.jk.consumer.service.TreeService;
 import org.apache.catalina.LifecycleState;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -21,6 +16,8 @@ import java.util.List;
 public class TreeController {
     @Autowired
      TreeService treeService;
+    @Autowired
+    private RedisTemplate redisTemplate;
     @RequestMapping("queryTree")
     public List<TreeBean> queryTree(){
      return treeService.queryTree();
@@ -75,5 +72,17 @@ public class TreeController {
     @ResponseBody
     public HashMap<String,Object> queryfukuan(DingdanBean dingdanBean,Integer page,Integer rows) {
         return treeService.queryfukuan(dingdanBean, page, rows);
+    }
+
+    @RequestMapping("login")
+    @ResponseBody
+    public HashMap<String, Object> LoginUser(String qyQuancheng,String password) {
+        return treeService.LoginUser(qyQuancheng,password);
+    }
+    @RequestMapping("queryQyName")
+    @ResponseBody
+    public String queryQyName(){
+        String qyName = redisTemplate.opsForValue().get("qyName").toString();
+        return qyName;
     }
 }

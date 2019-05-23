@@ -9,23 +9,41 @@ public class Road {
 
     private Integer sarea;
     private String sareaname;
+    private Integer scity;
+    private String scityname;
+    private Integer sregion;
+    private String sregionname;
+
+
 
     private Integer marea;
     private String mareaname;
+    private Integer mregion;
+    private String mregionname;
+    private Integer mcity;
+    private String mcityname;
 
     private String time;
 
-    private String zprice;
+    private Double zprice;
 
-    private String qprice;
+    private Double qprice;
 
-    private String minPrice;
+    private Double minPrice;
 
     private String good;
 
     private String sgood;
 
     private Integer status;
+
+    private String createTime;
+
+    private Integer gsId;
+
+    private Integer remen;
+
+    private String luxianname;
 
 
 }

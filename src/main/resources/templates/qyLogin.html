@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/bootstrap/easyui1.5/jquery.min.js"></script>
+    <link rel="stylesheet" href="/bootstrap/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap3/css/bootstrap.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap-table/bootstrap-table.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap-fileinput/css/fileinput.css">
+
+    <script src="/bootstrap/bootstrap3/js/bootstrap.js"></script>
+    <script src="/bootstrap/bootstrap-table/bootstrap-table.js"></script>
+    <script src="/bootstrap/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+    <script src="/bootstrap/bootbox/bootbox.all.min.js"></script>
+    <script src="/bootstrap/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script src="/bootstrap/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="/bootstrap/bootstrap-fileinput/js/fileinput.js"></script>
+    <script src="/bootstrap/bootstrap-fileinput/js/locales/zh.js"></script>
+</head>
+<body>
+<div class="input-group"style="margin:0 auto";>
+<!--
+    <img src="http://pic31.nipic.com/20130730/3347542_143239181000_2.jpg" height="250px" width="350px">
+-->
+</div>
+<div style="padding: 0px 400px 10px;">
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">✚</span>
+            <input  id="qyQuancheng" type="text" class="form-control" placeholder="请输入账号">
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">☁</span>
+            <input id="passid" type="text" class="form-control" placeholder="请输入密码">
+        </div>
+        <div>
+            <button  onclick="sub()"  class="btn btn-primary btn-lg btn-block">登录</button>
+        </div>
+
+</div>
+
+</body>
+<script type="text/javascript">
+
+    function sub() {
+        var qyQuancheng = $("#qyQuancheng").val();
+        var password = $("#passid").val();
+
+            $.ajax({
+                url:'/tree/login',
+                type:"post",
+                data:{
+                    qyQuancheng:qyQuancheng,
+                    password:password,
+                },
+                success:function(data) {
+                    if (data.code == 0 ){
+                        alert(data.msg);
+                        location.href="/page/show"
+                    }else{
+                        alert(data.msg);
+                    }
+                }
+            })
+    }
+
+
+</script>
+</html>

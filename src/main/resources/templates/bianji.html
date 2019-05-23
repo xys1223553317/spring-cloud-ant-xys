@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap3/css/bootstrap.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap-table/bootstrap-table.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap-fileinput/css/fileinput.css">
+    <script src="/bootstrap/easyui1.5/jquery.min.js"></script>
+    <script src="/bootstrap/bootstrap3/js/bootstrap.js"></script>
+    <script src="/bootstrap/bootstrap-table/bootstrap-table.js"></script>
+    <script src="/bootstrap/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+    <script src="/bootstrap/bootbox/bootbox.all.min.js"></script>
+    <script src="/bootstrap/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script src="/bootstrap/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="/bootstrap/bootstrap-fileinput/js/fileinput.js"></script>
+    <script src="/bootstrap/bootstrap-fileinput/js/locales/zh.js"></script>
+    <style type="text/css">
+        .myrow{
+            margin-bottom:10px
+        }
+    </style>
+</head>
+<body>
+<table class="table">
+        <thead>
+            <tr>
+                <th><font size="4px">*发车时刻表</font></th>
+                <th><input type="text" value="13:15">添加发车时刻</th>
+            </tr>
+
+        </thead>
+        <thead>
+            <tr>
+                <th><font size="4px">*时效：</font></th>
+                <th><input type="text" value=""> - <input type="text" value="">小时</th>
+                <th>*最低一票收费：</th>
+                <th><input type="text" value="">元</th>
+            </tr>
+        </thead>
+        </thead>
+        <thead>
+            <tr>
+                <th><font size="4px">*重货单价</font></th>
+                <th><font size="4px">*轻货单价</font></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+                <td><input type="text" value="0"> - <input type="text" value="1000">公斤 <input type="text" value="1.2">元/公斤</td>
+                <td><input type="text" value="0"> - <input type="text" value="10">立方 <input type="text" value="120">元/立方</td>
+
+
+            </tr>
+            <tr>
+                <td><input type="text" value="1000"> - <input type="text" value="3000">公斤<input type="text" value="1.1">元/公斤</td>
+                <td><input type="text" value="10"> - <input type="text" value="20">公斤<input type="text" value="110">元/立方</td>
+            </tr>
+            <tr>
+                <td><input type="text" value="3000"> - <input type="text" value="5000">公斤 <input type="text" value="1.0">元</td>
+                <td><input type="text" value="20"> - <input type="text" value="30">公斤 <input type="text" value="100">元/立方</td>
+            </tr>
+        </tbody>
+        <thead>
+          <tr>
+              <th><font size="4px"><input type="checkbox">支持上门提货</font></th>
+              <th><font size="4px"><input type="checkbox">支持送货上门</font></th>
+          </tr>
+        </thead>
+        <thead>
+           <tr>
+               <th><button type="button" class="btn btn-primary" onclick="baocun()">保存</button><font size="3px">编辑后，不影响已有订单的运费</font></th>
+               <th><button type="button" class="btn btn-primary" onclick="del()">删除</button><font size="3px">删除后，不影响已有订单</font></th>
+           </tr>
+        </thead>
+
+</table>
+
+
+
+<script>
+    function baocun() {
+
+      location.href="/page/findRoadList";
+    }
+    function del() {
+
+        location.href="/page/findRoadList";
+    }
+
+
+
+
+</script>
+</html>

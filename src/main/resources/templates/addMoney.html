@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .myrow{
+            margin-bottom:10px
+        }
+    </style>
+</head>
+<body>
+<form id="userFrom">
+ <div>
+    <div class="row myrow">
+        <div class="col-md-2">
+            <label for="name">当前账户余额：</label>
+        </div>
+        <div class="col-md-4">
+            <input type="hidden" class="form-control" id="name"><font color="red">152800.00  元</font>
+        </div>
+    </div>
+    <div class="row myrow">
+        <div class="col-md-2">
+            <label for="name">当前待审核提现金额：</label>
+        </div>
+        <div class="col-md-4">
+            <input type="hidden" class="form-control"><font color="red">50000.00  元</font>
+        </div>
+    </div>
+    <div class="row myrow">
+        <div class="col-md-2">
+            <label for="name">当前可提现金额：</label>
+        </div>
+        <div class="col-md-4">
+            <input type="hidden" class="form-control"><font color="red">102800.00  元</font>
+        </div>
+    </div>
+    <div class="row myrow">
+        <div class="col-md-2">
+            <label for="phone">*请输入本次提现金额：</label>
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" id="phone">
+            <span class="help-block"><font size="2px" color="red">提现金额必须大于2.00元</font></span>
+        </div>
+    </div>
+    <div class="row myrow">
+        <div class="col-md-2">
+            <label for="name">本次提现手续费：</label>
+        </div>
+        <div class="col-md-4">
+            <input type="hidden" class="form-control"><font color="red">10.00  元</font>
+        </div>
+    </div>
+    <div class="row myrow">
+        <div class="col-md-2">
+            <label for="name">实际到账金额：：</label>
+        </div>
+        <div class="col-md-4">
+            <input type="hidden" class="form-control"><font color="red">99990.00  元</font>
+        </div>
+    </div>
+    <div class="row myrow">
+        <div class="col-md-2">
+            <label for="job">选择要收账的银行卡：</label>
+        </div>
+        <div class="col-md-4">
+            <select class="form-control" id="job">
+                <option selected>62261523****1234默认</option>
+                <option>62261523****1234</option>
+                <option>62261523****1234</option>
+
+            </select>
+        </div>
+    </div>
+    <div class="row myrow">
+        <div class="col-md-2">
+            <label for="password">*提现密码:</label>
+        </div>
+        <div class="col-md-4">
+            <input type="password" class="form-control" id="password">
+        </div>
+    </div>
+
+    <center><button type="button" class="btn btn-primary" onclick="tijiao()">申请提现</button></center>
+
+
+</div>
+
+
+</form>
+</body>
+
+<script>
+    function tijiao() {
+
+      location.href="/page/findMoneyList";
+    }
+
+
+
+
+</script>
+</html>

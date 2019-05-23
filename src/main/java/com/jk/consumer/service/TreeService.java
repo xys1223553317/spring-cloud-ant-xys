@@ -1,9 +1,6 @@
 package com.jk.consumer.service;
 
-import com.jk.consumer.pojo.AreaBean;
-import com.jk.consumer.pojo.DingdanBean;
-import com.jk.consumer.pojo.GongSiiXanLu;
-import com.jk.consumer.pojo.TreeBean;
+import com.jk.consumer.pojo.*;
 import org.springframework.cloud.netflix.feign.FeignClient;
 
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,4 +30,7 @@ public interface TreeService {
     HashMap<String, Object> queryDingdanZaaitu(@RequestBody DingdanBean dingdanBean,@RequestParam("page") Integer page,@RequestParam("rows") Integer rows);
     @RequestMapping("queryfukuan")
     HashMap<String, Object> queryfukuan(@RequestBody DingdanBean dingdanBean,@RequestParam("page") Integer page,@RequestParam("rows") Integer rows);
+
+    @RequestMapping("login")
+    HashMap<String, Object> LoginUser(@RequestParam("qyQuancheng") String qyQuancheng,@RequestParam("password") String password);
 }

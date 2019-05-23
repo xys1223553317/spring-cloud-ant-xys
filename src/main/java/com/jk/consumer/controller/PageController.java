@@ -144,6 +144,41 @@ public class PageController {
     public String findList() {
         return "zengzhi";
     }
+
+    //线路管理
+    @RequestMapping("toAddUser")
+    public String toAddUser(){
+        return "addRoad";
+    }
+
+    @RequestMapping("toAdd")
+    public String toAdd(){
+        return "addMoney";
+    }
+
+
+    @RequestMapping("toEdit")
+    public String toEdit(){
+        return "bianji";
+    }
+
+    //线路新增
+    @RequestMapping("toAddRoad")
+    public String toAddRoad(){
+        return "addroad";
+    }
+
+    //导出
+    @RequestMapping("findTreeList")
+    public String findTreeList(){
+        return "daochu";
+    }
+
+    @RequestMapping("toUpdateMoney")
+    public String toUpdateMoney() {
+        return "updateMoney";
+
+    }
     //首页条件查询
     @RequestMapping("toload")
     public String toload(Integer daodashi,Integer shi,Model model) {
@@ -163,5 +198,9 @@ public class PageController {
     @RequestMapping("queryfukuan")
     public String queryfukuan() {
         return "queryfukuan";
+    }
+    @RequestMapping("qyLogin")
+    public String qyLogin(){
+        return "qyLogin";
     }
 }

@@ -60,6 +60,8 @@
     </style>
 </head>
 <body>
+<font size="4px">当前账户余额：￥28523000.00</font></font>
+
 <form:form modelAttribute="organizationManageDto">
     <div class="panel">
         <div class="panel-body">
@@ -67,7 +69,7 @@
                 <span class="title">筛选条件</span>
                 <div  class="row">
                     <div class="col-md-2">
-                        <label class="control-label" for="number">用户名>交易编号：</label>
+                        <label class="control-label" for="number">交易编号：</label>
 
                     </div>
                     <div class="col-md-4">
@@ -82,30 +84,11 @@
                     </div>
                 </div>
                 <div  class="row">
-                    <div>
-                        <div class="col-md-2">
-                            <label class="control-label" for="ztype">收支类型:</label>
-                        </div>
-                        <div class="radio" id="ztype">
-                            <label>
-                                <input type="radio" value="option1">全部
-
-                            </label>
-                            <label>
-                                <input type="radio" value="option2">收入
-
-                            </label>
-                            <label>
-                                <input type="radio" value="option3">支出
-
-                            </label>
                             <button type="button" class="btn btn-primary" onclick="searchFinance()">筛选</button>
-                            <button type="button" class="btn btn-primary">重置</button>
+                            <button type="button" class="btn btn-primary" onclick="shua()">重置</button>
                             <button type="button" class="btn btn-primary">导出</button>
                             <font size="3px">共有20条结果</font>
-                        </div>
-
-                    </div>
+                 </div>
                 </div>
             </div>
 
@@ -113,19 +96,6 @@
     </div>
 </form:form>
 
-<form:form modelAttribute="organizationManageDto">
-    <div class="panel">
-        <div class="panel-body">
-            <div class="bbb">
-                <span class="title1">排序规则</span>
-                  <a href="javascript:shijian('+id+');">按交易时间排序</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:jine('+id+');">按交易金额排序</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <a href="javascript:jaioyi('+id+');">按交易类型排序</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:shouzhi('+id+');">按收支类型排序</a>
-
-            </div>
-
-        </div>
-    </div>
-</form:form>
 <table id="goodsTable"></table>
 </body>
 <script>
@@ -193,6 +163,9 @@
     }
 
 
+    function shua() {
+        $("#goodsTable").bootstrapTable('refresh');
+    }
 
 
 
