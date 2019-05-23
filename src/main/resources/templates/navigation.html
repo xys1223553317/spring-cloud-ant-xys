@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="/js/easyui1.5/jquery.min.js"></script>
+    <link rel="stylesheet" href="/js/bootstrap3/css/bootstrap.css">
+    <script src="/js/bootstrap3/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/js/bootstrap-table/bootstrap-table.css">
+    <script src="/js/bootstrap-table/bootstrap-table.js"></script>
+    <script src="/js/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+    <link rel="stylesheet" href="/js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+    <script src="/js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script src="/js/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="/js/bootbox/bootbox.all.min.js"></script>
+    <script src="/js/bootstrap-fileinput/js/fileinput.js"></script>
+    <script src="/js/bootstrap-fileinput/js/locales/zh.js"></script>
+    <link rel="stylesheet" href="/js/bootstrap-fileinput/css/fileinput.css">
+    <title>Title</title>
+</head>
+<body>
+<div id="toolbar">
+    <button type="button" onclick="addnavigationbar()"  class="btn-info">新增</button>
+</div>
+<table id="myTable"></table>
+</body>
+<script type="text/javascript">
+    //查询
+    $(function () {
+        initnavigationbar();
+    })
+    function  initnavigationbar() {
+        $("#myTable").bootstrapTable({
+            url:'/navigation/findnavigationbarlist',
+            toolbar:"#toolnar",
+            columns: [
+                {field:'id',title:'ID'},
+                {field:'text',title:'名称'},
+                {field:'123',title:'操作',formatter:function(value,row,index){
+                        return "<a href='javaScript:delnavigationbar("+row.id+");'>删除</a>||<a href='javaScript:updanavigationbar("+row.id+");'>修改</a>";
+                 }},
+            ]
+        })
+    }
+    //单删
+    function delnavigationbar(id){
+        $.ajax({
+            url: '/navigation/deletenavigationbar',
+            data:{
+                id:id
+            },
+            type: 'post',
+            success:function(data){
+                if (data) {
+                    alert("删除成功");
+                    $('#myTable').bootstrapTable('refresh');
+                }else{
+                    bootbox.alert({
+                        size:"small",
+                        title:"提示",
+                        message:"删除失败"
+                    });
+                }
+            }
+        })
+    }
+    //新增
+    var res;
+    function createAddContent(url){
+        $.ajax({
+            url:url,
+            async:false,
+            success:function(data){
+                res = data;
+            }
+        });
+        return res;
+    }
+    function addnavigationbar(){
+        var url="/page/toaddnavigationbar";
+        bootbox.dialog({
+            title:'新增数据',
+            message:createAddContent(url),
+            size:'large',
+            buttons:{
+                cancel:{
+                    label:"关闭",
+                    className:'btn-danger',
+                    callback:function(){
+                        console.log("Custom cancel clicked");
+                    }
+                },
+                ok:{
+                    label:"保存",
+                    className:'btn-info',
+                    callback:function(){
+                        $.ajax({
+                            url:'/navigation/addnavigationlist',
+                            type:'post',
+                            data:$("#navigationbarForm").serialize(),
+                            dataType:'json',
+                            success:function(data){
+                                if(data){
+                                    alert("操作成功");
+                                    $('#myTable').bootstrapTable('refresh');
+                                }else{
+                                    bootbox.alert({
+                                        size:"small",
+                                        title:"提示",
+                                        message:"操作失败"
+                                    });
+                                }
+                            }
+                        })
+                    }
+                }
+            }
+        })
+    }
+    //回显
+    function updanavigationbar(id){
+        addnavigationbar();
+        $.ajax({
+            url:"/navigation/updatenavigationbar",
+            type:'post',
+            data:{
+                id:id
+            },
+            dataType:'json',
+            success:function(data){
+                $("#navigationbarid").val(data.id);
+                $("#navigationbartext").val(data.text);
+                $("#navigationbarurl").val(data.url);
+            }
+        })
+    }
+</script>
+</html>

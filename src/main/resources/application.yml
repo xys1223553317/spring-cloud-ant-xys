@@ -1,0 +1,21 @@
+server:
+  port: 3001
+
+spring:
+  application:
+    name: xys_consunmer
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:1001/eureka/
+
+
+  redis:
+    host: 192.168.1.131
+    port: 6379
+    pass:
+    maxIdle: 300
+    maxActive: 600
+    maxWait: 1000
+    testOnBorrow: true

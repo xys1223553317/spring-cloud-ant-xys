@@ -21,5 +21,8 @@ public class DingdanBean {
 
     private String endTime;
 
+    private Integer yn;
+
+    private String shengchengTime;
 
 }
