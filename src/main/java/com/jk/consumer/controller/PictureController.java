@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.HashMap;
 import java.util.List;
 
 @Controller
@@ -62,5 +63,41 @@ public class PictureController {
     @ResponseBody
     public PictureBean updatepicture(Integer id){
         return tuneport.updatepicture(id);
+    }
+    //查询广告图片
+    @RequestMapping("findadvertising")
+    @ResponseBody
+    public List<PictureBean> findadvertising(){
+        return tuneport.findadvertising();
+    }
+    //后台广告查询
+    @RequestMapping("findadvertisinglist")
+    @ResponseBody
+    public HashMap<String,Object> findadvertisinglist(Integer page,Integer rows){
+        return tuneport.findadvertisinglist(page,rows);
+    }
+    //后台广告删除
+    @RequestMapping("deleteadvertising")
+    @ResponseBody
+    public boolean deleteadvertising(Integer id){
+        try {
+            tuneport.deleteadvertising(id);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    //后台新增广告
+    @RequestMapping("addadvertisinglist")
+    @ResponseBody
+    public boolean addadvertisinglist( PictureBean pictureBean){
+        try {
+            tuneport.addadvertisinglist(pictureBean);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }

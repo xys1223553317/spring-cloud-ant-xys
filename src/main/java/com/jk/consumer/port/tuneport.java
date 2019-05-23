@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.List;
 
 @FeignClient(value="zzl")
@@ -45,7 +47,39 @@ public interface tuneport {
     @RequestMapping("findregionpid")
     List<RegionBean> findregionpid(@RequestParam("pid")Integer pid);
     @RequestMapping("findviewinformationlist")
-    List<viewinformationBean> findviewinformationlist(viewinformationBean viewinformationBean);
+    List<viewinformationBean> findviewinformationlist(@RequestParam("citys") Integer citys);
     @RequestMapping("findcityslist")
     List<CityBean> findcityslist();
+    @RequestMapping("findhtlogin")
+    HashMap<String, Object> findhtlogin(@RequestBody htloginBean htloginBean,@RequestParam("request") HttpServletRequest request);
+    @RequestMapping("findviewinformation")
+    List<viewinformationBean> findviewinformation();
+    @RequestMapping("viewinformationlist")
+    HashMap<String, Object> viewinformationlist(@RequestParam("page")Integer page,@RequestParam("rows") Integer rows);
+    @RequestMapping("deleteviewinformation")
+    void deleteviewinformation(@RequestParam("id")Integer id);
+    @RequestMapping("addviewinformationlist")
+    void addviewinformationlist(@RequestBody viewinformationBean viewinformationBean);
+    @RequestMapping("updateviewinformation")
+    viewinformationBean updateviewinformation(@RequestParam("id") Integer id);
+    @RequestMapping("addviewinformationlist")
+    void updateviewinformations(@RequestBody viewinformationBean viewinformationBean);
+    @RequestMapping("findadvertising")
+    List<PictureBean> findadvertising();
+    @RequestMapping("findadvertisinglist")
+    HashMap<String, Object> findadvertisinglist(@RequestParam("page") Integer page,@RequestParam("rows") Integer rows);
+    @RequestMapping("deleteadvertising")
+    void deleteadvertising(@RequestParam("id") Integer id);
+    @RequestMapping("addadvertisinglist")
+    void addadvertisinglist(@RequestBody PictureBean pictureBean);
+    @RequestMapping("findcityselect")
+    List<CityBean> findcityselect();
+    @RequestMapping("updastatelist")
+    boolean updastatelist(@RequestParam("id") Integer id);
+    @RequestMapping("findblacklistlist")
+    HashMap<String, Object> findblacklistlist(@RequestParam("page") Integer page,@RequestParam("rows") Integer rows);
+    @RequestMapping("updatestatelist")
+    boolean updatestatelist(@RequestParam("id") Integer id);
+    @RequestMapping("findlogmanagementlist")
+    HashMap<String, Object> findlogmanagementlist(@RequestParam("page") Integer page,@RequestParam("rows") Integer rows,@RequestBody LogBean logBean);
 }

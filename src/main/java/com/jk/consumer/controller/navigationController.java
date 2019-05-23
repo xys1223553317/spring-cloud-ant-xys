@@ -18,7 +18,6 @@ public class navigationController {
     @RequestMapping("findnavigationbar")
     @ResponseBody
     public List<navigationBean> findnavigationbar(){
-
         return tuneport.findnavigationbar();
     }
     //管理导航栏查询数据

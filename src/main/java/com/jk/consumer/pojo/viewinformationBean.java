@@ -9,7 +9,11 @@ public class viewinformationBean {
     private String href;
     private String href2;
     private String href3;
-    private String city;
+    private Integer cityid;
+    private String cityname;
     private Double yuan;
     private Double yuan2;
+    private Integer privoince;
+    private String privoinceName;
+    private Integer zhuantai;
 }

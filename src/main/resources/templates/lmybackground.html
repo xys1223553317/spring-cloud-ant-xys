@@ -38,6 +38,8 @@
     </script>
     <script type="text/javascript" src="http://www.lvmae.com/file/script/index/hj.common.js" charset="UTF-8"></script>
     <link rel="canonical" href="http://www.lvmae.com"/>
+    <script type="text/javascript" src="http://www.lvmae.com/file/script/index/hj.common.js" charset="UTF-8"></script>
+    <link rel="canonical" href="http://www.lvmae.com"/>
 
     <script src="/bootstrap3/js/bootstrap.js"></script>
     <link rel="stylesheet" href="/bootstrap3/css/bootstrap.css">
@@ -58,11 +60,71 @@
 </style>
 
 <body>
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<div class="header">
+    <div class="top">
+        <div class="wrap">
+            <div class="top-left" id="userstatus">
+            </div>
+            <div class="top-right">
+                <ul class="item-list">
+                    <li class="item">当前城市：</li>
+                    <li class="item top-area dropdown">
+                        <div class="top-area-content dropdown-box">
+                            <span class="main-color" id="selectArea"></span>
+                        </div>
+                    </li>
+                    <li class="item"><span class="icon icons-position"></span></li>
+                    <li class="item tel-app dropdown">
+                        <div class="tel-app-content dropdown-box">
+                            &nbsp;&nbsp;<span class="icons-photo"></span>&nbsp;<span>手机APP</span>&nbsp;<span class="icons-arrow-down"></span>&nbsp;&nbsp;
+                        </div>
+                        <div class="menu">
+                            <div class="ewm-box">
+                                <p>扫描二维码<br>
+                                    下载安卓客户端</p>
+                                <p><img src="/tree/erweima" alt="" width="98" height="98"></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item dropdown top-wx">
+                        <div class="dropdown-box">
+                            &nbsp;&nbsp;<span class="icons-wx"></span>&nbsp;微信号&nbsp;<span class="icons-arrow-down"></span>&nbsp;&nbsp;
+                        </div>
+                        <div class="menu">
+                            <div class="ewm-box">
+                                <p>扫描二维码<br>
+                                    关注绿蚂蚁公众号</p>
+                                <p><img src="http://www.lvmae.com/skin/default/images/ewm_2.jpg" alt="" width="98" height="98"></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item"><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzgwMDA1NjQwNF8zNjU3MzlfODAwMDU2NDA0XzJf" class="icons-qq" onclick="" target="_blank" title="点击这里给我发消息">&nbsp;</a></li>
+                    <li class="item"><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzgwMDA1NjQwNF8zNjU3MzlfODAwMDU2NDA0XzJf" target="_blank" >客户服务</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 <!-- Header Start -->
 <div class="header-content">
     <div class="wrap">
-        <div class="logo icons-logo fl"><a href="http://www.lvmae.com/" title="上绿蚂蚁发货，说走就走">上绿蚂蚁发货，说走就走</a></div>
-        <div class="icons-wuli fr" style="background-image:none;"><script type="text/javascript" src="http://www.lvmae.com/file/script/A47.js"></script></div>
+        <!--  <div class="logo icons-logo fl"><a href="http://www.lvmae.com/" title="上绿蚂蚁发货，说走就走">上绿蚂蚁发货，说走就走</a></div>
+          <div class="icons-wuli fr" style="background-image:none;"><script type="text/javascript" src="http://www.lvmae.com/file/script/A47.js"></script></div>-->
+        <span id="pp"></span>
     </div>
 </div>
 <div class="nav">
@@ -287,44 +349,12 @@
 </div>
 </div>
 </div>
-<div class="aaa">
-    <div class="wrap">
-        <a href="http://www.lvmae.com/extend/redirect.php?aid=94">
-            <img src="/js/img/u=846181890,1412064009&fm=26&gp=0.jpg" height="85" width="1200"/>
-        </a>
-    </div>
-</div>
-<div class="block-wrapper zuangche-fache">
-    <div class="wrap">
-        <div class="block-header">
-            <h3>专线发车时刻表</h3>
-            <ul class="tab-title" id="tab1">
-                <span id="dd" onclick="aaa()"></span>
-            </ul>
-        </div>
-        <div class="block-body" id="con1">
-            <div class="tab-content tab-active" data-tab="city_1">
-                <div class="section-1">
-                    <div class="section-left">
-                        <h4><span class="icons-i1"></span><strong>热门送达城市</strong></h4>
-                        <div class="tag-box-1">
-                            <span id="ff"></span>
-                        </div>
-                    </div>
-                    <table id="hyskb1" class="hyskb">
-                        <thead>
-                        <tr>
-                            <th class="wp15">物流线路</th>
-                            <th class="wp30">运输班次 / <span style="color:red;">预计到达时间</span></th>
-                            <th class="wp3"></th>
-                            <th class="wp15">运输价格</th>
-                            <th class="wp15">保障</th>
-                            <th class="wp12">发货</th>
-                        </tr>
-                        </thead>
-                    </table>
-                </div>
-            </div>
+<div class="aaa" style="margin-top: 360px">
+    <div class="banner-1">
+        <div class="wrap">
+            <a href="http://www.lvmae.com/extend/redirect.php?aid=94" target="_blank">
+                <img src="http://www.lvmae.com/file/upload/201612/26/15-13-38-83-38891.jpg" width="1200" height="80" alt="">
+            </a>
         </div>
     </div>
 </div>
@@ -332,7 +362,7 @@
     <div class="wrap">
         <div class="block-header">
             <p style="float:left;line-height: 30px;text-indent: 20px;width: 80px;">特价线路</p>
-            <select id="citys"></select>
+            <select id="citys" onchange="viewinformationlist()"></select>
         </div>
     </div>
 </div>
@@ -343,17 +373,6 @@
                 <sqan id="mm"></sqan>
             </ul>
         </div>
-    </div>
-</div>
-<div class="block-content"style="margin-left:180px">
-    <div class="section-4">
-        <div class="block-body">
-        </div>
-    </div>
-    <div class="section-5" id="order_list">
-        <div class="t-1">最新发货单</div>
-        <ul class="order-list" style="max-height: 239.413px; margin-top: 0.586761px;"><li class="item" style="opacity: 0.0225677;"><span class=" color-1">1533619****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/14198-41665/13178173.html" target="_blank">合肥到西安物流专线</a></li><li class="item" style=""><span class=" color-1">1533619****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/14198-41665/12207752.html" target="_blank">合肥到西安物流专线</a></li><li class="item" style=""><span class=" color-1">1813216****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/23842-657/12585932.html" target="_blank">武汉到石家庄物流专线</a></li><li class="item" style=""><span class=" color-1">1860544****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/3139-19684/13022049.html" target="_blank">太原到烟台物流专线</a></li><li class="item" style=""><span class=" color-1">1860544****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/3139-19684/12839266.html" target="_blank">太原到烟台物流专线</a></li><li class="item" style=""><span class=" color-1">1761511****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/19852-6238/3349904.html" target="_blank">潍坊到大连物流专线</a></li><li class="item" style=""><span class=" color-1">1761511****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/19852-6238/11498745.html" target="_blank">潍坊到大连物流专线</a></li><li class="item" style=""><span class=" color-1">1761511****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/19852-6238/11543679.html" target="_blank">潍坊到大连物流专线</a></li><li class="item" style=""><span class=" color-1">1353754****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/28373-28062/10123864.html" target="_blank">深圳到广州物流专线</a></li><li class="item" style=""><span class=" color-1">1353754****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/28373-28062/10515007.html" target="_blank">深圳到广州物流专线</a></li><li class="item" style=""><span class=" color-1">1399406****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/23842-3139/12396218.html" target="_blank">武汉到太原物流专线</a></li><li class="item" style=""><span class=" color-1">1775655****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/14354-14198/10010758.html" target="_blank">芜湖到合肥物流专线</a></li><li class="item" style=""><span class=" color-1">1876162****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/10996-17236/10005113.html" target="_blank">南京到南昌物流专线</a></li><li class="item" style=""><span class=" color-1">1860220****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/344-958/11584868.html" target="_blank">天津到唐山物流专线</a></li><li class="item" style=""><span class=" color-1">1381796****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/20250-2/10158018.html" target="_blank">威海到北京物流专线</a></li><li class="item" style=""><span class=" color-1">1340252****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/11243-11504/11563608.html" target="_blank">徐州到苏州物流专线</a></li><li class="item" style=""><span class=" color-1">1368192****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/29694-10747/11507734.html" target="_blank">中山到上海物流专线</a></li><li class="item" style=""><span class=" color-1">1517545****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/2880-1582/13333623.html" target="_blank">廊坊到邢台物流专线</a></li><li class="item" style=""><span class=" color-1">1526913****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/21150-28373/13107648.html" target="_blank">郑州到深圳物流专线</a></li><li class="item" style=""><span class=" color-1">1778897****</span>提交订单成功，<a class="" href="http://www.lvmae.com/road/16165-28062/11676806.html" target="_blank">厦门到广州物流专线</a></li>
-        </ul>
     </div>
 </div>
 <div class="block-wrapper wuliuquan">
@@ -389,14 +408,14 @@
                             </li>
                             <li class="item">
                                 <a href="http://www.lvmae.com/road/wuliuyuan/285.html" target="_blank">
-                                    <img src="/js/img/635592780938709416.png" alt="" width="170" height="170">
+                                    <img src="/js/img/635584892072959886.png" alt="" width="170" height="170">
                                     <div class="item-bg"></div>
                                     <div class="item-name">石岩物流园</div>
                                 </a>
                             </li>
                             <li class="item">
                                 <a href="http://www.lvmae.com/road/wuliuyuan/286.html" target="_blank">
-                                    <img src="/js/img/635584892072959886.jpg" alt="" width="170" height="170">
+                                    <img src="/js/img/635592780938709416.png" alt="" width="170" height="170">
                                     <div class="item-bg"></div>
                                     <div class="item-name">钟屋物流园</div>
                                 </a>
@@ -490,21 +509,63 @@
         </div>
     </div>
 </div>
+<div class="frendlink">
+    <div class="wrap">
+        <h3><strong>友情链接</strong></h3>
+        <div class="link-content">
+            <a href="http://dh.cx" target="_blank">易查单</a>
+            <a href="http://www.tuwentongbu.com" target="_blank">图文同步</a>
+            <a href="http://www.yunwangke168.com" target="_blank">云网客</a>
+            <a href="http://www.zgwlc.cn/" target="_blank" rel="external nofollow">中国物流城</a>
+            <a href="http://www.jhx56.cn/" target="_blank" rel="external nofollow">佳豪鑫物流</a>
+            <a href="http://www.5688.com.cn" target="_blank">物流巴巴</a>
+            <a href="http://www.chinaports.com" target="_blank">中国港口网</a>
+            <a href="http://www.yunfei89.com" target="_blank">海运报价</a>
+            <a href="http://www.cloud56.net" target="_blank">物流信息</a>
+            <a href="http://www.shippingcity.com" target="_blank">海运价格</a>
+            <a href="http://www.66tx.cn" target="_blank">四川物流</a>
+            <a href="http://www.yicha138.com" target="_blank">京东快递查询</a>
+            <a href="http://www.56fuwu.com" target="_blank">深圳国际快递</a>
+            <a href="http://www.11183post.com" target="_blank">ems经济快递查询</a>
+        </div>
+    </div>
+</div>
 </body>
 <script type="text/javascript">
+    layui.use('carousel', function(){
+        var carousel = layui.carousel;
+        //建造实例
+        carousel.render({
+            elem: '#test1'
+            ,width: '100%' //设置容器宽度
+            ,arrow: 'always' //始终显示箭头
+            //,anim: 'updown' //切换动画方式
+        });
+    });
     $(function () {
         navigationbar();
         getBroadcastMap();
         regions();
         aaa();
-        viewinformation();
         cityslist();
-        //pictureselect();
-        //pictureselect2();
-       // pictureselect();
+        viewinformation();
         initSheng(1);
         initFsheng(1);
+        advertising();
     })
+    //广告图片
+    function advertising(){
+        $.ajax({
+            url:'/picture/findadvertising',
+            success: function (data) {
+                var map = '';
+                for (var i = 0; i < data.length; i++) {
+                    map += '<img src="'+data[i].img+'" width="500" height="80" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+                }
+                $("#pp").html(map)
+            }
+        })
+    }
     //轮播图片
     function getBroadcastMap() {
         $.ajax({
@@ -514,17 +575,15 @@
                 for (var i = 0; i < data.length; i++) {
                     map += '<li style="background-image: url(' + data[i].img + '); background-repeat: no-repeat; background-position: center center;"></li>';
                 }
-                console.log(map)
                 $("#luntu").html(map)
                 $("#kSlide").kSlide({
                     type: 'slide',
-                    timeOut: 4000
+                    timeOut: 3000
                 });
             }
         })
     }
     function initFsheng(pid) {
-        alert(pid)
         $.ajax({
             url:"/tree/queryArea",
             data:{pid:pid},
@@ -532,9 +591,7 @@
                 var html="<option>省</option>";
                 for (var i = 0; i < data.length; i++) {
                     html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
-
                 }
-
                 $("#sheng2").html(html);
             }
         })
@@ -578,15 +635,11 @@
                 var html="<option>省</option>";
                 for (var i = 0; i < data.length; i++) {
                     html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
-
                 }
-
                 $("#sheng1").html(html);
             }
         })
-
     }
-
     function queryShi() {
         var shengid =$("#sheng1").val()
         $.ajax({
@@ -607,10 +660,7 @@
     function queryRoad() {
         var shi=$("#shi").val();
         var daodashi=$("#shi2").val();
-
         location="/page/toload?shi="+shi+"&"+"daodashi="+daodashi
-
-
     }
     function queryXian() {
         var shi =$("#shi").val();
@@ -654,6 +704,7 @@
             }
         })
     }
+    //地区二级联动
     function  aaa(pid) {
         $.ajax({
             url:'/region/findregionpid',
@@ -670,19 +721,15 @@
             }
         })
     }
-    //查看信息
-    function viewinformation() {
-        var cityss=$("#citys").val();
+    //查询信息数据
+    function viewinformation(){
         $.ajax({
-            url:'/message/findviewinformationlist',
-            data:{
-                citys:cityss
-            },
+            url:'/message/findviewinformation',
             dataType:'json',
             success:function (data) {
                 var str="";
                 for (var i = 0; i < data.length; i++) {
-                    str+='<li class="item"><div class="item-header"><div class="teijia-limit"><a href="'+data[i].href+'"  target="_blank">'+data[i].qyQuancheng+'</a></div><div style="float:left;">发往</div> </div><div class="item-name"><a href="'+data[i].href2+'"  target="_blank">'+data[i].city+'</a></div><div class="item-des">￥<span class=" color-1">'+data[i].yuan*data[i].yuan2+'元/公斤</span>￥'+data[i].yuan2+'</div><div class="item-btn"> <a class="btn b-5" href="'+data[i].href3+'" title="联系发货" target="_blank">联系发货</a> </div><div class="fix-tips">'+data[i].yuan+'折</div> </li>';
+                    str+='<li class="item"><div class="item-header"><div class="teijia-limit"><a href="'+data[i].href+'"  target="_blank">'+data[i].qyQuancheng+'</a></div><div style="float:left;">发往</div> </div><div class="item-name"><a href="'+data[i].href2+'"  target="_blank">'+data[i].cityname+'</a></div><div class="item-des">￥<span class=" color-1">'+data[i].yuan*data[i].yuan2+'元/公斤</span>￥'+data[i].yuan2+'</div><div class="item-btn"> <a class="btn b-5" href="'+data[i].href3+'" title="联系发货" target="_blank">联系发货</a> </div><div class="fix-tips">'+data[i].yuan+'折</div> </li>';
                 }
                 $("#mm").html(str);
             }
@@ -693,114 +740,30 @@
         $.ajax({
             url:"/message/findcityslist",
             success:function(data){
-                var html="<option value='-1'>请选择</option>";
+                var html="<option value='-1'>其他</option>";
                 for (var i = 0; i < data.length; i++) {
-                    html+="<option value='"+data[i].name+"'>"+data[i].name+"</option>";
+                    html+="<option value='"+data[i].id+"' name='na'>"+data[i].name+"</option>";
+                    //alert(data[i].id)
                 }
                 $("#citys").html(html);
             }
         })
     }
-    function initFsheng(pid) {
-        alert(pid)
+    //根据条查查询信息数据
+    function viewinformationlist() {
+        var cityss=$("#citys").val();
         $.ajax({
-            url:"/tree/queryArea",
-            data:{pid:pid},
+            url:'/message/findviewinformationlist',
+            data:{
+                citys:cityss
+            },
+            dataType:'json',
             success:function (data) {
-                var html="<option>省</option>";
+                var str="";
                 for (var i = 0; i < data.length; i++) {
-                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
-
+                    str+='<li class="item"><div class="item-header"><div class="teijia-limit"><a href="'+data[i].href+'"  target="_blank">'+data[i].qyQuancheng+'</a></div><div style="float:left;">发往</div> </div><div class="item-name"><a href="'+data[i].href2+'"  target="_blank">'+data[i].cityname+'</a></div><div class="item-des">￥<span class=" color-1">'+data[i].yuan*data[i].yuan2+'元/公斤</span>￥'+data[i].yuan2+'</div><div class="item-btn"> <a class="btn b-5" href="'+data[i].href3+'" title="联系发货" target="_blank">联系发货</a> </div><div class="fix-tips">'+data[i].yuan+'折</div> </li>';
                 }
-
-                $("#sheng2").html(html);
-            }
-        })
-    }
-    function querysheng2() {
-        var shengid =$("#sheng2").val()
-        $.ajax({
-            url:"/tree/queryAreaShi",
-            data:{shengid:shengid},
-            success:function (data) {
-                var html="<option>市</option>";
-                var  str="";
-                for (var i = 0; i < data.length; i++) {
-                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
-                    var  str=data[i].name
-                }
-                alert(str)
-                $("#shi2").html(html);
-            }
-        })
-    }
-    function queryshi2() {
-        var shi =$("#shi2").val();
-        $.ajax({
-            url:"/tree/queryAreaXian",
-            data:{shi:shi},
-            success:function (data) {
-                var html="<option>县</option>";
-                for (var i = 0; i < data.length; i++) {
-                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
-                }
-                $("#xian2").html(html);
-            }
-        })
-    }
-    function initSheng(pid) {
-        $.ajax({
-            url:"/tree/queryArea",
-            data:{pid:pid},
-            success:function (data) {
-                var html="<option>省</option>";
-                for (var i = 0; i < data.length; i++) {
-                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
-
-                }
-
-                $("#sheng1").html(html);
-            }
-        })
-
-    }
-
-    function queryShi() {
-        var shengid =$("#sheng1").val()
-        $.ajax({
-            url:"/tree/queryAreaShi",
-            data:{shengid:shengid},
-            success:function (data) {
-                var html="<option>市</option>";
-                var  str="";
-                for (var i = 0; i < data.length; i++) {
-                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
-                    var  str=data[i].name
-                }
-                alert(str)
-                $("#shi").html(html);
-            }
-        })
-    }
-    function queryRoad() {
-        var shi=$("#shi").val();
-        var daodashi=$("#shi2").val();
-
-        location="/page/toload?shi="+shi+"&"+"daodashi="+daodashi
-
-
-    }
-    function queryXian() {
-        var shi =$("#shi").val();
-        $.ajax({
-            url:"/tree/queryAreaXian",
-            data:{shi:shi},
-            success:function (data) {
-                var html="<option>县</option>";
-                for (var i = 0; i < data.length; i++) {
-                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
-                }
-                $("#xian").html(html);
+                $("#mm").html(str);
             }
         })
     }

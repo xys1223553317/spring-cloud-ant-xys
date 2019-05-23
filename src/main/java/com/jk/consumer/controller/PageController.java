@@ -90,6 +90,42 @@ public class PageController {
     public String toaddpicture(){
         return "addPicture";
     }
+    //后台登录
+    @RequestMapping("tohtlogin")
+    public String tohtlogin(){
+        return "htlogin";
+    }
+    //信息页面
+    @RequestMapping("toviewinformation")
+    public String toviewinformation(){
+        return "viewinformation";
+    }
+    //信息新增页面
+    @RequestMapping("toaddviewinformation")
+    public String toaddviewinformation(){
+        return "addviewinformation";
+    }
+    //广告页面
+    @RequestMapping("toadvertising")
+    public String toadvertising(){
+        return "advertising";
+    }
+    //新增广告页面
+    @RequestMapping("toaddadvertising")
+    public String toaddadvertising(){
+        return "addadvertising";
+    }
+    //黑名单页面
+    @RequestMapping("toblacklist")
+    public String toblacklist(){
+        return "blacklist";
+    }
+    //日志页面
+    @RequestMapping("tologmanagement")
+    public String tologmanagement(){
+        return "logmanagement";
+    }
+
 
 
     @RequestMapping("show")

@@ -16,6 +16,13 @@
     <script src="/bootstrap/bootstrap-fileinput/js/locales/zh.js"></script>
 </head>
 <body bgcolor="#8fbc8f">
+<div class="nav">
+    <div class="wrap">
+        <ul>
+            <span id="cc"></span>
+        </ul>
+    </div>
+</div>
 <table id="newTable" class="table" border="0px"></table>
 </body>
 <script>
@@ -64,6 +71,19 @@
             {field: 'content'},
 
             ]
+        })
+    }
+    function navigationbar() {
+        $.ajax({
+            url:'/navigation/findnavigationbar',
+            dataType:'json',
+            success:function (data) {
+                var str="";
+                for (var i = 0; i < data.length; i++) {
+                    str+='<li><a href="'+data[i].url+'">'+data[i].text+'</a></li>';
+                }
+                $("#cc").html(str);
+            }
         })
     }
 

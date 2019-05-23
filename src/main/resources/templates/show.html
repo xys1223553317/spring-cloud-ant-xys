@@ -32,7 +32,7 @@
             <div id="myTree"></div>
         </div>
         <span id="nameSpan" class="rt"></span>
-       <button type="button" class="btn btn-info" onclick="souli()">退出</button>
+       <button type="button" class="btn btn-info" onclick="logout()">退出</button>
 
         <div class="col-md-10">
             <div id="mytabs">
@@ -104,6 +104,16 @@
             }
         })
     }
+    function logout() {
+        $.ajax({
+            url:"/tree/logout",
+            success:function (data) {
+                if(data){
+                    location.href='/page/qyLogin'
+                }
+            }
+        })
 
+    }
 </script>
 </html>

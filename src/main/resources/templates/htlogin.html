@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="/js/jquery-1.9.1.min.js"></script>
     <script src="/js/easyui1.5/jquery.min.js"></script>
     <link rel="stylesheet" href="/js/bootstrap3/css/bootstrap.css">
     <script src="/js/bootstrap3/js/bootstrap.js"></script>
@@ -16,33 +15,43 @@
     <script src="/js/bootstrap-fileinput/js/fileinput.js"></script>
     <script src="/js/bootstrap-fileinput/js/locales/zh.js"></script>
     <link rel="stylesheet" href="/js/bootstrap-fileinput/css/fileinput.css">
-    <script src="/bootstrap3/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="/bootstrap3/css/bootstrap.css">
-
-    <link rel="stylesheet" href="/bootstrap-treeview/bootstrap-treeview.min.css">
-    <script src="/bootstrap-treeview/bootstrap-treeview.min.js"></script>
-
-    <script src="/bootStrap-addTabs/bootstrap.addtabs.min.js"></script>
-    <link rel="stylesheet" href="/bootStrap-addTabs/bootstrap.addtabs.css">
-
-    <link rel="stylesheet" href="/js/bootstrap-fileinput/css/fileinput.css">
     <title>Title</title>
 </head>
 <body>
 <div class="container-fluid">
-    <form class="form-horizontal" id="navigationbarForm">
+    <form class="form-horizontal col-md-offset-3" id="htloginForm">
+        <h4>登录</h4>
+        <div class="col-md-8">
         <div class="form-group">
-            <label for="navigationbartext" class="col-sm-2 control-label">名称</label>
-            <div class="col-sm-4">
-                <input type="hidden" class="form-control" id="navigationbarid" name="id">
-                <input type="text" class="form-control" id="navigationbartext" name="text">
-            </div>
-            <label for="navigationbarurl" class="col-sm-2 control-label">路径</label>
-            <div class="col-sm-4">
-                <input type="text" class="form-control" id="navigationbarurl" name="url">
-            </div>
+            <input type="text" class="form-control" placeholder="请输入账号" name="account">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="请输入密码" name="password">
+        </div>
+        <div class="form-group">
+            <button type="button" onclick="htlogin()">登录</button>
+        </div>
         </div>
     </form>
 </div>
 </body>
+<script>
+    function  htlogin() {
+
+        $.ajax({
+            url:'/tree/findhtlogin',
+            type:'post',
+            data:$("#htloginForm").serialize(),
+            dataType:'json',
+            success:function(data){
+                if(data.code==0){
+                    alert("登录成功");
+                    location.href="/page/tomgtree";
+                }else{
+                    alert(data.msg);
+                }
+            }
+        })
+    }
+</script>
 </html>

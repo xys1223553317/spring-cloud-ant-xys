@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="/js/easyui1.5/jquery.min.js"></script>
+    <link rel="stylesheet" href="/js/bootstrap3/css/bootstrap.css">
+    <script src="/js/bootstrap3/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/js/bootstrap-table/bootstrap-table.css">
+    <script src="/js/bootstrap-table/bootstrap-table.js"></script>
+    <script src="/js/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+    <link rel="stylesheet" href="/js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+    <script src="/js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script src="/js/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="/js/bootbox/bootbox.all.min.js"></script>
+    <script src="/js/bootstrap-fileinput/js/fileinput.js"></script>
+    <script src="/js/bootstrap-fileinput/js/locales/zh.js"></script>
+    <link rel="stylesheet" href="/js/bootstrap-fileinput/css/fileinput.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="container-fluid">
+    <form class="form-horizontal" id="viewinformationForm">
+        <div class="form-group">
+            <label for="viewinformationqyQuancheng" class="col-sm-2 control-label">公司名称</label>
+            <div class="col-sm-4">
+                <input type="hidden" class="form-control" id="viewinformationqyId" name="qyId">
+                <input type="text" class="form-control" id="viewinformationqyQuancheng" name="qyQuancheng">
+            </div>
+            <label for="viewinformationhref" class="col-sm-2 control-label">公司路径</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="viewinformationhref" name="href">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="viewinformationhref2" class="col-sm-2 control-label">城市路径</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="viewinformationhref2" name="href2">
+            </div>
+            <label for="viewinformationcity" class="col-sm-2 control-label">城市名称</label>
+            <div class="col-sm-4">
+                <select id="viewinformationcity" name="cityid"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="viewinformationhref3" class="col-sm-2 control-label">发货路径</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="viewinformationhref3" name="href3">
+            </div>
+            <label for="viewinformationyuan" class="col-sm-2 control-label">折扣</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="viewinformationyuan" name="yuan">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="viewinformationyuan2" class="col-sm-2 control-label">价格</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="viewinformationyuan2" name="yuan2">
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+<script>
+    $(function () {
+        cityselect();
+    })
+    function cityselect() {
+        $.ajax({
+            url:"/message/findcityselect",
+            success:function(data){
+                var html="<option value='-1'>请选择</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html+="<option value='"+data[i].id+"'>"+data[i].name+"</option>"
+                }
+                $("#viewinformationcity").html(html);
+            }
+        })
+    }
+</script>
+</html>

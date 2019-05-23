@@ -19,32 +19,47 @@
 </head>
 <body>
 <div id="toolbar">
-    <button type="button" onclick="addnavigationbar()"  class="btn-info">新增</button>
+    <button type="button" onclick="addadvertising()"  class="btn-info">新增</button>
 </div>
 <table id="myTable"></table>
 </body>
 <script type="text/javascript">
-    //查询
-    $(function () {
-        initnavigationbar();
-    })
-    function  initnavigationbar() {
+   //查询
+   $(function () {
+       initadvertising();
+   })
+    function initadvertising(){
         $("#myTable").bootstrapTable({
-            url:"/navigation/findnavigationbarlist",
-            toolbar:"#toolnar",
-            columns: [
+            url:'/picture/findadvertisinglist',
+            toolbar:'#toolbar',  //搜索
+            pagination:true, //是否展示分页
+            pageList:[2,5,10,20],//分页组件
+            pageNumber:1,    //默认跳转到第几页
+            pageSize:2,//默认每页条数
+            sidePagination:'server',
+            method:'post',
+            contentType:'application/x-www-form-urlencoded',//post请求按
+            queryParams:function(){
+                return{
+                    page: this.pageNumber,
+                    rows: this.pageSize,
+                }
+            },
+            columns:[
                 {field:'id',title:'ID'},
-                {field:'text',title:'名称'},
-                {field:'123',title:'操作',formatter:function(value,row,index){
-                        return "<a href='javaScript:delnavigationbar("+row.id+");'>删除</a>||<a href='javaScript:updanavigationbar("+row.id+");'>修改</a>";
+                {field:'img',title:'图片',formatter:function(value,row,index){
+                        return'<img width="50px" height="50px" src="'+row.img+'">'
                  }},
-            ]
+                {field:'123',title:'操作',formatter:function(value,row,index){
+                        return "<a href='javaScript:deladvertising("+row.id+");'>删除</a>";
+                }},
+            ],
         })
     }
-    //单删
-    function delnavigationbar(id){
+    //删除
+    function deladvertising(id){
         $.ajax({
-            url: '/navigation/deletenavigationbar',
+            url: '/picture/deleteadvertising',
             data:{
                 id:id
             },
@@ -64,21 +79,21 @@
         })
     }
     //新增
-    var res;
-    function createAddContent(url){
-        $.ajax({
-            url:url,
-            async:false,
-            success:function(data){
-                res = data;
-            }
-        });
-        return res;
-    }
-    function addnavigationbar(){
-        var url="/page/toaddnavigationbar";
+   var res;
+   function createAddContent(url){
+       $.ajax({
+           url:url,
+           async:false,
+           success:function(data){
+               res = data;
+           }
+       });
+       return res;
+   }
+    function addadvertising(){
+        var url="/page/toaddadvertising";
         bootbox.dialog({
-            title:'操作数据',
+            title:'新增数据',
             message:createAddContent(url),
             size:'large',
             buttons:{
@@ -94,19 +109,19 @@
                     className:'btn-info',
                     callback:function(){
                         $.ajax({
-                            url:'/navigation/addnavigationlist',
+                            url:'/picture/addadvertisinglist',
                             type:'post',
-                            data:$("#navigationbarForm").serialize(),
+                            data:$("#adimgForm").serialize(),
                             dataType:'json',
                             success:function(data){
                                 if(data){
-                                    alert("操作成功");
+                                    alert("新增成功");
                                     $('#myTable').bootstrapTable('refresh');
                                 }else{
                                     bootbox.alert({
                                         size:"small",
                                         title:"提示",
-                                        message:"操作失败"
+                                        message:"新增失败"
                                     });
                                 }
                             }
@@ -115,23 +130,6 @@
                 }
             }
         })
-    }
-    //回显
-    function updanavigationbar(id){
-        addnavigationbar();
-        $.ajax({
-            url:"/navigation/updatenavigationbar",
-            type:'post',
-            data:{
-                id:id
-            },
-            dataType:'json',
-            success:function(data){
-                $("#navigationbarid").val(data.id);
-                $("#navigationbartext").val(data.text);
-                $("#navigationbarurl").val(data.url);
-            }
-        })
-    }
+   }
 </script>
 </html>

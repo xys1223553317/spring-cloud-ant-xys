@@ -19,34 +19,49 @@
 </head>
 <body>
 <div id="toolbar">
-    <button type="button" onclick="addnavigationbar()"  class="btn-info">新增</button>
+    <button type="button" onclick="addviewinformation()"  class="btn-info">新增</button>
 </div>
 <table id="myTable"></table>
 </body>
 <script type="text/javascript">
     //查询
     $(function () {
-        initnavigationbar();
+        initviewinformation();
     })
-    function  initnavigationbar() {
+    function initviewinformation() {
         $("#myTable").bootstrapTable({
-            url:"/navigation/findnavigationbarlist",
-            toolbar:"#toolnar",
-            columns: [
-                {field:'id',title:'ID'},
-                {field:'text',title:'名称'},
+            url:'/message/viewinformationlist',
+            toolbar:'#toolbar',  //搜索
+            pagination:true, //是否展示分页
+            pageList:[2,5,10,20],//分页组件
+            pageNumber:1,    //默认跳转到第几页
+            pageSize:2,//默认每页条数
+            sidePagination:'server',
+            method:'post',
+            contentType:'application/x-www-form-urlencoded',//post请求按
+            queryParams:function(){
+                return{
+                    page: this.pageNumber,
+                    rows: this.pageSize,
+                }
+            },
+            columns:[
+                {field:'qyQuancheng',title:'公司名称'},
+                {field:'cityname',title:'城市名称'},
+                {field:'yuan',title:'折扣'},
+                {field:'yuan2',title:'价格'},
                 {field:'123',title:'操作',formatter:function(value,row,index){
-                        return "<a href='javaScript:delnavigationbar("+row.id+");'>删除</a>||<a href='javaScript:updanavigationbar("+row.id+");'>修改</a>";
-                 }},
-            ]
+                        return "<a href='javaScript:delviewinformation("+row.qyId+");'>删除</a>||<a href='javaScript:updaviewinformation("+row.qyId+");'>修改</a>||<a href='javaScript:updastate("+row.qyId+");'>拉黑</a>";
+                }},
+            ],
         })
     }
     //单删
-    function delnavigationbar(id){
+    function delviewinformation(qyId){
         $.ajax({
-            url: '/navigation/deletenavigationbar',
+            url: '/message/deleteviewinformation',
             data:{
-                id:id
+                id:qyId
             },
             type: 'post',
             success:function(data){
@@ -75,8 +90,8 @@
         });
         return res;
     }
-    function addnavigationbar(){
-        var url="/page/toaddnavigationbar";
+    function addviewinformation(){
+        var url="/page/toaddviewinformation";
         bootbox.dialog({
             title:'操作数据',
             message:createAddContent(url),
@@ -94,9 +109,9 @@
                     className:'btn-info',
                     callback:function(){
                         $.ajax({
-                            url:'/navigation/addnavigationlist',
+                            url:'/message/addviewinformationlist',
                             type:'post',
-                            data:$("#navigationbarForm").serialize(),
+                            data:$("#viewinformationForm").serialize(),
                             dataType:'json',
                             success:function(data){
                                 if(data){
@@ -117,19 +132,45 @@
         })
     }
     //回显
-    function updanavigationbar(id){
-        addnavigationbar();
+    function updaviewinformation(qyId){
+        addviewinformation();
         $.ajax({
-            url:"/navigation/updatenavigationbar",
+            url:"/message/updateviewinformation",
             type:'post',
             data:{
-                id:id
+                id:qyId
             },
             dataType:'json',
             success:function(data){
-                $("#navigationbarid").val(data.id);
-                $("#navigationbartext").val(data.text);
-                $("#navigationbarurl").val(data.url);
+                $("#viewinformationqyId").val(data.qyId);
+                $("#viewinformationqyQuancheng").val(data.qyQuancheng);
+                $("#viewinformationhref").val(data.href);
+                $("#viewinformationhref2").val(data.href2);
+                $("#viewinformationcity").val(data.cityid);
+                $("#viewinformationhref3").val(data.href3);
+                $("#viewinformationyuan").val(data.yuan);
+                $("#viewinformationyuan2").val(data.yuan2);
+            }
+        })
+    }
+    //修改状态
+    function updastate(qyId){
+        $.ajax({
+            url:"/message/updastatelist",
+            data:{
+                id:qyId
+            },
+            type: 'post',
+            success:function(data){
+                if (data) {
+                    $('#myTable').bootstrapTable('refresh');
+                }else{
+                    bootbox.alert({
+                        size:"small",
+                        title:"提示",
+                        message:"拉黑失败"
+                    });
+                }
             }
         })
     }
