@@ -54,4 +54,24 @@ public class PageController {
     public String toaddviewinformation(){
         return "addviewinformation";
     }
+    //广告页面
+    @RequestMapping("toadvertising")
+    public String toadvertising(){
+        return "advertising";
+    }
+    //新增广告页面
+    @RequestMapping("toaddadvertising")
+    public String toaddadvertising(){
+        return "addadvertising";
+    }
+    //黑名单页面
+    @RequestMapping("toblacklist")
+    public String toblacklist(){
+        return "blacklist";
+    }
+    //日志页面
+    @RequestMapping("tologmanagement")
+    public String tologmanagement(){
+        return "logmanagement";
+    }
 }

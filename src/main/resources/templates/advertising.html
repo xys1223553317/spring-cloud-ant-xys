@@ -19,18 +19,18 @@
 </head>
 <body>
 <div id="toolbar">
-    <button type="button" onclick="addviewinformation()"  class="btn-info">新增</button>
+    <button type="button" onclick="addadvertising()"  class="btn-info">新增</button>
 </div>
 <table id="myTable"></table>
 </body>
 <script type="text/javascript">
-    //查询
-    $(function () {
-        initviewinformation();
-    })
-    function initviewinformation() {
+   //查询
+   $(function () {
+       initadvertising();
+   })
+    function initadvertising(){
         $("#myTable").bootstrapTable({
-            url:'/message/viewinformationlist',
+            url:'/picture/findadvertisinglist',
             toolbar:'#toolbar',  //搜索
             pagination:true, //是否展示分页
             pageList:[2,5,10,20],//分页组件
@@ -46,22 +46,22 @@
                 }
             },
             columns:[
-                {field:'qyQuancheng',title:'公司名称'},
-                {field:'cityname',title:'城市名称'},
-                {field:'yuan',title:'折扣'},
-                {field:'yuan2',title:'价格'},
+                {field:'id',title:'ID'},
+                {field:'img',title:'图片',formatter:function(value,row,index){
+                        return'<img width="50px" height="50px" src="'+row.img+'">'
+                 }},
                 {field:'123',title:'操作',formatter:function(value,row,index){
-                        return "<a href='javaScript:delviewinformation("+row.qyId+");'>删除</a>||<a href='javaScript:updaviewinformation("+row.qyId+");'>修改</a>||<a href='javaScript:updastate("+row.qyId+");'>拉黑</a>";
+                        return "<a href='javaScript:deladvertising("+row.id+");'>删除</a>";
                 }},
             ],
         })
     }
-    //单删
-    function delviewinformation(qyId){
+    //删除
+    function deladvertising(id){
         $.ajax({
-            url: '/message/deleteviewinformation',
+            url: '/picture/deleteadvertising',
             data:{
-                id:qyId
+                id:id
             },
             type: 'post',
             success:function(data){
@@ -79,21 +79,21 @@
         })
     }
     //新增
-    var res;
-    function createAddContent(url){
-        $.ajax({
-            url:url,
-            async:false,
-            success:function(data){
-                res = data;
-            }
-        });
-        return res;
-    }
-    function addviewinformation(){
-        var url="/page/toaddviewinformation";
+   var res;
+   function createAddContent(url){
+       $.ajax({
+           url:url,
+           async:false,
+           success:function(data){
+               res = data;
+           }
+       });
+       return res;
+   }
+    function addadvertising(){
+        var url="/page/toaddadvertising";
         bootbox.dialog({
-            title:'操作数据',
+            title:'新增数据',
             message:createAddContent(url),
             size:'large',
             buttons:{
@@ -109,19 +109,19 @@
                     className:'btn-info',
                     callback:function(){
                         $.ajax({
-                            url:'/message/addviewinformationlist',
+                            url:'/picture/addadvertisinglist',
                             type:'post',
-                            data:$("#viewinformationForm").serialize(),
+                            data:$("#adimgForm").serialize(),
                             dataType:'json',
                             success:function(data){
                                 if(data){
-                                    alert("操作成功");
+                                    alert("新增成功");
                                     $('#myTable').bootstrapTable('refresh');
                                 }else{
                                     bootbox.alert({
                                         size:"small",
                                         title:"提示",
-                                        message:"操作失败"
+                                        message:"新增失败"
                                     });
                                 }
                             }
@@ -130,49 +130,6 @@
                 }
             }
         })
-    }
-    //回显
-    function updaviewinformation(qyId){
-        addviewinformation();
-        $.ajax({
-            url:"/message/updateviewinformation",
-            type:'post',
-            data:{
-                id:qyId
-            },
-            dataType:'json',
-            success:function(data){
-                $("#viewinformationqyId").val(data.qyId);
-                $("#viewinformationqyQuancheng").val(data.qyQuancheng);
-                $("#viewinformationhref").val(data.href);
-                $("#viewinformationhref2").val(data.href2);
-                $("#viewinformationcity").val(data.cityid);
-                $("#viewinformationhref3").val(data.href3);
-                $("#viewinformationyuan").val(data.yuan);
-                $("#viewinformationyuan2").val(data.yuan2);
-            }
-        })
-    }
-    //修改状态
-    function updastate(qyId){
-        $.ajax({
-            url:"/message/updastatelist",
-            data:{
-                id:qyId
-            },
-            type: 'post',
-            success:function(data){
-                if (data) {
-                    $('#myTable').bootstrapTable('refresh');
-                }else{
-                    bootbox.alert({
-                        size:"small",
-                        title:"提示",
-                        message:"拉黑失败"
-                    });
-                }
-            }
-        })
-    }
+   }
 </script>
 </html>

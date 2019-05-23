@@ -64,4 +64,22 @@ public interface tuneport {
     viewinformationBean updateviewinformation(@RequestParam("id") Integer id);
     @RequestMapping("addviewinformationlist")
     void updateviewinformations(@RequestBody viewinformationBean viewinformationBean);
+    @RequestMapping("findadvertising")
+    List<PictureBean> findadvertising();
+    @RequestMapping("findadvertisinglist")
+    HashMap<String, Object> findadvertisinglist(@RequestParam("page") Integer page,@RequestParam("rows") Integer rows);
+    @RequestMapping("deleteadvertising")
+    void deleteadvertising(@RequestParam("id") Integer id);
+    @RequestMapping("addadvertisinglist")
+    void addadvertisinglist(@RequestBody PictureBean pictureBean);
+    @RequestMapping("findcityselect")
+    List<CityBean> findcityselect();
+    @RequestMapping("updastatelist")
+    boolean updastatelist(@RequestParam("id") Integer id);
+    @RequestMapping("findblacklistlist")
+    HashMap<String, Object> findblacklistlist(@RequestParam("page") Integer page,@RequestParam("rows") Integer rows);
+    @RequestMapping("updatestatelist")
+    boolean updatestatelist(@RequestParam("id") Integer id);
+    @RequestMapping("findlogmanagementlist")
+    HashMap<String, Object> findlogmanagementlist(@RequestParam("page") Integer page,@RequestParam("rows") Integer rows,@RequestBody LogBean logBean);
 }

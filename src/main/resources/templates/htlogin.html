@@ -37,21 +37,18 @@
 </body>
 <script>
     function  htlogin() {
+
         $.ajax({
             url:'/tree/findhtlogin',
             type:'post',
             data:$("#htloginForm").serialize(),
             dataType:'json',
             success:function(data){
-                if(data){
+                if(data.code==0){
                     alert("登录成功");
                     location.href="/page/tomgtree";
                 }else{
-                    bootbox.alert({
-                        size:"small",
-                        title:"提示",
-                        message:"登录失败"
-                    });
+                    alert(data.msg);
                 }
             }
         })
